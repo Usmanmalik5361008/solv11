@@ -1,0 +1,44 @@
+.sigin-page-container {
+  background-color: #f2fbfe !important;
+  display: flex;
+  align-items: center;
+  background-image: url("../../assets/images/sigin-bg.png");
+  background-size: contain;
+
+  .sigin-form-container {
+    max-width: 400px;
+    width: 100%;
+    margin-left: 15%;
+
+    .sigin-logo {
+      width: auto;
+      height: 70px;
+      margin-bottom: 30px;
+    }
+
+    .form-field {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      label,
+      label {
+        color: #57647a;
+      }
+    }
+
+    .greetings {
+      p {
+        margin-bottom: 0;
+      }
+
+      h1 {
+        font-family: "Engschrift Caps";
+        text-transform: uppercase;
+      }
+    }
+    button {
+      margin-top: 30px;
+    }
+  }
+}

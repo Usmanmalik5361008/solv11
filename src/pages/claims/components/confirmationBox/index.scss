@@ -1,0 +1,26 @@
+.confirmation-box-wrapper {
+  border-radius: 10px;
+
+  .upper-section {
+    border-radius: 7px 7px 0 0;
+    background-color: #f3f8fa;
+    padding: 20px;
+
+    p {
+      color: #657590;
+      margin: 0;
+      font-size: 12px;
+
+      strong {
+        color: #19202e;
+      }
+    }
+  }
+  .bottom-section {
+    padding: 20px;
+    border-radius: 0 0 7px 7px;
+    background-color: #dbf4fc;
+    display: flex;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,84 @@
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .card-view {
+    padding: 20px;
+
+    .collapse-title {
+      margin: 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .top-section {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .ant-collapse {
+    border: 0;
+    border-radius: 0 0 10px 10px !important;
+
+    &:last-child {
+      .ant-collapse-content,
+      .ant-collapse-header {
+        border-radius: 0 0 10px 10px !important;
+      }
+    }
+  }
+
+  .ant-collapse-header {
+    background-color: white;
+    border-top: 1px solid #e6eaf0;
+  }
+  .ant-collapse-content {
+    border-top: 1px solid #e6eaf0;
+  }
+
+  .production-card {
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 10px;
+
+    h5,
+    p {
+      color: white;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 11px;
+    }
+
+    img {
+      width: auto;
+      height: 50px;
+    }
+  }
+
+  .production-card.bordered {
+    border: 1px solid #cdd5e2;
+    transition: 0.3s border;
+    cursor: pointer;
+
+    h5,
+    p {
+      color: var(--text-grey-1);
+    }
+
+    &:hover {
+      border: 1px solid #11b4ed;
+    }
+  }
+
+  .ant-collapse > .ant-collapse-item {
+    border-bottom: #e6eaf0;
+  }
+}

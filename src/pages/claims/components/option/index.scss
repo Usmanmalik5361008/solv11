@@ -1,0 +1,47 @@
+@import "../../../../styles/main";
+
+.claim-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  @include unselectable();
+  svg {
+    transition: all 0.3s;
+  }
+  p {
+    font-size: 12px;
+    transition: all 0.3s;
+  }
+  &:hover {
+    svg,
+    svg > path {
+      fill: #11b4ed;
+      stroke: #11b4ed;
+      transition: all 0.3s;
+    }
+
+    p {
+      color: #11b4ed;
+      transition: all 0.3s;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.claim-option.active {
+  svg,
+  svg > path {
+    fill: #11b4ed;
+    stroke: #11b4ed;
+    transition: all 0.3s;
+  }
+
+  p {
+    color: #11b4ed;
+    transition: all 0.3s;
+  }
+}

@@ -1,0 +1,26 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .card-view {
+    padding: 15px 20px;
+  }
+  .action-buttons {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .ant-alert-info {
+    max-width: 500px;
+  }
+  .card-actions {
+    display: inline-flex;
+    gap: 10px;
+  }
+  .projects-body {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}

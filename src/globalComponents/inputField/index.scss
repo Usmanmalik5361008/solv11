@@ -1,0 +1,33 @@
+.input-field-container {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+
+  .prepend-icon {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    width: 22px;
+  }
+
+  input {
+    background: #f2fbfe;
+    border: 1px solid #57647a;
+    border-radius: 10px;
+    height: 45px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .icon-divider {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    height: 25px;
+    border-left-color: #c4c4c4;
+  }
+
+  .icon-padding {
+    padding-left: 55px;
+  }
+}

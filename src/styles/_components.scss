@@ -1,0 +1,146 @@
+// buttons
+
+.btn-primary {
+  @include button-primary-variant();
+
+  img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+
+}
+
+.btn-gradient {
+  width: 100%;
+  height: 45px;
+  background: linear-gradient(90.26deg, #0e5fd9 2.2%, #11b4ed 99.02%);
+  border-radius: 10px;
+  border: 0;
+  color: white;
+}
+
+.pill-button {
+  padding: 5px 10px;
+  background: #eff4f9;
+  border: 1px solid #cdd5e2;
+  color: #657590;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  img {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.pill-button.rounded,
+.pill-button-highlighted.rounded {
+  border-radius: 20px;
+}
+
+.pill-button-highlighted {
+  padding: 5px 10px;
+  border-radius: 2px;
+  background: #dbf4fc;
+  border: 1px solid #11b4ed;
+  color: #657590;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #11b4ed;
+}
+
+// sizes
+
+.btn-primary-full-width {
+  @include button-primary-variant($width: 100%);
+}
+
+// custom dropdown
+
+.dropdown-style-1 {
+  height: 45px;
+  width: 100%;
+  border: 1px solid #57647a;
+  border-radius: 10px;
+  background: url("../assets/images/arrow-down.png") no-repeat right #f2fbfe;
+  -webkit-appearance: none;
+  background-size: 12px;
+  background-position-x: 95%;
+  padding-left: 10px;
+}
+
+.dropdown-style-2 {
+  padding: 5px 10px;
+  width: 100%;
+  border: 1px solid #cdd5e2;
+  border-radius: 5px;
+  background: url("../assets/images/small-arrow-down-icon.png") no-repeat right
+    #eff4f9;
+  -webkit-appearance: none;
+  background-size: 10px;
+  background-position-x: 95%;
+  padding-left: 5px;
+}
+
+// card style
+
+.card-view {
+  width: 100%;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0px 4px 90px rgba(163, 171, 185, 0.24);
+}
+
+// antd table modification style 1
+
+.custom-table-style-1 {
+  .ant-table {
+    border-radius: 0 0 10px 10px;
+  }
+
+  thead {
+    .ant-table-cell {
+      background-color: #f2fbfe;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #19202e;
+      font-size: 12px;
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  tbody {
+    .ant-table-row {
+      &:last-child {
+        td {
+          &:first-child {
+            border-bottom-left-radius: 10px;
+          }
+          &:last-child {
+            border-bottom-right-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// custom alert
+
+.ant-alert-info {
+  border: 0;
+  border-radius: 7px;
+  background: #dbf4fc;
+
+  .ant-alert-message {
+    color: #657590;
+    font-size: 12px;
+  }
+}

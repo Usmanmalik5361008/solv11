@@ -1,0 +1,27 @@
+import React from "react";
+
+const Button = ({
+  title,
+  onClick = null,
+  style,
+  prependIcon,
+  type = "primary",
+}) => {
+  const getClassName = () => {
+    let className = "";
+    if (type === "primary") {
+      className = "btn-primary";
+    } else if (type === "default") {
+      className = "btn-default";
+    }
+    return className;
+  };
+
+  return (
+    <button onClick={onClick} className={getClassName()}>
+      {prependIcon && <img src={prependIcon} alt="" />} {title}
+    </button>
+  );
+};
+
+export default Button;

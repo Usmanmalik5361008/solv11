@@ -1,0 +1,195 @@
+//font faces
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../assets/fonts/Inter/static/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../assets/fonts/Inter/static/Inter-Medium.ttf");
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../assets/fonts/Inter/static/Inter-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Engschrift Caps";
+  src: url("../assets/fonts/Engschrift-Caps/TGL_0-1451Eng.ttf");
+}
+
+// variables
+
+$primary-color: #11b4ed;
+$dark-grey: #19202e;
+$black-1: #19202e;
+$bg-light-grey: #e5e5e5;
+$btn-primary-bg: #11b4ed;
+
+$footer-height: 60px;
+
+//text sizes
+
+$text-xxs: 8px;
+$text-xs: 14px;
+$text-sm: 16px;
+$text-nm: 18px;
+$text-md: 20px;
+$text-lg: 25px;
+$text-xl: 30px;
+$text-xxl: 36px;
+$text-xxxl: 40px;
+
+//root
+
+:root {
+  --font-primary: "Inter-Regular";
+  // text colors
+  --color-text: $black-1;
+  --color-text-heading: $black;
+}
+
+// resets
+
+.ant-tag {
+  span {
+    font-weight: bold;
+  }
+}
+
+.ant-menu-item.ant-menu-item-selected {
+  background-color: white !important;
+  border-radius: 10px;
+
+  span {
+    color: #109ce7 !important;
+    font-weight: bold;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+form legend {
+  color: var(--color-text-heading);
+  margin-bottom: 8px;
+}
+
+/* text size */
+
+.text-xxxl {
+  font-size: $text-xxxl;
+}
+
+p {
+  font-size: $text-xs;
+  font-family: "Inter-Regular";
+  color: var(--color-text);
+}
+
+h1,
+.text-xxl {
+  font-size: $text-xxl;
+  font-family: "Inter-Bold";
+}
+
+h2,
+.text-xl {
+  font-size: $text-xl;
+  font-family: "Inter-Bold";
+}
+
+h3,
+.text-lg {
+  font-size: $text-lg;
+  font-family: "Inter-Bold";
+}
+
+h4,
+.text-md {
+  font-size: $text-md;
+  font-family: "Inter-Bold";
+}
+h5,
+.text-mormal {
+  font-size: $text-xs;
+  font-family: "Inter-Bold";
+}
+
+.text-sm,
+small {
+  font-size: $text-sm;
+}
+
+.text-xs {
+  font-size: $text-xs;
+}
+
+// utils
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.font-Engschrift-Caps {
+  font-family: "Engschrift Caps";
+}
+
+// mixins
+
+@mixin button-primary-variant($width: "") {
+  display: inline-flex;
+  align-items: center;
+  background: $btn-primary-bg;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  font-family: "Inter-Medium";
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+  padding: 8px 15px;
+  transition-property: color, background-color, border;
+
+  @if $width {
+    width: $width;
+  }
+  &:hover {
+    background: darken($btn-primary-bg, 10%);
+  }
+}
+
+@mixin unselectable() {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}

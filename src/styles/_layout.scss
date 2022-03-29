@@ -1,0 +1,98 @@
+.page-container {
+  height: 100%;
+  background-color: $bg-light-grey;
+}
+
+.auth-layout,
+.main-layout {
+  height: 100vh;
+  overflow-y: scroll;
+}
+.page-layout {
+  height: 100%;
+}
+
+.sider {
+  padding: 20px;
+}
+
+.logo {
+  background-image: url("../assets/images/company-logo-white.png");
+  width: 100%;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+.ant-layout-sider,
+.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-dark {
+  background: linear-gradient(90.26deg, #0e5fd9 2.2%, #11b4ed 99.02%);
+}
+
+.header-content-container {
+  padding: 20px 40px;
+  overflow-y: scroll;
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.page-header {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  background-color: #19202e;
+  color: white;
+  margin-bottom: 20px;
+
+  .upper-section {
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 35%;
+
+    .actions {
+      display: inline-flex;
+      gap: 20px;
+      align-items: center;
+
+      span {
+        cursor: pointer;
+        user-select: none;
+
+        img {
+          width: auto;
+          height: 7px;
+        }
+      }
+
+      img {
+        width: 17px;
+        height: 17px;
+        cursor: pointer;
+      }
+    }
+  }
+  .bottom-section {
+    min-height: 65%;
+    background-color: black;
+    padding: 20px 20px 15px 20px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .ant-breadcrumb a {
+      color: #acb5c5;
+      font-size: 11px;
+    }
+  }
+}
