@@ -3,17 +3,45 @@
   background-color: $bg-light-grey;
 }
 
-.auth-layout,
 .main-layout {
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+.auth-layout {
   height: 100vh;
   overflow-y: scroll;
 }
+
 .page-layout {
   height: 100%;
 }
 
 .sider {
   padding: 20px;
+
+  .ant-menu-item {
+    svg {
+      path {
+        fill: #fff !important;
+      }
+    }
+  }
+
+  .ant-menu-item.ant-menu-item-selected {
+    background-color: white !important;
+    border-radius: 10px;
+
+    span {
+      color: #109ce7 !important;
+      font-weight: bold;
+    }
+
+    svg {
+      path {
+        fill: #109ce7 !important;
+      }
+    }
+  }
 }
 
 .logo {
@@ -76,11 +104,14 @@
   }
   .bottom-section {
     min-height: 65%;
-    background-color: black;
+    background-size: cover;
+    background-position-x: right;
+    background-image: url("../assets/images/illustration_and_background.png");
     padding: 20px 20px 15px 20px;
     border-radius: 0 0 10px 10px;
     display: flex;
     flex-direction: column;
+    background-repeat: no-repeat;
 
     h2 {
       margin-bottom: 0;

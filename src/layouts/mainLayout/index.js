@@ -18,8 +18,8 @@ const MainLayout = () => {
             </Content>
           </Layout>
         </Layout>
+        <Footer />
       </Layout>
-      <Footer />
     </>
   );
 };

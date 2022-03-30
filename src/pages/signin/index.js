@@ -24,7 +24,8 @@ const SigninPage = () => {
               <InputField name="password" prependIcon={EYE_CROSSED} />
             </div>
             <select className="dropdown-style-1">
-              <option>Environment (Dropdown list)</option>
+              <option>Production</option>
+              <option>Developement</option>
             </select>
 
             <button className="btn-gradient">Get Started</button>
