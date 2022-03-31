@@ -42,7 +42,7 @@ const PageHeader = () => {
         </div>
       </div>
       <div className="bottom-section">
-        <h2 className="font-Engschrift-Caps">QOGNITIVE TECHNOLGIES</h2>
+        <h2 className="font-Engschrift-Caps">SOLV11</h2>
         <p>Solvency Analytics</p>
         <Breadcrums />
       </div>
