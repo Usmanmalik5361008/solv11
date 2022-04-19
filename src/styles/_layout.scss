@@ -19,6 +19,14 @@
 .sider {
   padding: 20px;
 
+  .-title-content {
+    margin-left: 10px;
+  }
+
+  .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+    background-color: transparent;
+  }
+
   .ant-menu-item {
     svg {
       path {
