@@ -147,3 +147,127 @@
     font-size: 12px;
   }
 }
+
+// custom tabs
+
+.custom-tabs-wrapper {
+  border-radius: 10px 10px 0 0;
+  background-color: white;
+
+  .ant-tabs-nav-wrap {
+    background-color: #dbf4fc;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 60px;
+  }
+  .ant-tabs-tab:hover {
+    color: #0e74dd;
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active {
+    .ant-tabs-tab-btn {
+      color: #0e74dd;
+      font-family: "Inter-Bold";
+    }
+  }
+  .ant-tabs-ink-bar {
+    background: #0e74dd;
+    height: 3px !important;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .ant-tabs-tabpane {
+    padding: 10px 20px;
+  }
+}
+
+// custom-form-field
+
+.small-heading {
+  color: #19202e;
+  font-family: "Inter-Medium";
+  margin-bottom: 5px;
+  display: inline-block;
+  flex-shrink: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.custom-form-field {
+  label {
+    color: #57647a;
+    font-family: "Inter-Medium";
+    display: inline-block;
+    flex-shrink: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  select {
+    background-color: transparent !important;
+    background-position-x: 97%;
+    height: 35px;
+    border: 1px solid #d5dbe4 !important;
+  }
+  .multiple-inputs-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+
+  input {
+    background: #ffffff;
+    border: 1px solid #d5dbe4;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 8px;
+    width: 100%;
+  }
+  .input-with-label {
+    position: relative;
+
+    p {
+      position: absolute;
+      top: 8px;
+      left: 10px;
+      font-size: 12px;
+      color: #657590;
+    }
+    input {
+      text-align: right;
+    }
+  }
+}
+
+// custom table style 2
+
+.custom-table-style-2-wrapper {
+  border-radius: 10px;
+  border: 1px solid #cdd5e2;
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+    border-style: hidden;
+    text-align: left;
+
+    td,
+    th {
+      padding: 10px 20px;
+      border: 1px solid #cdd5e2;
+      font-size: 12px;
+      color: #657590;
+      font-family: "Inter-Regular";
+    }
+  }
+}
+
+// light-grey-bordered
+
+.light-grey-bordered {
+  border: 1px solid #d5dbe4;
+  border-radius: 10px;
+  padding: 20px 10px;
+}

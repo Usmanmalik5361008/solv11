@@ -5,3 +5,4 @@ export { default as PageHeader } from "./pageHeader";
 export { default as PillButton } from "./pillButton";
 export { default as TabsWithFilters } from "./tabsWithFilters";
 export { default as Button } from "./button";
+export { default as ConfirmationBox } from "./confirmationBox";

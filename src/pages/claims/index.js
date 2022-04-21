@@ -9,8 +9,8 @@ import {
   styleIcon,
   advancedSettingIcon,
 } from "assets";
-import { PillButton } from "globalComponents";
-import { Option, Setting, ConfirmationBox } from "./components";
+import { PillButton, ConfirmationBox } from "globalComponents";
+import { Option, Setting } from "./components";
 import "./index.scss";
 
 const ClaimsPage = () => {

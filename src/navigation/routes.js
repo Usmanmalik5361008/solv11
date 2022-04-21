@@ -1,6 +1,12 @@
-import { SigninPage, DashboardPage, ProjectsPage, ClaimsPage } from "pages";
-import { AuthLayout } from "layouts";
-import MainLayout from "layouts/mainLayout";
+import {
+  SigninPage,
+  DashboardPage,
+  ProjectsPage,
+  ClaimsPage,
+  TabScreen1,
+  TabScreen2,
+} from "pages";
+import { AuthLayout, MainLayout } from "layouts";
 
 const getRoutes = () => {
   return [
@@ -34,6 +40,16 @@ const getRoutes = () => {
           title: "Claims",
           element: <ClaimsPage />,
           path: "claims",
+        },
+        {
+          title: "Tab Screen 1",
+          element: <TabScreen1 />,
+          path: "screen1",
+        },
+        {
+          title: "Tab Screen 2",
+          element: <TabScreen2 />,
+          path: "screen2",
         },
       ],
     },

@@ -151,6 +151,16 @@ small {
   font-family: "Engschrift Caps";
 }
 
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.dark-grey {
+  color: #57647a;
+}
+
 // mixins
 
 @mixin button-primary-variant($width: "") {

@@ -70,6 +70,18 @@ const menuItems = [
       },
     ],
   },
+  {
+    key: "8",
+    name: "Screen 1",
+    icon: <></>,
+    href: "/screen1",
+  },
+  {
+    key: "9",
+    name: "Screen 2",
+    icon: <></>,
+    href: "/screen2",
+  },
 ];
 
 export default menuItems;
