@@ -203,6 +203,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    width: 100%;
   }
   select {
     background-color: transparent !important;
@@ -249,7 +250,6 @@
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    max-width: 100%;
     border-style: hidden;
     text-align: left;
 
@@ -261,6 +261,12 @@
       color: #657590;
       font-family: "Inter-Regular";
     }
+
+    .table-row-title {
+      color: #57647a;
+      font-family: "Inter-Medium";
+      margin: 0;
+    }
   }
 }
 
@@ -270,4 +276,21 @@
   border: 1px solid #d5dbe4;
   border-radius: 10px;
   padding: 20px 10px;
+}
+
+//custom-table-style-2-header
+
+.custom-table-style-2-header {
+  display: flex;
+
+  h5 {
+    color: #57647a;
+    font-family: "Inter-Bold";
+    display: inline-block;
+    flex-shrink: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100% !important;
+  }
 }

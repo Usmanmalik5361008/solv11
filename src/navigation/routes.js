@@ -5,6 +5,7 @@ import {
   ClaimsPage,
   TabScreen1,
   TabScreen2,
+  TabScreen3,
 } from "pages";
 import { AuthLayout, MainLayout } from "layouts";
 
@@ -50,6 +51,11 @@ const getRoutes = () => {
           title: "Tab Screen 2",
           element: <TabScreen2 />,
           path: "screen2",
+        },
+        {
+          title: "Tab Screen 3",
+          element: <TabScreen3 />,
+          path: "screen3",
         },
       ],
     },

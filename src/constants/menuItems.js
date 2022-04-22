@@ -82,6 +82,12 @@ const menuItems = [
     icon: <></>,
     href: "/screen2",
   },
+  {
+    key: "10",
+    name: "Screen 3",
+    icon: <></>,
+    href: "/screen3",
+  },
 ];
 
 export default menuItems;

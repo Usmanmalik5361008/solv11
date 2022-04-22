@@ -1,8 +1,7 @@
 import React from "react";
 
 import { Tabs } from "antd";
-import { ExternalFunds } from "./components";
-import { ConfirmationBox } from "globalComponents";
+import { ExternalFunds, Hypothesis } from "./components";
 
 const { TabPane } = Tabs;
 
@@ -20,7 +19,7 @@ const TabScreen2 = () => {
           Contrat a taux narantie FN
         </TabPane>
         <TabPane tab="Hypothesis" key="4">
-          Hypothesis
+          <Hypothesis />
         </TabPane>
       </Tabs>
     </div>
