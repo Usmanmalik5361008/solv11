@@ -245,6 +245,7 @@
 .custom-table-style-2-wrapper {
   border-radius: 10px;
   border: 1px solid #cdd5e2;
+  overflow-x: auto;
 
   table {
     border-collapse: collapse;
@@ -252,6 +253,7 @@
     width: 100%;
     border-style: hidden;
     text-align: left;
+    overflow-x: auto;
 
     td,
     th {
