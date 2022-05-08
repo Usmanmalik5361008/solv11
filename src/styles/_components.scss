@@ -19,6 +19,20 @@
   color: white;
 }
 
+.btn-default {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: black;
+  border: 1px solid #95a7ad;
+  border-radius: 4px;
+  font-family: "Inter-Medium";
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+  padding: 8px 15px;
+  transition-property: color, background-color, border;
+}
+
 .pill-button {
   padding: 5px 10px;
   background: #eff4f9;
@@ -97,6 +111,10 @@
   border-radius: 10px;
   background: #ffffff;
   box-shadow: 0px 4px 90px rgba(163, 171, 185, 0.24);
+}
+
+.card-padding {
+  padding: 15px 20px;
 }
 
 // antd table modification style 1
@@ -255,6 +273,11 @@
     text-align: left;
     overflow-x: auto;
 
+    th {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
     td,
     th {
       padding: 10px 20px;
@@ -262,6 +285,11 @@
       font-size: 12px;
       color: #657590;
       font-family: "Inter-Regular";
+
+      input {
+        border: none;
+        width: 100%;
+      }
     }
 
     .table-row-title {
@@ -284,6 +312,7 @@
 
 .custom-table-style-2-header {
   display: flex;
+  overflow-x: auto;
 
   h5 {
     color: #57647a;
@@ -295,4 +324,12 @@
     text-overflow: ellipsis;
     width: 100% !important;
   }
+}
+
+// grey text color
+
+.grey-text {
+  color: #657590 !important;
+  font-family: "Inter-Bold" !important;
+  white-space: nowrap;
 }

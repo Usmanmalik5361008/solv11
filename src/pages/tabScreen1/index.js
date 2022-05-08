@@ -1,7 +1,12 @@
 import React from "react";
 
 import { Tabs } from "antd";
-import { Hypothesis, CounterpartyRisk } from "./components";
+import {
+  Hypothesis,
+  CounterpartyRisk,
+  ScrSante,
+  ScrUcTrad,
+} from "./components";
 
 const { TabPane } = Tabs;
 
@@ -16,10 +21,10 @@ const TabScreen1 = () => {
           <CounterpartyRisk />
         </TabPane>
         <TabPane tab="SCR Sante_EN" key="3">
-          Content of SCR Sante_EN
+          <ScrSante />
         </TabPane>
         <TabPane tab="SCR UC/TG Pb Trad" key="4">
-          Content of SCR UC/TG Pb Trad
+          <ScrUcTrad />
         </TabPane>
       </Tabs>
     </div>

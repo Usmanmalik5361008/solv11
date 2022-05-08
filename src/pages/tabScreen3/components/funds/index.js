@@ -6,16 +6,16 @@ const Funds = () => {
     <div className="">
       <div className="custom-table-style-2-header">
         <div style={{ width: "50%" }}></div>
-        <div style={{ width: "12.5%" }}>
+        <div style={{ width: "12.5%" }} className="text-center">
           <h5>Tier1 lilimeite</h5>
         </div>
-        <div style={{ width: "12.5%" }}>
+        <div style={{ width: "12.5%" }} className="text-center">
           <h5>Tier 1 Limite</h5>
         </div>
-        <div style={{ width: "12.5%" }}>
+        <div style={{ width: "12.5%" }} className="text-center">
           <h5>Tier 2</h5>
         </div>
-        <div style={{ width: "12.5%" }}>
+        <div style={{ width: "12.5%" }} className="text-center">
           <h5>Tier 3</h5>
         </div>
       </div>

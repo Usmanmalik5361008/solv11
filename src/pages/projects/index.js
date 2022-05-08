@@ -11,6 +11,8 @@ import {
   PRODUCTION_CARD_IMAGE2,
   PRODUCTION_CARD_IMAGE3,
 } from "assets";
+import { productionListingTwo } from "constants/productionDataListings";
+import { complianceSettings } from "constants/productionDataListings";
 
 const { Panel } = Collapse;
 
@@ -29,19 +31,29 @@ const ProjectsPage = () => {
       <div className="card-view p-0">
         <TabsWithFilters tabs={tabs}>
           <Collapse expandIconPosition="right">
-            <Panel
+            {/* <Panel
               header={<h5 className="collapse-title">Production Data (02)</h5>}
             >
               <ProductionData productions={productionListingOne} />
-            </Panel>
+            </Panel> */}
             <Panel
-              header={<h5 className="collapse-title">Production Data (07)</h5>}
+              header={
+                <h5 className="collapse-title">
+                  Production Data ({productionListingTwo.length})
+                </h5>
+              }
             >
               <ProductionData productions={productionListingTwo} />
             </Panel>
             <Panel
-              header={<h5 className="collapse-title">Reportings (03)</h5>}
-            ></Panel>
+              header={
+                <h5 className="collapse-title">
+                  Compliance Settings ({complianceSettings.length})
+                </h5>
+              }
+            >
+              <ProductionData productions={complianceSettings} />
+            </Panel>
           </Collapse>
         </TabsWithFilters>
       </div>
@@ -77,66 +89,21 @@ const tabs = [
   },
 ];
 
-const productionListingOne = [
-  {
-    title: "Balance",
-    id: "9CI1KA2Y0Z-9CI0KA36C4",
-    bgColor: "#548AED",
-    imgSrc: PRODUCTION_CARD_IMAGE1,
-    variant: "colored",
-  },
-  {
-    title: "Claims",
-    id: "9CI1KA2Y0Z-9CI0KA36C6",
-    bgColor: "#F17141",
-    imgSrc: PRODUCTION_CARD_IMAGE2,
-    variant: "colored",
-  },
-];
-
-const productionListingTwo = [
-  {
-    title: "Yield Curves",
-    id: "9CI1KA2Y0Z-9CI0KA36C9",
-    imgSrc: PRODUCTION_CARD_IMAGE3,
-    variant: "bordered",
-  },
-  {
-    title: "Clark Davis",
-    id: "9CI1KA2Y0Z-9CI0KA36C1",
-    imgSrc: PRODUCTION_CARD_IMAGE3,
-    variant: "bordered",
-  },
-  {
-    title: "Clark Davis",
-    id: "9CI1KA2Y0Z-9CI0KA36C2",
-    imgSrc: PRODUCTION_CARD_IMAGE3,
-    variant: "bordered",
-  },
-  {
-    title: "Clark Davis",
-    id: "9CI1KA2Y0Z-9CI0KA36C5",
-    imgSrc: PRODUCTION_CARD_IMAGE3,
-    variant: "bordered",
-  },
-  {
-    title: "Clark Davis",
-    id: "9CI1KA2Y0Z-9CI0KA36C6",
-    imgSrc: PRODUCTION_CARD_IMAGE3,
-    variant: "bordered",
-  },
-  {
-    title: "Clark Davis",
-    id: "9CI1KA2Y0Z-9CI0KA36C401",
-    imgSrc: PRODUCTION_CARD_IMAGE3,
-    variant: "bordered",
-  },
-  {
-    id: "9CI1KA2Y0Z-9CI0KA36C4033",
-    title: "Clark Davis",
-    imgSrc: PRODUCTION_CARD_IMAGE3,
-    variant: "bordered",
-  },
-];
+// const productionListingOne = [
+//   {
+//     title: "Balance",
+//     id: "9CI1KA2Y0Z-9CI0KA36C4",
+//     bgColor: "#548AED",
+//     imgSrc: PRODUCTION_CARD_IMAGE1,
+//     variant: "colored",
+//   },
+//   {
+//     title: "Claims",
+//     id: "9CI1KA2Y0Z-9CI0KA36C6",
+//     bgColor: "#F17141",
+//     imgSrc: PRODUCTION_CARD_IMAGE2,
+//     variant: "colored",
+//   },
+// ];
 
 export default ProjectsPage;

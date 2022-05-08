@@ -4,6 +4,10 @@ import { subMenuIcon } from "assets";
 import { analyticsIcon } from "assets";
 import { ReportingIcon } from "assets";
 import { DashboardIcon, ProjectIcon, SimulationIcon } from "assets";
+import {
+  complianceSettings,
+  productionListingTwo,
+} from "./productionDataListings";
 
 const menuItems = [
   {
@@ -35,14 +39,28 @@ const menuItems = [
     name: "Production Data",
     icon: productionIcon,
     href: "/production-data",
-    subMenu: [],
+    subMenu: [
+      ...productionListingTwo.map(({ href, title }) => ({
+        key: href,
+        name: title,
+        icon: subMenuIcon,
+        href,
+      })),
+    ],
   },
   {
     key: "6",
-    name: "Analytics Parameters",
+    name: "Compliance Settings",
     icon: analyticsIcon,
-    href: "/analytics",
-    subMenu: [],
+    href: "/compliance-settings",
+    subMenu: [
+      ...complianceSettings.map(({ href, title }) => ({
+        key: href,
+        name: title,
+        icon: subMenuIcon,
+        href,
+      })),
+    ],
   },
   {
     key: "7",

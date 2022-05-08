@@ -5,11 +5,10 @@
 
 .main-layout {
   min-height: 100vh;
-  overflow-y: scroll;
 }
 .auth-layout {
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .page-layout {
@@ -66,7 +65,7 @@
 
 .header-content-container {
   padding: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   &:last-child {
     margin-bottom: 20px;

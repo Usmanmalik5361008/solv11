@@ -1,8 +1,22 @@
+// import { productionListingTwo } from "constants/productionDataListings";
 import {
   SigninPage,
   DashboardPage,
   ProjectsPage,
   ClaimsPage,
+  AssetsPage,
+  EquityPage,
+  BenifitsPage,
+  LiabilitiesPage,
+  ProductUCPage,
+  HealthPremiumsPage,
+  ProductSantePage,
+  FullRedemptionPage,
+  HypothesesShockPage,
+  AnnuitiesPage,
+  PartialRedemptionPage,
+  CorrelationMatrix1Page,
+  CorrelationMatrix2Page,
   TabScreen1,
   TabScreen2,
   TabScreen3,
@@ -36,6 +50,68 @@ const getRoutes = () => {
           title: "Projects",
           element: <ProjectsPage />,
           path: "projects",
+        },
+        {
+          title: "Production Data",
+          path: "production-data",
+          children: [
+            { path: "fond-propres", element: <AssetsPage /> },
+            { path: "actifs", element: <EquityPage /> },
+            {
+              path: "primes-sante-pb-trad",
+              element: <HealthPremiumsPage />,
+              title: "Primes (santé) Pb Trad",
+            },
+            {
+              path: "prestations-sante-pb-trad",
+              element: <BenifitsPage />,
+            },
+            {
+              path: "passif-uc-pb-trad",
+              element: <LiabilitiesPage />,
+            },
+            {
+              path: "produits-uc-pb-trad",
+              element: <ProductUCPage />,
+            },
+            {
+              path: "produits-sante-pb-trad",
+              element: <ProductSantePage />,
+            },
+            {
+              path: "rentes",
+              element: <AnnuitiesPage />,
+            },
+            {
+              path: "rachat-partiel",
+              element: <PartialRedemptionPage />,
+            },
+            {
+              path: "rachat-total",
+              element: <FullRedemptionPage />,
+            },
+          ],
+        },
+        {
+          title: "Compliance Settings",
+          path: "compliance-settings",
+          children: [
+            {
+              path: "hypothesis-de-choc",
+              element: <HypothesesShockPage />,
+              title: "Hypotheses (Shock)",
+            },
+            {
+              path: "matrice-correlation-1",
+              element: <CorrelationMatrix1Page />,
+              title: "Matrice correlation 1",
+            },
+            {
+              path: "matrice-correlation-2",
+              element: <CorrelationMatrix2Page />,
+              title: "Matrice correlation 2",
+            },
+          ],
         },
         {
           title: "Claims",
