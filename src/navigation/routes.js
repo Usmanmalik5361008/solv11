@@ -17,9 +17,8 @@ import {
   PartialRedemptionPage,
   CorrelationMatrix1Page,
   CorrelationMatrix2Page,
-  TabScreen1,
-  TabScreen2,
-  TabScreen3,
+  SCRPage,
+  ProfitabilityPage,
 } from "pages";
 import { AuthLayout, MainLayout } from "layouts";
 
@@ -39,10 +38,10 @@ const getRoutes = () => {
     {
       element: <MainLayout />,
       path: "/",
-      title: "home",
+      title: "Dashboard",
       children: [
         {
-          title: "Home",
+          title: "Dashboard",
           element: <DashboardPage />,
           index: true,
         },
@@ -55,8 +54,12 @@ const getRoutes = () => {
           title: "Production Data",
           path: "production-data",
           children: [
-            { path: "fond-propres", element: <AssetsPage /> },
-            { path: "actifs", element: <EquityPage /> },
+            {
+              path: "fond-propres",
+              element: <AssetsPage />,
+              title: "Fond Propres",
+            },
+            { path: "actifs", element: <EquityPage />, title: "Actifs" },
             {
               path: "primes-sante-pb-trad",
               element: <HealthPremiumsPage />,
@@ -65,30 +68,37 @@ const getRoutes = () => {
             {
               path: "prestations-sante-pb-trad",
               element: <BenifitsPage />,
+              title: "Prestations (santé) Pb Trad",
             },
             {
               path: "passif-uc-pb-trad",
               element: <LiabilitiesPage />,
+              title: "Passif UC Pb Trad",
             },
             {
               path: "produits-uc-pb-trad",
               element: <ProductUCPage />,
+              title: "Produits UC Pb Trad",
             },
             {
               path: "produits-sante-pb-trad",
               element: <ProductSantePage />,
+              title: "Produits Santé Pb Trad",
             },
             {
               path: "rentes",
               element: <AnnuitiesPage />,
+              title: "Rentes",
             },
             {
               path: "rachat-partiel",
               element: <PartialRedemptionPage />,
+              title: "Rachat Partiel",
             },
             {
               path: "rachat-total",
               element: <FullRedemptionPage />,
+              title: "Rachat Total",
             },
           ],
         },
@@ -119,19 +129,20 @@ const getRoutes = () => {
           path: "claims",
         },
         {
-          title: "Tab Screen 1",
-          element: <TabScreen1 />,
-          path: "screen1",
-        },
-        {
-          title: "Tab Screen 2",
-          element: <TabScreen2 />,
-          path: "screen2",
-        },
-        {
-          title: "Tab Screen 3",
-          element: <TabScreen3 />,
-          path: "screen3",
+          title: "Compliance Monitoring",
+          path: "compliance-monitoring",
+          children: [
+            {
+              title: "SCR",
+              element: <SCRPage />,
+              path: "scr",
+            },
+            {
+              title: "Profitability",
+              element: <ProfitabilityPage />,
+              path: "profitability",
+            },
+          ],
         },
       ],
     },

@@ -1,11 +1,16 @@
 import React from "react";
 
 import { Tabs } from "antd";
-import { ExternalFunds, Hypothesis, Contract } from "./components";
+import {
+  ExternalFunds,
+  Hypothesis,
+  Contract,
+  DedicatedFunds,
+} from "./components";
 
 const { TabPane } = Tabs;
 
-const TabScreen2 = () => {
+const ProfitabilityPage = () => {
   return (
     <div className="tab-screen-1-page">
       <Tabs defaultActiveKey="1" className="custom-tabs-wrapper">
@@ -13,7 +18,7 @@ const TabScreen2 = () => {
           <ExternalFunds />
         </TabPane>
         <TabPane tab="Contrat invested in dedicated founds" key="2">
-          Contrat invested in dedicated founds
+          <DedicatedFunds />
         </TabPane>
         <TabPane tab="Contrat a taux narantie FN" key="3">
           <Contract />
@@ -26,4 +31,4 @@ const TabScreen2 = () => {
   );
 };
 
-export default TabScreen2;
+export default ProfitabilityPage;

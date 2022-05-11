@@ -2,13 +2,19 @@
 
 import getRoutes from "navigation/routes";
 import { matchPath, useLocation } from "react-router-dom";
-
-const routes = [getRoutes().flatMap(({ path }) => path)];
+import { flattenRoutes } from "../utils";
 
 const usePathPattern = () => {
-  const { pathname } = useLocation();
+  const allRoutes = getRoutes();
 
-  return matchPath(pathname, routes)?.path;
+  const location = useLocation();
+
+  const allFlattenRoutes = flattenRoutes(allRoutes);
+
+  const matchedRoute = allFlattenRoutes.find((route) => {
+    return matchPath({ path: route.path || "/" }, location.pathname) || false;
+  });
+  return matchedRoute;
 };
 
 export { usePathPattern };

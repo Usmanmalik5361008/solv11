@@ -10,7 +10,7 @@ import {
 
 const { TabPane } = Tabs;
 
-const TabScreen1 = () => {
+const SCRPage = () => {
   return (
     <div className="tab-screen-1-page">
       <Tabs defaultActiveKey="1" className="custom-tabs-wrapper">
@@ -31,4 +31,4 @@ const TabScreen1 = () => {
   );
 };
 
-export default TabScreen1;
+export default SCRPage;

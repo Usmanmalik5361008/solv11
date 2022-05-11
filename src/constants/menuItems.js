@@ -1,12 +1,7 @@
-import { productionIcon } from "assets";
-import { complianceIcon } from "assets";
-import { subMenuIcon } from "assets";
-import { analyticsIcon } from "assets";
-import { ReportingIcon } from "assets";
-import { DashboardIcon, ProjectIcon, SimulationIcon } from "assets";
+import { analyticsIcon, complianceIcon, DashboardIcon, productionIcon, ProjectIcon, SimulationIcon, subMenuIcon } from "assets";
 import {
   complianceSettings,
-  productionListingTwo,
+  productionListingTwo
 } from "./productionDataListings";
 
 const menuItems = [
@@ -28,12 +23,12 @@ const menuItems = [
     icon: SimulationIcon,
     href: "/claims",
   },
-  {
-    key: "4",
-    name: "Reportings",
-    icon: ReportingIcon,
-    href: "/reportings",
-  },
+  // {
+  //   key: "4",
+  //   name: "Reportings",
+  //   icon: ReportingIcon,
+  //   href: "/reportings",
+  // },
   {
     key: "5",
     name: "Production Data",
@@ -66,45 +61,21 @@ const menuItems = [
     key: "7",
     name: "Compliance Monitoring",
     icon: complianceIcon,
-    href: "/compliance",
+    href: "/compliance-monitoring",
     subMenu: [
       {
         key: "7-1",
-        name: "SCR",
-        href: "/compliance/scr",
+        name: "SCR-Calcul reglementaire",
+        href: "/compliance-monitoring/scr",
         icon: subMenuIcon,
       },
       {
         key: "7-2",
-        name: "MCR",
-        href: "/compliance/mcr",
-        icon: subMenuIcon,
-      },
-      {
-        key: "7-3",
-        name: "SCR Brut",
-        href: "/compliance/scr-brut",
+        name: "Profitabilite (Tests Solvabilite)",
+        href: "/compliance-monitoring/profitability",
         icon: subMenuIcon,
       },
     ],
-  },
-  {
-    key: "8",
-    name: "Screen 1",
-    icon: <></>,
-    href: "/screen1",
-  },
-  {
-    key: "9",
-    name: "Screen 2",
-    icon: <></>,
-    href: "/screen2",
-  },
-  {
-    key: "10",
-    name: "Screen 3",
-    icon: <></>,
-    href: "/screen3",
   },
 ];
 

@@ -15,6 +15,5 @@ export { default as CorrelationMatrix2Page } from "./complianceSettings/correlat
 export { default as DashboardPage } from "./dashboard";
 export { default as ProjectsPage } from "./projects";
 export { default as ClaimsPage } from "./claims";
-export { default as TabScreen1 } from "./tabScreen1";
-export { default as TabScreen2 } from "./tabScreen2";
-export { default as TabScreen3 } from "./tabScreen3";
+export { default as SCRPage } from "./complianceMonitoring/SCR";
+export { default as ProfitabilityPage } from "./complianceMonitoring/Profitability";

@@ -1,23 +1,16 @@
 import { Avatar, Dropdown, Menu } from "antd";
 import {
   COMMENT_ICON,
-  DOWN_ARROW_WHITE, INFORMATION_ICON,
+  DOWN_ARROW_WHITE,
+  INFORMATION_ICON,
   SETTINGS_ICON
 } from "assets";
-// import { usePathPattern } from "hooks";
+import { usePathPattern } from "hooks";
 import React from "react";
 import Breadcrums from "../breadcrums";
 
 const PageHeader = () => {
-  // const activePath = usePathPattern();
-
-  // console.log("activePath", activePath);
-
-  // const routes = [
-  //   getRoutes().flatMap(({ path, children }) => [path, ...children]),
-  // ];
-
-  // console.log("routes", routes);
+  const activePath = usePathPattern();
 
   const userMenu = (
     <Menu>
@@ -28,7 +21,7 @@ const PageHeader = () => {
   return (
     <header className="page-header">
       <div className="upper-section">
-        <h3 className="font-Engschrift-Caps">DASHBOARD</h3>
+        <h3 className="font-Engschrift-Caps uppercase">{activePath?.title || ""}</h3>
         <div className="actions">
           <img src={INFORMATION_ICON} alt="" />
           <img src={COMMENT_ICON} alt="" />

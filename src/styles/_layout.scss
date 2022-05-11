@@ -44,7 +44,8 @@
     }
 
     svg {
-      path {
+      path,
+      rect {
         fill: #109ce7 !important;
       }
     }
@@ -126,6 +127,10 @@
 
     p {
       margin-bottom: 0;
+    }
+
+    .ant-breadcrumb-separator {
+      color: #acb5c5;
     }
 
     .ant-breadcrumb a {
