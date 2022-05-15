@@ -1,4 +1,5 @@
 import { Divider } from "antd";
+import { ConfirmationBox } from "globalComponents";
 import React from "react";
 
 const CorrelationMatrix1Page = () => {
@@ -201,6 +202,8 @@ const CorrelationMatrix1Page = () => {
           </tbody>
         </table>
       </div>
+      <br />
+      <ConfirmationBox />
     </div>
   );
 };

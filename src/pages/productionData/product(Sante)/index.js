@@ -1,3 +1,4 @@
+import { ConfirmationBox } from "globalComponents";
 import React from "react";
 
 const ProductSantePage = () => {
@@ -50,6 +51,8 @@ const ProductSantePage = () => {
           </tbody>
         </table>
       </div>
+      <br />
+      <ConfirmationBox />
     </div>
   );
 };

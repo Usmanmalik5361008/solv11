@@ -1,4 +1,5 @@
 import { Col, Row } from "antd";
+import { ConfirmationBox } from "globalComponents";
 import { Button } from "globalComponents";
 import React from "react";
 
@@ -122,10 +123,12 @@ const ProductUCPage = () => {
         </Col>
       </Row>
       <div className="mt-5 d-flex flex-row-reverse" style={{ gap: 20 }}>
-        <Button type="primary" title="Ajouter Produit" />        
+        <Button type="primary" title="Ajouter Produit" />
         <Button type="default" title="Suprimer Produit" />
         <Button type="default" title="Modifier Produit" />
       </div>
+      <br />
+      <ConfirmationBox />
     </div>
   );
 };

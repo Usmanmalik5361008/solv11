@@ -1,3 +1,4 @@
+import { ConfirmationBox } from "globalComponents";
 import React from "react";
 
 const PartialRedemptionPage = () => {
@@ -37,6 +38,8 @@ const PartialRedemptionPage = () => {
           </tbody>
         </table>
       </div>
+      <br />
+      <ConfirmationBox />
     </div>
   );
 };

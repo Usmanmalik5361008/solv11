@@ -1,4 +1,5 @@
 import { Col, Row } from "antd";
+import { ConfirmationBox } from "globalComponents";
 import { PillButton } from "globalComponents";
 import React from "react";
 
@@ -130,6 +131,8 @@ const HealthPremiumsPage = () => {
           </div>
         </Col>
       </Row>
+      <br />
+      <ConfirmationBox />
     </div>
   );
 };

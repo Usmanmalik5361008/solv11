@@ -1,4 +1,5 @@
 import { Col, Row } from "antd";
+import { ConfirmationBox } from "globalComponents";
 import React from "react";
 
 const AnnuitiesPage = () => {
@@ -163,6 +164,8 @@ const AnnuitiesPage = () => {
           </div>
         </Col>
       </Row>
+      <br />
+      <ConfirmationBox />
     </div>
   );
 };

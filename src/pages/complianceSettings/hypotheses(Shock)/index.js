@@ -1,4 +1,5 @@
 import { Col, Divider, Row, Grid } from "antd";
+import { ConfirmationBox } from "globalComponents";
 
 const { useBreakpoint } = Grid;
 
@@ -294,6 +295,8 @@ const HypothesesShockPage = () => {
           </Row>
         </Col>
       </Row>
+      <br />
+      <ConfirmationBox />
     </div>
   );
 };
