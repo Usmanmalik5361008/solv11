@@ -26,6 +26,12 @@
   "add-filters": "Add Filters",
   "search": "Search",
 
+  "all": "All",
+  "production-all": "Production All",
+  "parameters": "Parameters",
+  "simulations": "Simulations",
+  "reporting": "Reporting",
+
   "projects": {
     "title": "Projects"
   },

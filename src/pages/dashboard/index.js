@@ -12,9 +12,9 @@ const DashboardPage = () => {
     "Lorem Ipsum is dummy text of the printing typesetting industry. the printing typesetting ind Lorem Ipsum has been the industry's standard dummy galley of type and scrambled."
 
   const tabs = [
-    { id: 0, title: t('all-projects') },
-    { id: 1, title: t('completed') },
-    { id: 2, title: t('pending') },
+    { id: 0, title: 'all-projects' },
+    { id: 1, title: 'completed' },
+    { id: 2, title: 'pending' },
   ]
 
   return (

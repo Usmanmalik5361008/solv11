@@ -13,16 +13,18 @@ import {
 } from "assets";
 import { productionListingTwo } from "constants/productionDataListings";
 import { complianceSettings } from "constants/productionDataListings";
+import { useTranslation } from "react-i18next";
 
 const { Panel } = Collapse;
 
 const ProjectsPage = () => {
+  const { t } = useTranslation()
   return (
     <div className="projects-page">
       <div className="card-view">
         <div className="top-section">
-          <PillButton title="Refresh" prependIcon={REFRESH_ICON} />
-          <PillButton title="Download" prependIcon={DOWNLOAD_ICON} />
+          <PillButton title={t("refresh")} prependIcon={REFRESH_ICON} />
+          <PillButton title={t("download")} prependIcon={DOWNLOAD_ICON} />
         </div>
         <div className="card-body">
           <Alert message={infoText} type="info" showIcon />
@@ -39,7 +41,7 @@ const ProjectsPage = () => {
             <Panel
               header={
                 <h5 className="collapse-title">
-                  Production Data ({productionListingTwo.length})
+                  {t('production-data.title')} ({productionListingTwo.length})
                 </h5>
               }
             >
@@ -48,7 +50,7 @@ const ProjectsPage = () => {
             <Panel
               header={
                 <h5 className="collapse-title">
-                  Compliance Settings ({complianceSettings.length})
+                  {t("compliance-settings.title")} ({complianceSettings.length})
                 </h5>
               }
             >
@@ -68,23 +70,23 @@ const infoText =
 
 const tabs = [
   {
-    title: "All",
+    title: "all",
     id: 0,
   },
   {
-    title: "Production All",
+    title: "production-all",
     id: 1,
   },
   {
-    title: "Paramters",
+    title: "paramters",
     id: 2,
   },
   {
-    title: "Simulations",
+    title: "simulations",
     id: 3,
   },
   {
-    title: "Reporting",
+    title: "reporting",
     id: 4,
   },
 ];

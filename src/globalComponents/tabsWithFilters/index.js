@@ -25,7 +25,7 @@ const TabsWithFilters = ({ tabs = [], children }) => {
               className={selectedTab.id === id ? 'selected' : ''}
               onClick={() => handleTabSelection(tabs[index])}
             >
-              {title}
+              {t(title)}
             </span>
           ))}
         </div>

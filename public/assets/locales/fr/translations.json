@@ -21,6 +21,12 @@
   "add-filters": "Ajouter des filtres",
   "search": "Recherche",
 
+  "all": "Tout",
+  "production-all": "Fabrication Tout",
+  "parameters": "Paramètres",
+  "simulations": "Simulateurs",
+  "reporting": "Rapports",
+
   "dashboard": {
     "title": "Tableau de bord",
     "analytics": "Analyse de solvabilité"
