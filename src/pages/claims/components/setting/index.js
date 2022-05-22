@@ -13,8 +13,12 @@ import { PillButton } from "globalComponents";
 import { InfoCircleOutlined } from "@ant-design/icons";
 import React from "react";
 import "./index.scss";
+import { useTranslation } from "react-i18next";
 
 const Setting = () => {
+
+  const { t } = useTranslation()
+
   return (
     <div className="settings-wrapper">
       <div className="configuration">
@@ -51,27 +55,27 @@ const Setting = () => {
       <div className="configuration-bottom-bar">
         <div className="required-wrapper">
           <input type={"checkbox"} />
-          <label>{"Required?"}</label>
+          <label>{t("required")}?</label>
         </div>
         <div className="title-wrapper">
           <BottomBarTitle
-            title={"Parameter Name"}
+            title={t("parameter-name")}
             tooltipTitle={"This is a Parameter name tooltip"}
           />
           <BottomBarTitle
-            title={"Display Name"}
+            title={t("display-name")}
             tooltipTitle={"This is a Display name tooltip"}
           />
           <BottomBarTitle
-            title={"Parameter type"}
+            title={t("parameter-type")}
             tooltipTitle={"This is a Parameter type tooltip"}
           />
           <BottomBarTitle
-            title={"Global"}
+            title={t("global")}
             tooltipTitle={"This is a Global tooltip"}
           />
           <BottomBarTitle
-            title={"Explanation"}
+            title={t("explanation")}
             tooltipTitle={"This is an Explanation tooltip"}
           />
         </div>

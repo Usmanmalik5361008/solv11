@@ -7,6 +7,8 @@
   "new-projects": "De nouveaux projets",
   "reports": "Rapports",
   "settings": "Réglages",
+  "advanced-settings": "Réglages avancés",
+  "style": "Style",
 
   "all-projects": "Tous les projets",
   "completed": "Terminé",
@@ -27,16 +29,32 @@
   "simulations": "Simulateurs",
   "reporting": "Rapports",
 
+  "help": "Aider",
+  "done-editing": "Finis d'éditer",
+
+  "required":"Obligatoire",
+
+  "parameter-name": "Le nom du paramètre",
+  "parameter-type": "Type de paramètre",
+  "global": "Global",
+  "explanation": "Explication",
+
   "dashboard": {
     "title": "Tableau de bord",
     "analytics": "Analyse de solvabilité"
   },
+
   "projects": {
     "title": "Projets"
   },
+
   "claims": {
-    "title": "Réclamations"
+    "title": "Réclamations",
+    "info-1":"Vous pouvez utiliser des paramètres dans les étapes de requête de texte et d'analyse en plaçant le nom du paramètre entre accolades, comme",
+    "info-2":"Quelle que soit la valeur que vous définissez ici, elle sera remplacée dans les étapes ci-dessous qui utilisent ce paramètre",
+    "info-variable":"leNomDuParamètre"
   },
+
   "production-data": {
     "title": "Données de production",
     "list-item-1": "Fond Propres",
@@ -50,16 +68,19 @@
     "list-item-9": "Rachat partiel",
     "list-item-10": "Rachat total"
   },
+
   "compliance-settings": {
     "title": "Paramètres de conformité",
     "list-item-1": "Hypothesis de choc",
     "list-item-2": "Matrice correlation 1",
     "list-item-3": "Matrice correlation 2"
   },
+
   "compliance-monitoring": {
     "title": "Surveillance de la conformité",
     "list-item-1": "SCR-Calcul reglementaire",
     "list-item-2": "Profitabilite (Tests Solvabilite)"
   },
+
   "itsWorking": "ça marche"
 }

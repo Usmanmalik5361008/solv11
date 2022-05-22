@@ -1,17 +1,17 @@
-import React from "react";
-import "./index.scss";
+import React from 'react'
+import { useTranslation } from 'react-i18next'
+import './index.scss'
 
 const Option = ({ id, title, icon, onClick, isActive }) => {
-  const handleClick = () => onClick(id);
+  const { t } = useTranslation()
+
+  const handleClick = () => onClick(id)
 
   return (
-    <div
-      className={`claim-option ${isActive ? "active" : ""}`}
-      onClick={handleClick}
-    >
-      {icon} <p>{title}</p>
+    <div className={`claim-option ${isActive ? 'active' : ''}`} onClick={handleClick}>
+      {icon} <p>{t(title)}</p>
     </div>
-  );
-};
+  )
+}
 
-export default Option;
+export default Option

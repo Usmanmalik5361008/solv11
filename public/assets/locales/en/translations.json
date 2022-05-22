@@ -7,6 +7,8 @@
   "new-projects": "New Projects",
   "reports": "Reports",
   "settings": "Settings",
+  "advanced-settings": "Advanced Settings",
+  "style": "Style",
 
   "all-projects": "All Projects",
   "completed": "Completed",
@@ -32,12 +34,27 @@
   "simulations": "Simulations",
   "reporting": "Reporting",
 
+  "help": "Help",
+  "done-editing": "Done Editing",
+
+  "required": "Required",
+
+  "parameter-name": "Parameter Name",
+  "parameter-type": "Parameter Type",
+  "global": "Global",
+  "explanation": "Explanaion",
+
   "projects": {
     "title": "Projects"
   },
+
   "claims": {
-    "title": "Claims"
+    "title": "Claims",
+    "info-1":"You can use parameters in text and analytics query steps by placing the parameter name in braces, like",
+    "info-2":"Whatever value you set here will be replaced in steps below which use that parameter",
+    "info-variable":"parameterName"
   },
+
   "production-data": {
     "title": "Production Data",
     "list-item-1": "Equity",
@@ -51,12 +68,14 @@
     "list-item-9": "Partial redemption",
     "list-item-10": "Total redemption"
   },
+
   "compliance-settings": {
     "title": "Compliance Settings",
     "list-item-1": "Shock hypothesis",
     "list-item-2": "Correlation matrix 1",
     "list-item-3": "Correlation matrix 2"
   },
+
   "compliance-monitoring": {
     "title": "Compliance Monitoring",
     "list-item-1": "SCR-Regulatory calculation",

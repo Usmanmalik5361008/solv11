@@ -52,7 +52,7 @@ const getRoutes = () => {
           path: 'projects',
         },
         {
-          title: t('production-data'),
+          title: t('production-data.title'),
           path: 'production-data',
           children: [
             {
@@ -104,7 +104,7 @@ const getRoutes = () => {
           ],
         },
         {
-          title: t('compliance-settings'),
+          title: t('compliance-settings.title'),
           path: 'compliance-settings',
           children: [
             {
@@ -125,12 +125,12 @@ const getRoutes = () => {
           ],
         },
         {
-          title: t('claims'),
+          title: t('claims.title'),
           element: <ClaimsPage />,
           path: 'claims',
         },
         {
-          title: t('compliance-monitoring'),
+          title: t('compliance-monitoring.title'),
           path: 'compliance-monitoring',
           children: [
             {
