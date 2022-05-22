@@ -1,4 +1,5 @@
 // import { productionListingTwo } from "constants/productionDataListings";
+import { t } from "i18next";
 import { AuthLayout, MainLayout } from "layouts";
 import {
   AnnuitiesPage,
@@ -19,7 +20,7 @@ import {
   ProfitabilityPage,
   ProjectsPage,
   SCRPage,
-  SigninPage,
+  SigninPage
 } from "pages";
 
 const getRoutes = () => {
@@ -41,7 +42,7 @@ const getRoutes = () => {
       title: "Dashboard",
       children: [
         {
-          title: "Dashboard",
+          title: `${t('dashboard.title')}`,
           element: <DashboardPage />,
           index: true,
         },

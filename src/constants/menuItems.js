@@ -7,19 +7,19 @@ import {
 const menuItems = [
   {
     key: "1",
-    name: "Dashboard",
+    name: 'dashboard.title',
     icon: DashboardIcon,
     href: "/",
   },
   {
     key: "2",
-    name: "Projects",
+    name: "projects.title",
     icon: ProjectIcon,
     href: "/projects",
   },
   {
     key: "3",
-    name: "Claims",
+    name: "claims.title",
     icon: SimulationIcon,
     href: "/claims",
   },
@@ -31,7 +31,7 @@ const menuItems = [
   // },
   {
     key: "5",
-    name: "Production Data",
+    name: "production-data.title",
     icon: productionIcon,
     href: "/production-data",
     subMenu: [
@@ -45,7 +45,7 @@ const menuItems = [
   },
   {
     key: "6",
-    name: "Compliance Settings",
+    name: "compliance-settings.title",
     icon: analyticsIcon,
     href: "/compliance-settings",
     subMenu: [
@@ -59,19 +59,19 @@ const menuItems = [
   },
   {
     key: "7",
-    name: "Compliance Monitoring",
+    name: "compliance-monitoring.title",
     icon: complianceIcon,
     href: "/compliance-monitoring",
     subMenu: [
       {
         key: "7-1",
-        name: "SCR-Calcul reglementaire",
+        name: "compliance-monitoring.list-item-1",
         href: "/compliance-monitoring/scr",
         icon: subMenuIcon,
       },
       {
         key: "7-2",
-        name: "Profitabilite (Tests Solvabilite)",
+        name: "compliance-monitoring.list-item-2",
         href: "/compliance-monitoring/profitability",
         icon: subMenuIcon,
       },

@@ -1,3 +1,59 @@
 {
+  "home": "Domicile",
+
+  "refresh": "Rafraîchir",
+  "download": "Télécharger",
+
+  "new-projects": "De nouveaux projets",
+  "reports": "Rapports",
+  "settings": "Réglages",
+
+  "all-projects": "Tous les projets",
+  "completed": "Terminé",
+  "pending": "En attente",
+  "approved": "A approuvé",
+
+  "display-name": "Afficher un nom",
+  "client-id": "ID de l'application (client)",
+  "created-on": "Créé sur",
+  "certificates-n-secrets": "Certificats et secrets",
+
+  "add-filters": "Ajouter des filtres",
+  "search": "Recherche",
+
+  "dashboard": {
+    "title": "Tableau de bord",
+    "analytics": "Analyse de solvabilité"
+  },
+  "projects": {
+    "title": "Projets"
+  },
+  "claims": {
+    "title": "Réclamations"
+  },
+  "production-data": {
+    "title": "Données de production",
+    "list-item-1": "Fond Propres",
+    "list-item-2": "Actifs",
+    "list-item-3": "Primes (santé) Pb Trad",
+    "list-item-4": "Prestations (santé) Pb Trad",
+    "list-item-5": "Passif (UC) Pb Trad",
+    "list-item-6": "Produits (UC) Pb Trad",
+    "list-item-7": "Produits (santé) Pb Trad",
+    "list-item-8": "Annuities",
+    "list-item-9": "Rachat partiel",
+    "list-item-10": "Rachat total"
+  },
+  "compliance-settings": {
+    "title": "Paramètres de conformité",
+    "list-item-1": "Hypothesis de choc",
+    "list-item-2": "Matrice correlation 1",
+    "list-item-3": "Matrice correlation 2"
+  },
+  "compliance-monitoring": {
+    "title": "Surveillance de la conformité",
+    "list-item-1": "SCR-Calcul reglementaire",
+    "list-item-2": "Profitabilite (Tests Solvabilite)"
+  },
   "itsWorking": "ça marche"
 }

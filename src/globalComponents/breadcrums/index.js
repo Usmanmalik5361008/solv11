@@ -1,4 +1,5 @@
 import { Breadcrumb } from "antd";
+import { t } from "i18next";
 import getRoutes from "navigation/routes";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -27,7 +28,7 @@ const Breadcrums = () => {
 
   const breadcrumbItems = [
     <Breadcrumb.Item key="home">
-      <Link to="/">Home</Link>
+      <Link to="/">{t('home')}</Link>
     </Breadcrumb.Item>,
   ].concat(extraBreadcrumbItems);
 

@@ -1,3 +1,61 @@
 {
+  "home": "Home",
+
+  "refresh": "Refresh",
+  "download": "Download",
+
+  "new-projects": "New Projects",
+  "reports": "Reports",
+  "settings": "Settings",
+
+  "all-projects": "All Projects",
+  "completed": "Completed",
+  "pending": "Pending",
+  "approved": "Approved",
+
+  "display-name": "Display Name",
+  "client-id": "Application (Client) ID",
+  "created-on": "Created On",
+  "certificates-n-secrets": "Certificates & Secrets",
+
+  "dashboard": {
+    "title": "Dashboard",
+    "analytics": "Solvency Analytics"
+  },
+
+  "add-filters": "Add Filters",
+  "search": "Search",
+
+  "projects": {
+    "title": "Projects"
+  },
+  "claims": {
+    "title": "Claims"
+  },
+  "production-data": {
+    "title": "Production Data",
+    "list-item-1": "Equity",
+    "list-item-2": "Assets",
+    "list-item-3": "Premiums (health) Pb Trad",
+    "list-item-4": "Benefits (health) Pb Trad",
+    "list-item-5": "Liabilities (UC) Pb Trad",
+    "list-item-6": "Products (UC) Pb Trad",
+    "list-item-7": "Products (health) Pb Trad",
+    "list-item-8": "Annuities",
+    "list-item-9": "Partial redemption",
+    "list-item-10": "Total redemption"
+  },
+  "compliance-settings": {
+    "title": "Compliance Settings",
+    "list-item-1": "Shock hypothesis",
+    "list-item-2": "Correlation matrix 1",
+    "list-item-3": "Correlation matrix 2"
+  },
+  "compliance-monitoring": {
+    "title": "Compliance Monitoring",
+    "list-item-1": "SCR-Regulatory calculation",
+    "list-item-2": "Profitability (Solvency Tests)"
+  },
+
   "itsWorking": "It's working"
 }

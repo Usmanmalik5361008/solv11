@@ -8,12 +8,14 @@ import {
 import { usePathPattern } from "hooks";
 import i18next from "i18next";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Breadcrums from "../breadcrums";
 
 const { Option } = Select;
 
 const PageHeader = () => {
   const activePath = usePathPattern();
+  const { t } = useTranslation();
 
   const userMenu = (
     <Menu>
@@ -25,6 +27,7 @@ const PageHeader = () => {
     // change language with i18next
     i18next.changeLanguage(value);
   };
+
 
   return (
     <header className="page-header">
@@ -55,7 +58,7 @@ const PageHeader = () => {
       </div>
       <div className="bottom-section">
         <h2 className="font-Engschrift-Caps">SOLV11</h2>
-        <p>Solvency Analytics</p>
+        <p>{t('dashboard.analytics')}</p>
         <Breadcrums />
       </div>
     </header>
