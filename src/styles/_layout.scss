@@ -93,6 +93,12 @@
       gap: 20px;
       align-items: center;
 
+      .language-select {
+        span {
+          color: #fff;
+        }
+      }
+
       span {
         cursor: pointer;
         user-select: none;

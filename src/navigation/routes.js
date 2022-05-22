@@ -1,26 +1,26 @@
 // import { productionListingTwo } from "constants/productionDataListings";
+import { AuthLayout, MainLayout } from "layouts";
 import {
-  SigninPage,
-  DashboardPage,
-  ProjectsPage,
-  ClaimsPage,
-  AssetsPage,
-  EquityPage,
-  BenifitsPage,
-  LiabilitiesPage,
-  ProductUCPage,
-  HealthPremiumsPage,
-  ProductSantePage,
-  FullRedemptionPage,
-  HypothesesShockPage,
   AnnuitiesPage,
-  PartialRedemptionPage,
+  AssetsPage,
+  BenifitsPage,
+  ClaimsPage,
   CorrelationMatrix1Page,
   CorrelationMatrix2Page,
-  SCRPage,
+  DashboardPage,
+  EquityPage,
+  FullRedemptionPage,
+  HealthPremiumsPage,
+  HypothesesShockPage,
+  LiabilitiesPage,
+  PartialRedemptionPage,
+  ProductSantePage,
+  ProductUCPage,
   ProfitabilityPage,
+  ProjectsPage,
+  SCRPage,
+  SigninPage,
 } from "pages";
-import { AuthLayout, MainLayout } from "layouts";
 
 const getRoutes = () => {
   return [

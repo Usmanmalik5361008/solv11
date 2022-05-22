@@ -1,16 +1,12 @@
-import React from "react";
-import { PillButton, TabsWithFilters } from "globalComponents";
-import "./index.scss";
-import {
-  REFRESH_ICON,
-  PLUS_ICON,
-  DOWNLOAD_ICON,
-  SETTINGS_LARGE_ICON,
-  FILE_ICON,
-} from "assets";
-
 import { Alert } from "antd";
+import {
+  DOWNLOAD_ICON, FILE_ICON, PLUS_ICON, REFRESH_ICON, SETTINGS_LARGE_ICON
+} from "assets";
+import { PillButton, TabsWithFilters } from "globalComponents";
+import React from "react";
 import { OptionCard, ProjectTable } from "./components";
+import "./index.scss";
+
 
 const DashboardPage = () => {
   const infoText =
@@ -27,6 +23,7 @@ const DashboardPage = () => {
       <div className="card-view">
         <div className="d-flex justify-space-between">
           <h3>Projects</h3>
+
           <div className="actions">
             <div className="action-buttons">
               <PillButton title="Refresh" prependIcon={REFRESH_ICON} />

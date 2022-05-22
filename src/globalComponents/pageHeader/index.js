@@ -1,4 +1,4 @@
-import { Avatar, Dropdown, Menu } from "antd";
+import { Avatar, Dropdown, Menu, Select } from "antd";
 import {
   COMMENT_ICON,
   DOWN_ARROW_WHITE,
@@ -6,8 +6,11 @@ import {
   SETTINGS_ICON
 } from "assets";
 import { usePathPattern } from "hooks";
+import i18next from "i18next";
 import React from "react";
 import Breadcrums from "../breadcrums";
+
+const { Option } = Select;
 
 const PageHeader = () => {
   const activePath = usePathPattern();
@@ -18,11 +21,27 @@ const PageHeader = () => {
     </Menu>
   );
 
+  const handleLanguageChange = (value) => {
+    // change language with i18next
+    i18next.changeLanguage(value);
+  };
+
   return (
     <header className="page-header">
       <div className="upper-section">
-        <h3 className="font-Engschrift-Caps uppercase">{activePath?.title || ""}</h3>
+        <h3 className="font-Engschrift-Caps uppercase">
+          {activePath?.title || ""}
+        </h3>
         <div className="actions">
+          <Select
+            defaultValue="en"
+            className="language-select"
+            bordered={false}
+            onChange={handleLanguageChange}
+          >
+            <Option value="en">English</Option>
+            <Option value="fr">French</Option>
+          </Select>
           <img src={INFORMATION_ICON} alt="" />
           <img src={COMMENT_ICON} alt="" />
           <img src={SETTINGS_ICON} alt="" />
