@@ -1,8 +1,10 @@
 import { Divider } from "antd";
 import { ConfirmationBox } from "globalComponents";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const CorrelationMatrix1Page = () => {
+  const { t } = useTranslation()
   return (
     <div className="card-view card-padding">
       <div className="custom-table-style-2-wrapper">
@@ -10,16 +12,28 @@ const CorrelationMatrix1Page = () => {
           <thead>
             <tr>
               <th>BSCR</th>
-              <th>Interest</th>
-              <th>Equity</th>
-              <th>Property</th>
-              <th>Spread</th>
-              <th>Currency</th>
+              <th>
+                
+              </th>
+              <th>
+                {t('compliance-settings.cm.equity')}
+              </th>
+              <th>
+                {t('compliance-settings.cm.property')}
+              </th>
+              <th>
+                {t('compliance-settings.cm.spread')}
+              </th>
+              <th>
+                {t('compliance-settings.cm.currency')}
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="grey-text">Interest</td>
+              <td className="grey-text">
+                {t('compliance-settings.cm.interest')}
+              </td>
               <td>
                 <input />
               </td>
@@ -37,7 +51,9 @@ const CorrelationMatrix1Page = () => {
               </td>
             </tr>
             <tr>
-              <td className="grey-text">Equity</td>
+              <td className="grey-text">
+                {t('compliance-settings.cm.interest')}
+              </td>
               <td>
                 <input />
               </td>
@@ -56,7 +72,9 @@ const CorrelationMatrix1Page = () => {
               </td>
             </tr>
             <tr>
-              <td className="grey-text">Property</td>
+              <td className="grey-text">
+                {t('compliance-settings.cm.property')}
+              </td>
               <td>
                 <input />
               </td>
@@ -75,7 +93,9 @@ const CorrelationMatrix1Page = () => {
               </td>
             </tr>
             <tr>
-              <td className="grey-text">Currency</td>
+              <td className="grey-text">
+                {t('compliance-settings.cm.currency')}
+              </td>
 
               <td>
                 <input />
@@ -101,14 +121,16 @@ const CorrelationMatrix1Page = () => {
         <table>
           <thead>
             <tr>
-              <th>Counterpart</th>
-              <th>Type 1</th>
-              <th>Type 2</th>
+              <th>
+                {t('compliance-settings.cm.counterpart')}
+              </th>
+              <th>{t('compliance-settings.cm.type')} 1</th>
+              <th>{t('compliance-settings.cm.type')} 2</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="grey-text">Type 1</td>
+              <td className="grey-text">{t('compliance-settings.cm.type')} 1</td>
               <td>
                 <input />
               </td>
@@ -117,7 +139,7 @@ const CorrelationMatrix1Page = () => {
               </td>
             </tr>
             <tr>
-              <td className="grey-text">Type 2</td>
+              <td className="grey-text">{t('compliance-settings.cm.type')} 2</td>
               <td>
                 <input />
               </td>
@@ -136,7 +158,7 @@ const CorrelationMatrix1Page = () => {
               <th>HNL</th>
               <th>Med Exp</th>
               <th>Inc Portec</th>
-              <th>Work Comp</th>
+              <th>{t('compliance-settings.cm.work')} Comp</th>
               <th>Non Prop</th>
             </tr>
           </thead>
@@ -173,7 +195,7 @@ const CorrelationMatrix1Page = () => {
             </tr>
 
             <tr>
-              <td className="grey-text">Work Comp</td>
+              <td className="grey-text">{t('compliance-settings.cm.work')} Comp</td>
               <td>
                 <input />
               </td>

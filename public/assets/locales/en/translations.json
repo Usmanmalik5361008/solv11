@@ -73,7 +73,56 @@
     "title": "Compliance Settings",
     "list-item-1": "Shock hypothesis",
     "list-item-2": "Correlation matrix 1",
-    "list-item-3": "Correlation matrix 2"
+    "list-item-3": "Correlation matrix 2",
+
+    "shock-hyp-tab": {
+      "redemption-up": "Redemption up",
+      "redemption-down": "Redemption down",
+      "massive-takeover": "Massive Takeover",
+      "expenses": "Expenses",
+      "disaster": "Disaster",
+      "inflation": "Inflation",
+      "liquid": "Liquid",
+      "non-retail-red": "Non-retail redemption",
+      "longevity"   : "Longevity",
+      "inability"  : "Inability",
+      "revision" : "Revision",
+      "currency-up": "Currency up",
+      "currency-down": "Currency down",
+      "action"  : "Action",
+      "spread"  : "Spread",
+      "lower": "Lower",
+      "unrated" : "Unrated",
+      "Immobilier": "Real estate",
+      "shock-correlation":"Shock Correlation A",
+      "no-rating":"No Rating"
+    },
+    
+    "cm":{
+      "equity": "Equity",
+      "global":"Global",
+      "other":"Other",
+
+      "interest":"Interest",
+      "property":"Property",
+      "spread":"Spread",
+      "currency":"Currency",
+      "concentrate":"Concentrate",
+      "countercycling":"Countercycling",
+
+      "life":"Life",
+      "mortality":"Mortality",
+      "longevity":"Longevity",
+      "disability":"Disability",
+      "lapse":"Lapse",
+      "expenses":"Expenses",
+      "revision":"Revision",
+      "cat":"Cat",
+
+      "counterpart":"Counterpart",
+      "type":"Type",
+      "work":"Work"
+    }
   },
 
   "compliance-monitoring": {

@@ -73,7 +73,57 @@
     "title": "Paramètres de conformité",
     "list-item-1": "Hypothesis de choc",
     "list-item-2": "Matrice correlation 1",
-    "list-item-3": "Matrice correlation 2"
+    "list-item-3": "Matrice correlation 2",
+
+    "shock-hyp-tab": {
+      "redemption-up": "Rachat up",
+      "redemption-down": "Rachat down",
+      "massive-takeover": "Rachat Massif",
+      "expenses": "Depenses",
+      "disaster": "Catastrophe",
+      "inflation": "Inflation",
+      "liquid": "Illiquidité",
+      "non-retail-red": "Rachat non-retail",
+      "longevity"   : "Longevité",
+      "inability"  : "Incapacité",
+      "revision" : "Révision",
+      "currency-up": "Devise up",
+      "currency-down": "Devise down",
+      "action"  : "Action",
+      "spread"  : "Spread",
+      "lower": "Bas",
+      "unrated" : "Non évalué",
+      "Immobilier": "Immobilier",
+      "shock-correlation":"Corrélation de choc A",
+      "no-rating":"Non évalué"
+    },
+
+    "cm":{
+      "equity": "Équité",
+      "global":"Mondial",
+      "other":"Autre",
+
+      "interest":"L'intérêt",
+      "property":"Bien",
+      "spread":"Spread",
+      "currency":"Devise",
+      "concentrate":"Concentrati",
+      "countercycling":"Countercycli",
+
+      "life":"Vie",
+      "mortality":"Mortalité",
+      "longevity":"Longevité",
+      "disability":"Incapacité",
+      "lapse":"Lapse",
+      "expenses":"Dépenses",
+      "revision":"Révision",
+      "cat":"Cat",
+
+      "counterpart":"Homologue",
+      "type":"Taper",
+      "work":"Travail"
+    
+    }
   },
 
   "compliance-monitoring": {
