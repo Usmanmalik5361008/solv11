@@ -1,18 +1,26 @@
 import { Col, Row } from "antd";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const CounterpartyRisk = () => {
+  const {t} = useTranslation();
   return (
     <div>
-      <h5 className="small-heading">Type 1</h5>
+      <h5 className="small-heading">{t("compliance-monitoring.counterparty-risk-tab.title-1")}</h5>
       <div className="custom-table-style-2-wrapper">
         <table>
           <thead>
             <tr>
               <th style={{ width: "5%" }}></th>
-              <th>Counterparty</th>
-              <th>Risk</th>
-              <th>Risk</th>
+              <th>
+                {t("compliance-monitoring.counterparty-risk-tab.field-1")}
+              </th>
+              <th>
+                {t("compliance-monitoring.counterparty-risk-tab.field-2")}
+              </th>
+              <th>
+                {t("compliance-monitoring.counterparty-risk-tab.field-2")}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -25,13 +33,14 @@ const CounterpartyRisk = () => {
           </tbody>
         </table>
       </div>
-      <p className="small-heading mt-5">Type 2</p>
+      <p className="small-heading mt-5">
+        {t("compliance-monitoring.counterparty-risk-tab.title-2")}
+      </p>
       <Row gutter={[30, 30]}>
         <Col sm={24} md={12}>
           <div className="custom-form-field">
             <label>
-              Total Type 2 Exposures, excluding those overdue by more than 3
-              months_EN
+              {t("compliance-monitoring.counterparty-risk-tab.field-3")}
             </label>
             <input placeholder="180 880 488.00" className="text-right" />
           </div>
@@ -39,7 +48,7 @@ const CounterpartyRisk = () => {
         <Col sm={24} md={12}>
           <div className="custom-form-field">
             <label>
-              Total Type 2 Exposures over-due by more than 3 months_EN
+              {t("compliance-monitoring.counterparty-risk-tab.field-4")}
             </label>
             <input placeholder="180 880 488.00" className="text-right" />
           </div>

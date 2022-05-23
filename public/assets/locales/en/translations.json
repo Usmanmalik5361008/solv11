@@ -79,7 +79,197 @@
   "compliance-monitoring": {
     "title": "Compliance Monitoring",
     "list-item-1": "SCR-Regulatory calculation",
-    "list-item-2": "Profitability (Solvency Tests)"
+    "list-item-2": "Profitability (Solvency Tests)",
+
+    "hypothesis": "Hypothesis",
+    "counterparty-risk": "Counterparty Risk",
+    "scr-sante_en": "SCR Health_EN",
+    
+    "hypothesis-tab":{
+      "field-1": "Calculation Date",
+      "field-2": "Real Mortality",
+      "field-3": "Male Mortality Table",
+      "field-4": "Female Mortality Table_EN",
+      "field-5": "No. of Scenarios",
+      "field-6": "Projection Time",
+      "field-7": "No. of Rate Inflation_EN",
+      "field-8": "Tax rate_EN",
+      "field-9": "Costs relating to life insurance contracts linked_EN",
+      "field-10": "Gross earned premiums of unlinked life insurance_EN",
+      "field-10-placeholder": "Financial Year N",
+      "field-11": "Life Insurance Gross Premium",
+      "field-12": "Non Life Insurance Gross Premium"
+    },
+    "counterparty-risk-tab":{
+      "title-1":"Type 1",
+      "field-1": "Counterparty",
+      "field-2": "Risk",
+      
+      "title-2":"Type 2",
+      "field-3": "Total Type 2 Exposures, excluding those overdue by more than 3 months_EN",
+      "field-4": "Total Type 2 Exposures over-due by more than 3 months_EN"
+    },
+
+    "scr-health-tab": {
+      "field-1":"General costs relating to the health branch(Medical Expenses)",
+      "field-2": "General costs relating to the health branch(Income Protection)",
+      "field-3": "General costs relating to the health branch(Worker Compensation)",
+      "field-4": "General costs relating to the health branch(Non Proportional Reinsurance)",
+      "field-5": "Rate of revaluation of health contributions",
+      "field-6": "Rate of revaluation of health contributions",
+      "field-7": "Duration (in months) of termination",
+      "field-8": "Share of LOB Medical Expenses in the provision for benefits to be paid",
+      "field-9": "Share of LOB Income Expenses in the provision for benefits payable",
+      "field-10": "Share of LOB Work Compensation in the provision for benefits to be paid", 
+      "field-11": "Share of Non Proportional Expenses in the provision for benefits to be paid"
+    },
+
+    "scr-trad-tab":{
+      "field-1":"Fixed costs for UC",
+      "field-2":"Fixed costs for TG",
+      "field-3":"Percentage of PM from which there is a management action (ORSA)"
+    },
+
+    "contract-external":"Contract invested in external funds",
+    "contract-dedicated":"Contract invested in dedicated funds",
+    "fn-contract":"FN guaranteed rate contract",
+    
+    "contract-external-tab-1":{
+      "field-1":"Effective Date",
+      "field-2":"Gross Initial Premium",
+      "field-3":"Age at subscription",
+      "field-4":"Gender of the insured (m/f)_EN",
+      "field-5":"Contract duration",
+      "field-6":"Death Capital",
+      "field-7":"Percentage or Amount",
+      "field-8":"Calculation Basis",
+      "field-9":"Acquisition Fees",
+      "field-10":"Acquisition Commission",
+      "field-11":"Annual rate of administration costs on outstandings (revenue)_FR",
+      "field-12":"Annual brokerage commission (expense)_EN",
+      "field-13":"Annual rate of financial management fees (deducted from assets) EN",
+      "field-14":"Share Insurer_EN",
+      "field-15":"Return on assets per year (net of end management fees)_EN"
+    },
+
+    "contract-external-tab-2":{
+      
+      "title-1":"Brand",
+      "field-1":"Percentage",
+      "field-2":"Average coupon",
+      "field-3":"Average duration",
+      "field-4":"Average Rating",
+      
+      "title-2":"Actions et fonds Action:_EN",
+      
+      "title-3":"Cash",
+
+      "title-4":"Annual Managment Cost",
+      "field-5":"Year",
+      "field-6":"Year 2 and",
+
+      "title-5":"Managment fees of the assects (per contract)",
+      "field-7":"Management Cost of death",
+      "field-8":"Management Cost of surrender"
+    },
+
+    "contract-external-tab-generic":{
+      "field-1":"Year",
+      "field-2":"Criminal rate Racht",
+      "field-3":"Contracts sold per month"
+    },
+
+
+    "contract-dedicated-tab":{
+      "field-1":"Initial Gross Premium",
+      "field-2":"Insured's age (M/F)",
+      "field-3":"Duration of Contract (in years)",
+      "field-4":"Death benefit",
+      "field-5":"Calculation basis",
+      "field-6":"Acquisition Fees",
+      "field-7":"Acquisition Commission",
+      "field-8":"Actual mortality",
+      "dropdown-1":"Monthly",
+      "field-9":"Annual brokerage commission(expense)",
+      "field-10":"Annual rate of financial management fees (deducted from assets)",
+      "field-11":"Insurer share",
+      "field-12":"Return on assets per year (net of financial management fees",
+      "field-13":"Percentage or amount in case of increased cover",
+
+      "title-1":"Annual management cost per contract",
+      "field-14":"Year 1",
+      "field-15":"Year 2 and",
+      "field-16":"Financial management fees per contract",
+      "field-17":"Management cost per death claim",
+      "field-18":"Management cost per redemption"
+    },
+
+    
+    "unit-linked-policy": "Unit Linked Policy",
+    "dedicated-policy": "Dedicated Policy",
+
+    "fn-contract-tab":{
+
+      "field-1":"Calculation Date",
+      "field-2":"Product Code",
+      "field-3":"Policy Number",
+      "field-4":"Unit Code",
+      "field-5":"PAB",
+      "field-6":"Type Support_EN",
+      "field-7":"Unit Currency",
+      "field-8":"Death Guarantee",
+      "field-9":"Death Guarantee Ammo",
+
+      "field-10":"Date Calculator",
+      "field-11":"Rate Margin",
+      "field-12":"Date of birth",
+      "field-13":"Cost Management",
+      "field-14":"Product code",
+      "field-15":"to Margin Min",
+      "field-16":"TMG",
+      "field-17":"Redemption Cost",
+      "field-18":"Contract number",
+      "field-19":"Amount Margin",
+      "field-20":"Sex Assures",
+      "field-21":"Loss Cost",
+      "field-22":"Code support",
+      "field-23":"Comm Rate",
+      "field-24":"Date Term",
+      "field-25":"End Management Cost",
+      "field-26":"Type support",
+      "field-27":"Min Comm Rate",
+      "field-28":"Balance Esc Comm",
+      "field-29":"Percentage",
+      "field-30":"Devise Support",
+      "field-31":"Comm Amount",
+      "field-32":"Contract Effective Date",
+      "field-33":"Nb Contract",
+      "field-34":"Death guarantee",
+      "field-35":"Premium Per Year",
+      "field-36":"Exit in Annuity",
+      "field-37":"Amount Guarantee",
+      "field-38":"PM",
+      "field-39":"Tx Expenses Ges End",
+      "field-40":"Type of Annuity"
+    },
+
+    "hyp-tab":{
+      "field-1":"Mortality Table_EN",
+      "field-2":"Real Mortality (in % of the mortality table)",
+      "field-3":"Increase of the used mortality table",
+      "field-4":"Tax rate_EN",
+      "field-5":"Inflation rate by index year)EN",
+      "field-6":"Capital cost",
+      "field-7":"Return on Equity_EN",
+      "field-8":"Reinsurance cession rate_EN",
+      "field-9":"Development costs",
+      "field-10":"Amortization period",
+      "field-11":"Mortality table for Reinsurance_En",
+      "field-12":"Rating of",
+     
+      "field-1-dropdown-1":"Option"   
+    }
+    
   },
 
   "itsWorking": "It's working"

@@ -7,23 +7,25 @@ import {
   ScrSante,
   ScrUcTrad,
 } from "./components";
+import { useTranslation } from "react-i18next";
 
 const { TabPane } = Tabs;
 
 const SCRPage = () => {
+  const {t} = useTranslation()
   return (
     <div className="tab-screen-1-page">
       <Tabs defaultActiveKey="1" className="custom-tabs-wrapper">
-        <TabPane tab="Hypothesis" key="1">
+        <TabPane tab={t("compliance-monitoring.hypothesis")} key="1">
           <Hypothesis />
         </TabPane>
-        <TabPane tab="Counterparty Risk" key="2">
+        <TabPane tab={t("compliance-monitoring.counterparty-risk")} key="2">
           <CounterpartyRisk />
         </TabPane>
-        <TabPane tab="SCR Sante_EN" key="3">
+        <TabPane tab={t("compliance-monitoring.scr-sante_en")} key="3">
           <ScrSante />
         </TabPane>
-        <TabPane tab="SCR UC/TG Pb Trad" key="4">
+        <TabPane tab={"SCR UC/TG Pb Trad"} key="4">
           <ScrUcTrad />
         </TabPane>
       </Tabs>

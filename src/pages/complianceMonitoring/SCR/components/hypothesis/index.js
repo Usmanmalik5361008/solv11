@@ -1,10 +1,14 @@
 import { Row, Col, Divider, Grid } from "antd";
 import { ConfirmationBox } from "globalComponents";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const { useBreakpoint } = Grid;
 
 const Hypothesis = () => {
+
+  const {t} = useTranslation();
+
   const screens = useBreakpoint();
 
   return (
@@ -12,7 +16,7 @@ const Hypothesis = () => {
       <Row gutter={20}>
         <Col xs={12}>
           <div className="custom-form-field">
-            <label>Calculation Date</label>
+            <label>{t('compliance-monitoring.hypothesis-tab.field-1')}</label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -25,7 +29,7 @@ const Hypothesis = () => {
               <Row gutter={10}>
                 <Col md={24} lg={16}>
                   <div className="custom-form-field">
-                    <label>Real Mortality</label>
+                    <label>{t("compliance-monitoring.hypothesis-tab.field-2")}</label>
                     <div className="multiple-inputs-wrapper">
                       <input placeholder="30" />
                       <input placeholder="30" />
@@ -33,13 +37,13 @@ const Hypothesis = () => {
                     </div>
                   </div>
                   <div className="custom-form-field mt-3">
-                    <label>Table de Mortality Homme</label>
+                    <label>{t("compliance-monitoring.hypothesis-tab.field-3")}</label>
                     <select className="dropdown-style-2">
                       <option value="1">1</option>
                     </select>
                   </div>
                   <div className="custom-form-field mt-3">
-                    <label>Table de Mortality Femme_EN</label>
+                    <label>{t("compliance-monitoring.hypothesis-tab.field-4")}</label>
                     <select className="dropdown-style-2">
                       <option value="1">1</option>
                     </select>
@@ -48,15 +52,15 @@ const Hypothesis = () => {
                 {/* right side of first section */}
                 <Col md={24} lg={8}>
                   <div className="custom-form-field">
-                    <label>Nbr of Scenarios</label>
+                    <label>{t("compliance-monitoring.hypothesis-tab.field-5")}</label>
                     <input placeholder="30" />
                   </div>
                   <div className="custom-form-field mt-3">
-                    <label>Projection Time</label>
+                    <label>{t("compliance-monitoring.hypothesis-tab.field-6")}</label>
                     <input placeholder="30" />
                   </div>
                   <div className="custom-form-field mt-3">
-                    <label>NbrTaux Diniflation_EN</label>
+                    <label>{t("compliance-monitoring.hypothesis-tab.field-7")}</label>
                     <input placeholder="30" />
                   </div>
                 </Col>
@@ -73,27 +77,23 @@ const Hypothesis = () => {
             {/* second section */}
             <Col md={24} lg={11}>
               <div className="custom-form-field">
-                <label>Taux d’imposition_EN</label>
+                <label>{t("compliance-monitoring.hypothesis-tab.field-8")}</label>
                 <input placeholder="30" />
               </div>
               <div className="custom-form-field mt-3">
-                <label>
-                  Frais relatifs aux contrats d’assurance-vie liee_EN
-                </label>
+                <label>{t("compliance-monitoring.hypothesis-tab.field-9")}</label>
                 <input placeholder="30" />
               </div>
               <div className="custom-form-field mt-3">
-                <label>
-                  Primes brutes acquises d’assurance-vie non liee_EN
-                </label>
+                <label>{t("compliance-monitoring.hypothesis-tab.field-10")}</label>
                 <div className="multiple-inputs-wrapper">
                   <div className="input-with-label">
-                    <p>Financiel Year N</p>
+                    <p>{t("compliance-monitoring.hypothesis-tab.field-10-placeholder")}</p>
                     <input placeholder="30" style={{ paddingLeft: 120 }} />
                   </div>
 
                   <div className="input-with-label">
-                    <p>Financiel Year N</p>
+                  <p>{t("compliance-monitoring.hypothesis-tab.field-10-placeholder")}</p>
                     <input
                       placeholder="30"
                       className="text-right"
@@ -103,14 +103,14 @@ const Hypothesis = () => {
                 </div>
               </div>
               <div className="custom-form-field mt-3">
-                <label>Life Insurance Gross Premium</label>
+                <label>{t("compliance-monitoring.hypothesis-tab.field-11")}</label>
                 <div className="multiple-inputs-wrapper">
                   <input placeholder="30" />
                   <input placeholder="30" />
                 </div>
               </div>
               <div className="custom-form-field mt-3">
-                <label>Non Life Insurance Gross Premium</label>
+                <label>{t("compliance-monitoring.hypothesis-tab.field-12")}</label>
                 <div className="multiple-inputs-wrapper">
                   <input placeholder="30" />
                   <input placeholder="30" />

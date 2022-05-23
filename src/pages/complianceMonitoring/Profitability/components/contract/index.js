@@ -1,25 +1,47 @@
 import { Col, Row } from "antd";
 import { ConfirmationBox } from "globalComponents";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Contract = () => {
+  const {t} = useTranslation()
   return (
     <div>
-      <h5 className="small-heading">Unit Linked Policy</h5>
+      <h5 className="small-heading">
+        {t("compliance-monitoring.unit-linked-policy")}
+      </h5>
       <div className="custom-table-style-2-wrapper">
         <table>
           <thead>
             <tr>
               <th style={{ width: "5%" }}></th>
-              <th>Calculation Date</th>
-              <th>Product Code</th>
-              <th>Policy Number</th>
-              <th>Unit Code</th>
-              <th>PAB</th>
-              <th>Type Support_EN</th>
-              <th>Unit Currency</th>
-              <th>Death Guarantee</th>
-              <th>Death Guarantee Ammo</th>
+              <th>
+                {t("compliance-monitoring.fn-contract-tab.field-1")}
+              </th>
+              <th>
+                {t("compliance-monitoring.fn-contract-tab.field-2")}
+              </th>
+              <th>
+                {t("compliance-monitoring.fn-contract-tab.field-3")}
+              </th>
+              <th>
+                {t("compliance-monitoring.fn-contract-tab.field-4")}
+              </th>
+              <th>
+                {t("compliance-monitoring.fn-contract-tab.field-5")}
+              </th>
+              <th>
+                {t("compliance-monitoring.fn-contract-tab.field-6")}
+              </th>
+              <th>
+                {t("compliance-monitoring.fn-contract-tab.field-7")}
+              </th>
+              <th>
+                {t("compliance-monitoring.fn-contract-tab.field-8")}
+              </th>
+              <th>
+                {t("compliance-monitoring.fn-contract-tab.field-9")}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -44,7 +66,9 @@ const Contract = () => {
       <Row gutter={[10, 10]} className="mt-5">
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Date Calculator</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-10")}
+            </label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -52,13 +76,17 @@ const Contract = () => {
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Taux Marge</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-11")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Date Naissance</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-12")}
+            </label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -66,13 +94,17 @@ const Contract = () => {
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Cout Gestion</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-13")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Code Produit</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-14")}
+            </label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -80,49 +112,65 @@ const Contract = () => {
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Taux Marge Min</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-15")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>TMG</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-16")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Cout Rachat</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-17")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Numero Contrat</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-18")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Montant Marge</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-19")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Sexe Assure</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-20")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Cout Sinistre</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-21")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>CodeSupport</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-22")}
+            </label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -130,25 +178,33 @@ const Contract = () => {
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Taux Comm</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-23")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Date Terme</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-24")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Cout Gest Fin</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-25")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>TypeSupport</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-26")}
+            </label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -156,25 +212,33 @@ const Contract = () => {
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Taux Comm Min</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-27")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Solde Esc Comm</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-28")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Pourcentage</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-29")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>DeviseSupport</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-30")}
+            </label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -182,13 +246,17 @@ const Contract = () => {
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Montant Comm</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-31")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Date Effet Contrat</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-32")}
+            </label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -196,13 +264,17 @@ const Contract = () => {
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Nb Contrat</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-33")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Grantie Deces</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-34")}
+            </label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -210,31 +282,41 @@ const Contract = () => {
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Prime Per Ann</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-35")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Sortie en Rente</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-36")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Montant Garantie</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-37")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>PM</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-38")}
+            </label>
             <input className="text-right" placeholder="0" />
           </div>
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Tx Frais Ges Fin</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-39")}
+            </label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -242,7 +324,9 @@ const Contract = () => {
         </Col>
         <Col md={12} lg={6}>
           <div className="custom-form-field">
-            <label>Type de Rente</label>
+            <label>
+              {t("compliance-monitoring.fn-contract-tab.field-40")}
+            </label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>

@@ -1,160 +1,198 @@
-import { Col, Divider, Row } from "antd";
-import { ConfirmationBox } from "globalComponents";
-import React from "react";
+import { Col, Divider, Row } from 'antd'
+import { ConfirmationBox } from 'globalComponents'
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const DedicatedFunds = () => {
+  const { t } = useTranslation()
+
   return (
     <div>
       <Row>
         <Col sm={24} md={11}>
           <Row gutter={[10, 10]}>
             <Col xs={12}>
-              <div className="custom-form-field">
-                <label>Prime Brut Initiale</label>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-1')}
+                </label>
                 <input />
               </div>
             </Col>
             <Col xs={12}>
-              <div className="custom-form-field">
-                <label>Age de I'assure (H/F)</label>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-2')}
+                </label>
                 <input />
               </div>
             </Col>
             <Col xs={12}>
-              <div className="custom-form-field">
-                <label>Age de I'assure (H/F)</label>
-                <select className="dropdown-style-2">
-                  <option value="1">1</option>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-2')}
+                </label>
+                <select className='dropdown-style-2'>
+                  <option value='1'>1</option>
                 </select>
               </div>
             </Col>
             <Col xs={12}>
-              <div className="custom-form-field">
-                <label>Duree De Contrat (en anees)</label>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-3')}
+                  </label>
                 <input />
               </div>
             </Col>
             <Col xs={12}>
-              <div className="custom-form-field">
-                <label>Capital Deces</label>
-                <select className="dropdown-style-2">
-                  <option value="1">1</option>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-4')}
+                </label>
+                <select className='dropdown-style-2'>
+                  <option value='1'>1</option>
                 </select>
               </div>
             </Col>
 
             <Col xs={12}>
-              <div className="custom-form-field">
-                <label>Base De Calcul</label>
-                <select className="dropdown-style-2">
-                  <option value="1">1</option>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-5')}
+                </label>
+                <select className='dropdown-style-2'>
+                  <option value='1'>1</option>
                 </select>
               </div>
             </Col>
             <Col xs={12}>
-              <div className="custom-form-field">
-                <label>Frais D'acquisation</label>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-6')}
+                </label>
                 <input />
               </div>
             </Col>
             <Col xs={12}>
-              <div className="custom-form-field">
-                <label>Commission D'acquisation</label>
-                <input />
-              </div>
-            </Col>
-            <Col xs={24}>
-              <div className="custom-form-field">
-                <label>Real Mortality</label>
-                <div className="multiple-inputs-wrapper">
-                  <input placeholder="30" />
-                  <select className="dropdown-style-2">
-                    <option value="1">Mensual</option>
-                  </select>
-                </div>
-              </div>
-            </Col>
-            <Col xs={24}>
-              <div className="custom-form-field">
-                <label>Commission annual decourtage(depense)</label>
-                <input />
-              </div>
-            </Col>
-            <Col xs={24}>
-              <div className="custom-form-field">
+              <div className='custom-form-field'>
                 <label>
-                  Taux annuel de frais de gestion financiere (deduit de I'actif)
+                  {t('compliance-monitoring.contract-dedicated-tab.field-7')}
                 </label>
-                <div className="multiple-inputs-wrapper">
-                  <input placeholder="30" />
-                  <select className="dropdown-style-2">
-                    <option value="1">Mensual</option>
+                <input />
+              </div>
+            </Col>
+            <Col xs={24}>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-8')}
+                </label>
+                <div className='multiple-inputs-wrapper'>
+                  <input placeholder='30' />
+                  <select className='dropdown-style-2'>
+                    <option value='1'>
+                      {t('compliance-monitoring.contract-dedicated-tab.dropdown-1')}
+                    </option>
                   </select>
                 </div>
               </div>
             </Col>
             <Col xs={24}>
-              <div className="custom-form-field">
-                <label>Part Assureur</label>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-9')}
+                </label>
                 <input />
               </div>
             </Col>
             <Col xs={24}>
-              <div className="custom-form-field">
+              <div className='custom-form-field'>
                 <label>
-                  Rendement de I'actif par annee (net de frais gestion
-                  financiere
+                  {t('compliance-monitoring.contract-dedicated-tab.field-10')}
+                </label>
+                <div className='multiple-inputs-wrapper'>
+                  <input placeholder='30' />
+                  <select className='dropdown-style-2'>
+                    <option value='1'>
+                      {t('compliance-monitoring.contract-dedicated-tab.dropdown-1')}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </Col>
+            <Col xs={24}>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-11')}
+                </label>
+                <input />
+              </div>
+            </Col>
+            <Col xs={24}>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-12')}
                 </label>
                 <input />
               </div>
             </Col>
           </Row>
         </Col>
-        <Col sm={24} md={2} className="d-flex justify-center">
-          <Divider className="h-100" type="vertical" />
+        <Col sm={24} md={2} className='d-flex justify-center'>
+          <Divider className='h-100' type='vertical' />
         </Col>
         <Col sm={24} md={11}>
           <Row gutter={[10, 10]}>
             <Col xs={24}>
-              <div className="custom-form-field">
+              <div className='custom-form-field'>
                 <label>
-                  Pourcentage ou montant en cas de garantie majoree{" "}
+                  {t('compliance-monitoring.contract-dedicated-tab.field-13')}
+                  </label>
+                <input />
+              </div>
+            </Col>
+            <Col xs={24}>
+              <h5 className='text-center'>
+                {t('compliance-monitoring.contract-dedicated-tab.title-1')}
+              </h5>
+            </Col>
+            <Col xs={12}>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-14')}
+                </label>
+                <input />
+              </div>
+            </Col>
+            <Col xs={12}>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-15')}
                 </label>
                 <input />
               </div>
             </Col>
             <Col xs={24}>
-              <h5 className="text-center">
-                Cout de Gestion annuel par contrat
-              </h5>
-            </Col>
-            <Col xs={12}>
-              <div className="custom-form-field">
-                <label>Annee 1</label>
-                <input />
-              </div>
-            </Col>
-            <Col xs={12}>
-              <div className="custom-form-field">
-                <label>Annee 2 et</label>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-16')}
+                </label>
                 <input />
               </div>
             </Col>
             <Col xs={24}>
-              <div className="custom-form-field">
-                <label>Frais de gestion financiere par contrat</label>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-17')}
+                </label>
                 <input />
               </div>
             </Col>
             <Col xs={24}>
-              <div className="custom-form-field">
-                <label>Cout de gestion par sinistre deces</label>
-                <input />
-              </div>
-            </Col>
-            <Col xs={24}>
-              <div className="custom-form-field">
-                <label>Cout de gestion par rachat</label>
+              <div className='custom-form-field'>
+                <label>
+                  {t('compliance-monitoring.contract-dedicated-tab.field-18')}
+                </label>
                 <input />
               </div>
             </Col>
@@ -162,27 +200,27 @@ const DedicatedFunds = () => {
         </Col>
       </Row>
       <Row gutter={[20, 20]}>
-        <Col md={24} lg={12} className="mt-5">
-          <div className="custom-table-style-2-wrapper">
+        <Col md={24} lg={12} className='mt-5'>
+          <div className='custom-table-style-2-wrapper'>
             <table>
               <thead>
                 <tr>
-                  <th style={{ width: "5%" }}></th>
-                  <th>Annee</th>
-                  <th>Taux de penabale Racht</th>
-                  <th>Contrats vendus par mois</th>
+                  <th style={{ width: '5%' }}></th>
+                  <th>{t('compliance-monitoring.contract-external-tab-generic.field-1')}</th>
+                  <th>{t('compliance-monitoring.contract-external-tab-generic.field-2')}</th>
+                  <th>{t('compliance-monitoring.contract-external-tab-generic.field-3')}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td></td>
-                  <td className="text-right">1</td>
+                  <td className='text-right'>1</td>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr>
                   <td></td>
-                  <td className="text-right">2</td>
+                  <td className='text-right'>2</td>
                   <td></td>
                   <td></td>
                 </tr>
@@ -190,27 +228,27 @@ const DedicatedFunds = () => {
             </table>
           </div>
         </Col>
-        <Col md={24} lg={12} className="mt-5">
-          <div className="custom-table-style-2-wrapper">
+        <Col md={24} lg={12} className='mt-5'>
+          <div className='custom-table-style-2-wrapper'>
             <table>
               <thead>
                 <tr>
-                  <th style={{ width: "5%" }}></th>
-                  <th>Annee</th>
-                  <th>Contrats vendus par mois</th>
-                  <th>Contrats vendus par mois</th>
+                  <th style={{ width: '5%' }}></th>
+                  <th>{t('compliance-monitoring.contract-external-tab-generic.field-1')}</th>
+                  <th>{t('compliance-monitoring.contract-external-tab-generic.field-2')}</th>
+                  <th>{t('compliance-monitoring.contract-external-tab-generic.field-3')}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td></td>
-                  <td className="text-right">1</td>
+                  <td className='text-right'>1</td>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr>
                   <td></td>
-                  <td className="text-right">2</td>
+                  <td className='text-right'>2</td>
                   <td></td>
                   <td></td>
                 </tr>
@@ -219,11 +257,11 @@ const DedicatedFunds = () => {
           </div>
         </Col>
       </Row>
-      <div className="mt-5">
+      <div className='mt-5'>
         <ConfirmationBox />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DedicatedFunds;
+export default DedicatedFunds

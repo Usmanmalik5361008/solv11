@@ -79,7 +79,197 @@
   "compliance-monitoring": {
     "title": "Surveillance de la conformité",
     "list-item-1": "SCR-Calcul reglementaire",
-    "list-item-2": "Profitabilite (Tests Solvabilite)"
+    "list-item-2": "Profitabilite (Tests Solvabilite)",
+
+    "hypothesis": "Hypothèse",
+    "counterparty-risk": "Risque de contrepartie",
+    "scr-sante_en": "SCR Santé_FR",
+
+    "hypothesis-tab":{
+      "field-1": "Date de calcul",
+      "field-2": "Mortalité réelle",
+      "field-3": "Nbr de Scenarios",
+      "field-4": "Table de Mortality Homme",
+      "field-5": "Temps de projection",
+      "field-6": "Table de Mortality Femme_EN",
+      "field-7": "Nbr Taux Diniflation_EN",
+      "field-8": "Taux d’imposition_EN",
+      "field-9": "Frais relatifs aux contrats d’assurance-vie liee_EN",
+      "field-10": "Primes brutes acquises d’assurance-vie non liee_EN",
+      "field-10-placeholder": "Exercice financier N",
+      "field-11": "Prime brute d'assurance-vie",
+      "field-12": "Prime brute d'assurance non-vie"
+    },
+
+    "counterparty-risk-tab":{
+      "title-1":"Type 1",
+      "field-1": "Contrepartie",
+      "field-2": "Risque",
+      
+      "title-2":"Type 2",
+      "field-3": "Total des expositions de type 2, à l'exclusion de celles échues depuis plus de 3 mois_FR",
+      "field-4": "Total des expositions de type 2 en retard de plus de 3 mois_FR"
+    },
+
+    "scr-health-tab": {
+      "field-1":"Frais generaux relatifs a la branche sante(Medical Expenses)",
+      "field-2": "Frais generaux relatifs a la branche sante(Income Protection)",
+      "field-3": "Frais generaux relatifs a la branche sante(Worker Compensation)",
+      "field-4": "Frais generaux relatifs a la branche sante(Non Proportional Reinsurance)",
+      "field-5": "Taux de revalorisation des cotisations sante",
+      "field-6": "Taux de revalorisation des cotisations sante",
+      "field-7": "Duree (en-mois) de resilliation",
+      "field-8": "Part du LOB Medical Expenses dans la provision pour prestations a payer",
+      "field-9": "Part du LOB Income Expenses dans la provision pour prestations a payer",
+      "field-10": "Part du LOB Work Compensation dans la provision pour prestations a payer", 
+      "field-11": "Part du Non Proportional Expenses dans la provision pour prestations a payer"
+    },
+
+    "scr-trad-tab":{
+      "field-1":"Couts fixes pour les UC",
+      "field-2":"Couts fixes pour les TG",
+      "field-3":"Pourcentage de Pm a partir dequel il y a une management action (ORSA)"
+    },
+
+    "contract-external":"Contrat investi en fonds externes",
+    "contract-dedicated":"Contrat investi dans des fonds dédiés",
+    "fn-contract":"Contrat a taux narantie FN",
+    
+    "contract-external-tab-1":{
+      "field-1":"Effective Date",
+      "field-2":"Prime initiale brute",
+      "field-3":"Âge à la souscription",
+      "field-4":"Sexe de l'assuré (h/f)_EN",
+      "field-5":"Durée de contrat",
+      "field-6":"Capitale de la mort",
+      "field-7":"Pourcentage ou Montant",
+      "field-8":"Base de calcul",
+      "field-9":"Frais d'acquisition",
+      "field-10":"Commission d'acquisition",
+      "field-11":"Taux annuel de frais d'administration sur encours (recette)_EN",
+      "field-12":"Commission annuelle de courtage (dépense)_EN",
+      "field-13":"Taux annuele de frais de gestion financière (déduit de l'actif) EN",
+      "field-14":"Part Assureur_EN",
+      "field-15":"Rendement de l'actif par année (net de frais de gestion fin)_EN"
+    },
+
+    "contract-external-tab-2":{
+      
+      "title-1":"Marque",
+      "field-1":"Pourcentage",
+      "field-2":"Coupon moyen",
+      "field-3":"Durée moyenne",
+      "field-4":"Note moyenne",
+      
+      "title-2":"Actions et fonds Action:_EN",
+      
+      "title-3":"Espèces",
+
+      "title-4":"Coût de gestion annuel",
+      "field-5":"Année",
+      "field-6":"Année 2 et",
+
+      "title-5":"Frais de gestion des actifs (par contrat)",
+      "field-7":"Prise en charge Coût du décès",
+      "field-8":"Gestion Coût de rachat"
+    },
+
+    "contract-external-tab-generic":{
+      "field-1":"Année",
+      "field-2":"Taux de penabale Racht",
+      "field-3":"Contrats vendus par mois"
+    },
+
+    "contract-dedicated-tab":{
+      "field-1":"Prime Brut Initiale",
+      "field-2":"Age de I'assure (H/F)",
+      "field-3":"Duree De Contrat (en anees)",
+      "field-4":"Capital Deces",
+      "field-5":"Base De Calcul",
+      "field-6":"Frais D'acquisation",
+      "field-7":"Commission D'acquisation",
+      "field-8":"Mortalité réelle",
+      "dropdown-1":"Mensuel",
+      "field-9":"Commission annual decourtage(depense)",
+      "field-10":"Taux annuel de frais de gestion financiere (deduit de I'actif)",
+      "field-11":"Part Assureur",
+      "field-12":"Rendement de I'actif par annee (net de frais gestion financiere",
+      "field-13":"Pourcentage ou montant en cas de garantie majoree",
+
+      "title-1":"Cout de Gestion annuel par contrat",
+      "field-14":"Année",
+      "field-15":"Année 2 et",
+      "field-16":"Frais de gestion financiere par contrat",
+      "field-17":"Cout de gestion par sinistre deces",
+      "field-18":"Cout de gestion par rachat"
+
+    },
+
+    "unit-linked-policy": "Politique liée à l'unité",
+    "dedicated-policy": "Politique dédiée",
+
+    "fn-contract-tab":{
+
+      "field-1":"Date de calcul",
+      "field-2":"Code produit",
+      "field-3":"Numéro de police",
+      "field-4":"Code d'unité",
+      "field-5":"PAB",
+      "field-6":"Tapez Support_EN",
+      "field-7":"Devise de l'unité",
+      "field-8":"Garantie décès",
+      "field-9":"Munitions garanties de mort",
+
+      "field-10":"Calculateur de dates",
+      "field-11":"Taux Marge",
+      "field-12":"Date Naissance",
+      "field-13":"Cout Gestion",
+      "field-14":"Code Produit",
+      "field-15":"aux Marge Min",
+      "field-16":"TMG",
+      "field-17":"Cout Rachat",
+      "field-18":"Numero Contrat",
+      "field-19":"Montant Marge",
+      "field-20":"Sexe Assure",
+      "field-21":"Cout Sinistre",
+      "field-22":"Prise en charge des codes",
+      "field-23":"Taux Comm",
+      "field-24":"Date Terme",
+      "field-25":"Cout Gest Fin",
+      "field-26":"Prise en charge des types",
+      "field-27":"Taux Comm Min",
+      "field-28":"Solde Esc Comm",
+      "field-29":"Pourcentage",
+      "field-30":"Aide à la conception",
+      "field-31":"Montant Comm",
+      "field-32":"Date Effet Contrat",
+      "field-33":"Nb Contrat",
+      "field-34":"Grantie Deces",
+      "field-35":"Prime Per Ann",
+      "field-36":"Sortie en Rente",
+      "field-37":"Montant Garantie",
+      "field-38":"PM",
+      "field-39":"Tx Frais Ges Fin",
+      "field-40":"Type de Rente"
+    },
+
+    "hyp-tab":{
+      "field-1":"Table de Mortalité_EN",
+      "field-2":"Mortalité réelle (en % de la table de mortalité)",
+      "field-3":"Augmentation de la table de mortalité utilisée",
+      "field-4":"Taux d'imposition_EN",
+      "field-5":"Taux d'inflation par année index)EN",
+      "field-6":"Coût en capital",
+      "field-7":"Rendement des Fonds propres_EN",
+      "field-8":"Taux de cession en réassurance_En",
+      "field-9":"Frais de développement",
+      "field-10":"Période d'amortissement",
+      "field-11":"Table de mortalité pour Réassurance_En",
+      "field-12":"Rating du",
+     
+      "field-1-dropdown-1":"Option"   
+    }
+    
   },
 
   "itsWorking": "ça marche"

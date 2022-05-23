@@ -7,23 +7,26 @@ import {
   Contract,
   DedicatedFunds,
 } from "./components";
+import { useTranslation } from "react-i18next";
 
 const { TabPane } = Tabs;
 
 const ProfitabilityPage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="tab-screen-1-page">
       <Tabs defaultActiveKey="1" className="custom-tabs-wrapper">
-        <TabPane tab="Contrat invested in extemal founds" key="1">
+        <TabPane tab={t("compliance-monitoring.contract-external")} key="1">
           <ExternalFunds />
         </TabPane>
-        <TabPane tab="Contrat invested in dedicated founds" key="2">
+        <TabPane tab={t("compliance-monitoring.contract-dedicated")} key="2">
           <DedicatedFunds />
         </TabPane>
-        <TabPane tab="Contrat a taux narantie FN" key="3">
+        <TabPane tab={t("compliance-monitoring.fn-contract")} key="3">
           <Contract />
         </TabPane>
-        <TabPane tab="Hypothesis" key="4">
+        <TabPane tab={t("compliance-monitoring.hypothesis")} key="4">
           <Hypothesis />
         </TabPane>
       </Tabs>
