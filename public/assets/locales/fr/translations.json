@@ -32,12 +32,134 @@
   "help": "Aider",
   "done-editing": "Finis d'éditer",
 
-  "required":"Obligatoire",
+  "required": "Obligatoire",
 
   "parameter-name": "Le nom du paramètre",
   "parameter-type": "Type de paramètre",
   "global": "Global",
   "explanation": "Explication",
+
+  "apply-filters": "Appliquer des filtres",
+  "clear": "Dégager",
+
+  "year": "Année",
+  "date-cal": "Dat Calcul",
+  "type-treat": "Type Traitement",
+  "prod-code": "Code Produit",
+  "not-prod-pb-trad": "Non Produit Pb Trad",
+  "status-prod-pb-trad": "Statut Produit Pb Trad",
+  "ver-prod-pb-trad": "Ver Produit Pb Trad",
+  "ref-cg-pb-trad": "Reference CG Pb Trad",
+  "fis-prod-pb-trad": "Fiscalite Produit Pb Trad",
+  "guarantee-code": "Code Garantie",
+  "lib-guarantee-pb-trad": "Libelle Garantie Pb Trad",
+  "mod-adhesion-pb-trad": "Mode Adhesion Pb Trad",
+  "college-pb-trad": "Collège Pb Trad",
+  "rate-cost-acq-pb-trad": "Taux Coût Acquisition Pb Trad",
+  "manag-fee-rate-pb-trad": "Taux Frais de Gestion",
+  "rate-other-fees-pb-trad": "Taux Autres Frais Pb Trad",
+  "reinsurance-rate-pb-trad": "Taux de Reassurance Pb Trad",
+  "state": "Etat",
+
+  "type-annually": "Type Rente",
+  "direct-payment": "Paiement Direct",
+  "certain-annuity": "Rente Certaine",
+  "life-annuity": "Rente Viagere",
+  "duration-certain-annuity": "Durée Rente Certaine",
+  "exit-age": "Age de Sortie",
+  "reversion-rate": "Taux de Reversion",
+  "diff-age-ann-survivor-age": "Difference Age Rentier Age Reversataire",
+  "periodicity": "Périodicité",
+  "mortality-table": "Table Mortalite",
+  "mang-rate": "Taux de Gestion",
+  "mang-cost": "Coût de Gestion",
+  "guaranteed-rate": "Taux Garanti",
+  "currency-agency": "Devise Rente",
+  "percentage": "Pourcentage",
+  "duration-annuity": "Durée Rente",
+  "edit-prod": "Modifier Produit",
+  "del-prod": "Suprimer Produit",
+  "add-prod": "Ajouter Produit",
+
+  "male-mortality-table": "Table Mortalite Homme",
+  "female-mortality-table": "Table Mortalite Femme",
+  "maj-tab-risk-prim": "Majoratian Table Prime de Risque",
+  "maj-tab-reasurance": "Majoratian Table Reassurance",
+  "male-reinsurance-mortality-table": "Table Mortalite Reassurance Homme",
+  "female-reinsurance-mortality-table": "Table Mortalite Reassurance Femme",
+  "discount": "Escompete",
+  "discount-duration": "Duree Escompete",
+  "male-reassurance-table": "Table Reassurance Homme",
+  "female-reassurance-table": "Table Reassurance Femme",
+  "redemp-penalty": "Penalite de Rachat",
+  "redemp-penalty-duration": "Duree Penalite de Rachat",
+  "reinsurance-cessation-rate": "Taux de Cession Reassurance",
+  "max-redemp-penalty-rate": "Taux maximum Penalite de Rachat",
+
+  "cal-date": "Date de Calcul",
+  "contract-num": "Numero De Contrat",
+  "contact-num": "Numero De Contat",
+  "beneficiary-num": "Numero De Benefeciaire",
+  "code-act": "Code Acte",
+  "effective-date": "Date D'effet",
+  "aquired-contribution": "Cotisation Acquise",
+
+  "date-occ": "Date Survenance",
+  "claim-start-date": "Date Debut Sinistre",
+  "date-fin-claim": "Date Fin Sinistre",
+  "rule-date": "Date de Regle",
+  "wording-act": "Libelle Acte",
+  "treatment-date": "Date de soin",
+  "amount-of-d": "Montant de la d",
+  "be-number": "Numero de Be",
+  "si-number": "Numero de Si",
+  "refund-amount": "Montant Rembo",
+
+  "filter": "Filtre",
+  "support-type": "Type De Support",
+  "title-type": "Type Titre",
+  "elastic": "Elatique",
+  "currency": "Devise",
+  "rating": "Evaluation",
+  "title-name": "Nom Titre",
+  "passive-type": "Type Passif",
+  "exchange-rate": "Taux Change",
+  "duration": "Durée",
+  "purchase-date": "Date Achat",
+  "quantity": "Quantite",
+  "date-course": "Date Cours",
+  "value-curr": "Valeur Devise",
+  "date-term": "Date Terme",
+  "euro-val": "Valeur Euro",
+
+  "unlimited": "lilimeite",
+  "limited": "Limite",
+  "bass-equity": "Fonds Propress de Bass",
+  "aux-equity-fund": "Fonds Propress Auxiliaire",
+
+  "death-guarantee":"Garantie Deces",
+  "mortant-guarantee-death":"Mortant Garantie Deces",
+  "rate-margin":"Taux Marge",
+  "d-o-b":"Date Naissance",
+  "cost-manag":"Cout Gestion",
+  "redemp-cost":"Cout Rachat",
+  "amount-margin":"Montant Marge",
+  "sex-assures":"Sexe Assure",
+  "loss-cost":"Cout Sinistre",
+  "code-support":"Prise en charge des codes",
+  "comm-rate":"Taux Comm",
+  "end-manag-cost":"Cout Gest Fin",
+  "type-support":"Prise en charge des types",
+  "bal-esc-comm":"Solde Esc Comm",
+  "curr-support":"Prise en charge des devises",
+  "com-amount":"Montant Comm",
+  "contract-effective-date":"Date Effet Contrat",
+  "Nb-contract":"Nb Contrat",
+  "prem-per-year":"Prime Per Ann",
+  "exit-in-annuity":"Sortie en Rente",
+  "amount-guarantee":"Montant Garantie",
+  "tx-expense-ges-end":"Tx Frais Ges Fin",
+  "type-of-annuity":"Type de Rente",
 
   "dashboard": {
     "title": "Tableau de bord",
@@ -50,9 +172,9 @@
 
   "claims": {
     "title": "Réclamations",
-    "info-1":"Vous pouvez utiliser des paramètres dans les étapes de requête de texte et d'analyse en plaçant le nom du paramètre entre accolades, comme",
-    "info-2":"Quelle que soit la valeur que vous définissez ici, elle sera remplacée dans les étapes ci-dessous qui utilisent ce paramètre",
-    "info-variable":"leNomDuParamètre"
+    "info-1": "Vous pouvez utiliser des paramètres dans les étapes de requête de texte et d'analyse en plaçant le nom du paramètre entre accolades, comme",
+    "info-2": "Quelle que soit la valeur que vous définissez ici, elle sera remplacée dans les étapes ci-dessous qui utilisent ce paramètre",
+    "info-variable": "leNomDuParamètre"
   },
 
   "production-data": {
@@ -66,7 +188,44 @@
     "list-item-7": "Produits (santé) Pb Trad",
     "list-item-8": "Annuities",
     "list-item-9": "Rachat partiel",
-    "list-item-10": "Rachat total"
+    "list-item-10": "Rachat total",
+
+    "bass-equity": {
+      "field-1": "Capital souscrit ou fonds équivalent d'une mutuelle",
+      "field-2": "Prime d'émission relatives au capital souscrit",
+
+      "title-1": "Passifs subordonnés conformes aux exigences Solvabilité 2",
+      "field-3": "Actions préférentielles",
+      "field-4": "Primes d'émission relatives aux actions préférentielles",
+      "field-5": "Comptes suibordonnés des membres d'une mutuelle",
+      "field-6": "Autres passifs subordonnés",
+
+      "title-2": "Passifs subordonnés admis au titre des dispositions transitoires",
+      "field-7": "Surplus funds Créances d'impôts latentes nettes",
+      "field-8": "Réserve de réconciliation totale",
+
+      "title-3": "A déduire",
+      "field-9": "Capital souscrit non versé",
+      "field-10": "Actions propres ou parts propres",
+      "field-11": "Dividendes et distributions prévisibles",
+      "field-12": "Participations dans des établisements de crédit et des institutions",
+      "field-13": "Déduction pour ring fenced funds",
+      "field-14": "Déduction pour surplus funds et créances d'impôts latentes",
+      "field-15": "Autres éléments admis sur autorisation du CAA"
+    },
+
+    "aux-fund":{
+      "field-1": "Capital souscrit non verse",
+      "field-2": "Fonds non versés équivalents au capital souscrit non versé d'une",
+      "field-3": "Actions préférentielles appelables sur demande",
+      "field-4": "Engagements juridiquement contraignants de souscrire sur demande à des passifs subordonnés",
+      "field-5": "Primes d'émission relatives aux actions préférentielles",
+      "field-6": "Lettres de crédit et garanties satisfaisant aux critères de l'article 92 de la directive SII",
+      "field-7": "Autres lettres de crédit et garanties", 
+      "field-8": "Rappels de cotisations satisfaisant aux critères de l'article 93 de la",
+      "field-9": "Autres rappels de cotisations",
+      "field-10": "Autres fonds propres auxiliaires"
+    }
   },
 
   "compliance-settings": {
@@ -84,45 +243,44 @@
       "inflation": "Inflation",
       "liquid": "Illiquidité",
       "non-retail-red": "Rachat non-retail",
-      "longevity"   : "Longevité",
-      "inability"  : "Incapacité",
-      "revision" : "Révision",
+      "longevity": "Longevité",
+      "inability": "Incapacité",
+      "revision": "Révision",
       "currency-up": "Devise up",
       "currency-down": "Devise down",
-      "action"  : "Action",
-      "spread"  : "Spread",
+      "action": "Action",
+      "spread": "Spread",
       "lower": "Bas",
-      "unrated" : "Non évalué",
+      "unrated": "Non évalué",
       "Immobilier": "Immobilier",
-      "shock-correlation":"Corrélation de choc A",
-      "no-rating":"Non évalué"
+      "shock-correlation": "Corrélation de choc A",
+      "no-rating": "Non évalué"
     },
 
-    "cm":{
+    "cm": {
       "equity": "Équité",
-      "global":"Mondial",
-      "other":"Autre",
+      "global": "Mondial",
+      "other": "Autre",
 
-      "interest":"L'intérêt",
-      "property":"Bien",
-      "spread":"Spread",
-      "currency":"Devise",
-      "concentrate":"Concentrati",
-      "countercycling":"Countercycli",
+      "interest": "L'intérêt",
+      "property": "Bien",
+      "spread": "Spread",
+      "currency": "Devise",
+      "concentrate": "Concentrati",
+      "countercycling": "Countercycli",
 
-      "life":"Vie",
-      "mortality":"Mortalité",
-      "longevity":"Longevité",
-      "disability":"Incapacité",
-      "lapse":"Lapse",
-      "expenses":"Dépenses",
-      "revision":"Révision",
-      "cat":"Cat",
+      "life": "Vie",
+      "mortality": "Mortalité",
+      "longevity": "Longevité",
+      "disability": "Incapacité",
+      "lapse": "Lapse",
+      "expenses": "Dépenses",
+      "revision": "Révision",
+      "cat": "Cat",
 
-      "counterpart":"Homologue",
-      "type":"Taper",
-      "work":"Travail"
-    
+      "counterpart": "Homologue",
+      "type": "Taper",
+      "work": "Travail"
     }
   },
 
@@ -135,7 +293,7 @@
     "counterparty-risk": "Risque de contrepartie",
     "scr-sante_en": "SCR Santé_FR",
 
-    "hypothesis-tab":{
+    "hypothesis-tab": {
       "field-1": "Date de calcul",
       "field-2": "Mortalité réelle",
       "field-3": "Nbr de Scenarios",
@@ -151,18 +309,18 @@
       "field-12": "Prime brute d'assurance non-vie"
     },
 
-    "counterparty-risk-tab":{
-      "title-1":"Type 1",
+    "counterparty-risk-tab": {
+      "title-1": "Type 1",
       "field-1": "Contrepartie",
       "field-2": "Risque",
-      
-      "title-2":"Type 2",
+
+      "title-2": "Type 2",
       "field-3": "Total des expositions de type 2, à l'exclusion de celles échues depuis plus de 3 mois_FR",
       "field-4": "Total des expositions de type 2 en retard de plus de 3 mois_FR"
     },
 
     "scr-health-tab": {
-      "field-1":"Frais generaux relatifs a la branche sante(Medical Expenses)",
+      "field-1": "Frais generaux relatifs a la branche sante(Medical Expenses)",
       "field-2": "Frais generaux relatifs a la branche sante(Income Protection)",
       "field-3": "Frais generaux relatifs a la branche sante(Worker Compensation)",
       "field-4": "Frais generaux relatifs a la branche sante(Non Proportional Reinsurance)",
@@ -171,155 +329,151 @@
       "field-7": "Duree (en-mois) de resilliation",
       "field-8": "Part du LOB Medical Expenses dans la provision pour prestations a payer",
       "field-9": "Part du LOB Income Expenses dans la provision pour prestations a payer",
-      "field-10": "Part du LOB Work Compensation dans la provision pour prestations a payer", 
+      "field-10": "Part du LOB Work Compensation dans la provision pour prestations a payer",
       "field-11": "Part du Non Proportional Expenses dans la provision pour prestations a payer"
     },
 
-    "scr-trad-tab":{
-      "field-1":"Couts fixes pour les UC",
-      "field-2":"Couts fixes pour les TG",
-      "field-3":"Pourcentage de Pm a partir dequel il y a une management action (ORSA)"
+    "scr-trad-tab": {
+      "field-1": "Couts fixes pour les UC",
+      "field-2": "Couts fixes pour les TG",
+      "field-3": "Pourcentage de Pm a partir dequel il y a une management action (ORSA)"
     },
 
-    "contract-external":"Contrat investi en fonds externes",
-    "contract-dedicated":"Contrat investi dans des fonds dédiés",
-    "fn-contract":"Contrat a taux narantie FN",
-    
-    "contract-external-tab-1":{
-      "field-1":"Effective Date",
-      "field-2":"Prime initiale brute",
-      "field-3":"Âge à la souscription",
-      "field-4":"Sexe de l'assuré (h/f)_EN",
-      "field-5":"Durée de contrat",
-      "field-6":"Capitale de la mort",
-      "field-7":"Pourcentage ou Montant",
-      "field-8":"Base de calcul",
-      "field-9":"Frais d'acquisition",
-      "field-10":"Commission d'acquisition",
-      "field-11":"Taux annuel de frais d'administration sur encours (recette)_EN",
-      "field-12":"Commission annuelle de courtage (dépense)_EN",
-      "field-13":"Taux annuele de frais de gestion financière (déduit de l'actif) EN",
-      "field-14":"Part Assureur_EN",
-      "field-15":"Rendement de l'actif par année (net de frais de gestion fin)_EN"
+    "contract-external": "Contrat investi en fonds externes",
+    "contract-dedicated": "Contrat investi dans des fonds dédiés",
+    "fn-contract": "Contrat a taux narantie FN",
+
+    "contract-external-tab-1": {
+      "field-1": "Effective Date",
+      "field-2": "Prime initiale brute",
+      "field-3": "Âge à la souscription",
+      "field-4": "Sexe de l'assuré (h/f)_EN",
+      "field-5": "Durée de contrat",
+      "field-6": "Capitale de la mort",
+      "field-7": "Pourcentage ou Montant",
+      "field-8": "Base de calcul",
+      "field-9": "Frais d'acquisition",
+      "field-10": "Commission d'acquisition",
+      "field-11": "Taux annuel de frais d'administration sur encours (recette)_EN",
+      "field-12": "Commission annuelle de courtage (dépense)_EN",
+      "field-13": "Taux annuele de frais de gestion financière (déduit de l'actif) EN",
+      "field-14": "Part Assureur_EN",
+      "field-15": "Rendement de l'actif par année (net de frais de gestion fin)_EN"
     },
 
-    "contract-external-tab-2":{
-      
-      "title-1":"Marque",
-      "field-1":"Pourcentage",
-      "field-2":"Coupon moyen",
-      "field-3":"Durée moyenne",
-      "field-4":"Note moyenne",
-      
-      "title-2":"Actions et fonds Action:_EN",
-      
-      "title-3":"Espèces",
+    "contract-external-tab-2": {
+      "title-1": "Marque",
+      "field-1": "Pourcentage",
+      "field-2": "Coupon moyen",
+      "field-3": "Durée moyenne",
+      "field-4": "Note moyenne",
 
-      "title-4":"Coût de gestion annuel",
-      "field-5":"Année",
-      "field-6":"Année 2 et",
+      "title-2": "Actions et fonds Action:_EN",
 
-      "title-5":"Frais de gestion des actifs (par contrat)",
-      "field-7":"Prise en charge Coût du décès",
-      "field-8":"Gestion Coût de rachat"
+      "title-3": "Espèces",
+
+      "title-4": "Coût de gestion annuel",
+      "field-5": "Année",
+      "field-6": "Année 2 et",
+
+      "title-5": "Frais de gestion des actifs (par contrat)",
+      "field-7": "Prise en charge Coût du décès",
+      "field-8": "Gestion Coût de rachat"
     },
 
-    "contract-external-tab-generic":{
-      "field-1":"Année",
-      "field-2":"Taux de penabale Racht",
-      "field-3":"Contrats vendus par mois"
+    "contract-external-tab-generic": {
+      "field-1": "Année",
+      "field-2": "Taux de penabale Racht",
+      "field-3": "Contrats vendus par mois"
     },
 
-    "contract-dedicated-tab":{
-      "field-1":"Prime Brut Initiale",
-      "field-2":"Age de I'assure (H/F)",
-      "field-3":"Duree De Contrat (en anees)",
-      "field-4":"Capital Deces",
-      "field-5":"Base De Calcul",
-      "field-6":"Frais D'acquisation",
-      "field-7":"Commission D'acquisation",
-      "field-8":"Mortalité réelle",
-      "dropdown-1":"Mensuel",
-      "field-9":"Commission annual decourtage(depense)",
-      "field-10":"Taux annuel de frais de gestion financiere (deduit de I'actif)",
-      "field-11":"Part Assureur",
-      "field-12":"Rendement de I'actif par annee (net de frais gestion financiere",
-      "field-13":"Pourcentage ou montant en cas de garantie majoree",
+    "contract-dedicated-tab": {
+      "field-1": "Prime Brut Initiale",
+      "field-2": "Age de I'assure (H/F)",
+      "field-3": "Duree De Contrat (en anees)",
+      "field-4": "Capital Deces",
+      "field-5": "Base De Calcul",
+      "field-6": "Frais D'acquisation",
+      "field-7": "Commission D'acquisation",
+      "field-8": "Mortalité réelle",
+      "dropdown-1": "Mensuel",
+      "field-9": "Commission annual decourtage(depense)",
+      "field-10": "Taux annuel de frais de gestion financiere (deduit de I'actif)",
+      "field-11": "Part Assureur",
+      "field-12": "Rendement de I'actif par annee (net de frais gestion financiere",
+      "field-13": "Pourcentage ou montant en cas de garantie majoree",
 
-      "title-1":"Cout de Gestion annuel par contrat",
-      "field-14":"Année",
-      "field-15":"Année 2 et",
-      "field-16":"Frais de gestion financiere par contrat",
-      "field-17":"Cout de gestion par sinistre deces",
-      "field-18":"Cout de gestion par rachat"
-
+      "title-1": "Cout de Gestion annuel par contrat",
+      "field-14": "Année",
+      "field-15": "Année 2 et",
+      "field-16": "Frais de gestion financiere par contrat",
+      "field-17": "Cout de gestion par sinistre deces",
+      "field-18": "Cout de gestion par rachat"
     },
 
     "unit-linked-policy": "Politique liée à l'unité",
     "dedicated-policy": "Politique dédiée",
 
-    "fn-contract-tab":{
+    "fn-contract-tab": {
+      "field-1": "Date de calcul",
+      "field-2": "Code Produit",
+      "field-3": "Numéro de police",
+      "field-4": "Code d'unité",
+      "field-5": "PAB",
+      "field-6": "Tapez Support_EN",
+      "field-7": "Devise de l'unité",
+      "field-8": "Garantie décès",
+      "field-9": "Munitions garanties de mort",
 
-      "field-1":"Date de calcul",
-      "field-2":"Code produit",
-      "field-3":"Numéro de police",
-      "field-4":"Code d'unité",
-      "field-5":"PAB",
-      "field-6":"Tapez Support_EN",
-      "field-7":"Devise de l'unité",
-      "field-8":"Garantie décès",
-      "field-9":"Munitions garanties de mort",
-
-      "field-10":"Calculateur de dates",
-      "field-11":"Taux Marge",
-      "field-12":"Date Naissance",
-      "field-13":"Cout Gestion",
-      "field-14":"Code Produit",
-      "field-15":"aux Marge Min",
-      "field-16":"TMG",
-      "field-17":"Cout Rachat",
-      "field-18":"Numero Contrat",
-      "field-19":"Montant Marge",
-      "field-20":"Sexe Assure",
-      "field-21":"Cout Sinistre",
-      "field-22":"Prise en charge des codes",
-      "field-23":"Taux Comm",
-      "field-24":"Date Terme",
-      "field-25":"Cout Gest Fin",
-      "field-26":"Prise en charge des types",
-      "field-27":"Taux Comm Min",
-      "field-28":"Solde Esc Comm",
-      "field-29":"Pourcentage",
-      "field-30":"Aide à la conception",
-      "field-31":"Montant Comm",
-      "field-32":"Date Effet Contrat",
-      "field-33":"Nb Contrat",
-      "field-34":"Grantie Deces",
-      "field-35":"Prime Per Ann",
-      "field-36":"Sortie en Rente",
-      "field-37":"Montant Garantie",
-      "field-38":"PM",
-      "field-39":"Tx Frais Ges Fin",
-      "field-40":"Type de Rente"
+      "field-10": "Calculateur de dates",
+      "field-11": "Taux Marge",
+      "field-12": "Date Naissance",
+      "field-13": "Cout Gestion",
+      "field-14": "Code Produit",
+      "field-15": "aux Marge Min",
+      "field-16": "TMG",
+      "field-17": "Cout Rachat",
+      "field-18": "Numero Contrat",
+      "field-19": "Montant Marge",
+      "field-20": "Sexe Assure",
+      "field-21": "Cout Sinistre",
+      "field-22": "Prise en charge des codes",
+      "field-23": "Taux Comm",
+      "field-24": "Date Terme",
+      "field-25": "Cout Gest Fin",
+      "field-26": "Prise en charge des types",
+      "field-27": "Taux Comm Min",
+      "field-28": "Solde Esc Comm",
+      "field-29": "Pourcentage",
+      "field-30": "Aide à la conception",
+      "field-31": "Montant Comm",
+      "field-32": "Date Effet Contrat",
+      "field-33": "Nb Contrat",
+      "field-34": "Grantie Deces",
+      "field-35": "Prime Per Ann",
+      "field-36": "Sortie en Rente",
+      "field-37": "Montant Garantie",
+      "field-38": "PM",
+      "field-39": "Tx Frais Ges Fin",
+      "field-40": "Type de Rente"
     },
 
-    "hyp-tab":{
-      "field-1":"Table de Mortalité_EN",
-      "field-2":"Mortalité réelle (en % de la table de mortalité)",
-      "field-3":"Augmentation de la table de mortalité utilisée",
-      "field-4":"Taux d'imposition_EN",
-      "field-5":"Taux d'inflation par année index)EN",
-      "field-6":"Coût en capital",
-      "field-7":"Rendement des Fonds propres_EN",
-      "field-8":"Taux de cession en réassurance_En",
-      "field-9":"Frais de développement",
-      "field-10":"Période d'amortissement",
-      "field-11":"Table de mortalité pour Réassurance_En",
-      "field-12":"Rating du",
-     
-      "field-1-dropdown-1":"Option"   
+    "hyp-tab": {
+      "field-1": "Table de Mortalité_EN",
+      "field-2": "Mortalité réelle (en % de la table de mortalité)",
+      "field-3": "Augmentation de la table de mortalité utilisée",
+      "field-4": "Taux d'imposition_EN",
+      "field-5": "Taux d'inflation par année index)EN",
+      "field-6": "Coût en capital",
+      "field-7": "Rendement des Fonds propres_EN",
+      "field-8": "Taux de cession en réassurance_En",
+      "field-9": "Frais de développement",
+      "field-10": "Période d'amortissement",
+      "field-11": "Table de mortalité pour Réassurance_En",
+      "field-12": "Rating du",
+
+      "field-1-dropdown-1": "Option"
     }
-    
   },
 
   "itsWorking": "ça marche"

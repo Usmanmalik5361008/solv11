@@ -1,8 +1,10 @@
 import { Col, Row } from "antd";
 import { ConfirmationBox } from "globalComponents";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Benifits = () => {
+  const { t } = useTranslation();
   return (
     <div className="card-view card-padding">
       <div className="custom-table-style-2-wrapper mt-5">
@@ -10,12 +12,12 @@ const Benifits = () => {
           <thead>
             <tr>
               <th style={{ width: "2%" }}></th>
-              <th>Calculation Date</th>
-              <th>Numero De Contat</th>
-              <th>Numero De Benefeciaire</th>
-              <th>Date Survenance</th>
-              <th>Date Debut Sinistre</th>
-              <th>Date Fn Sinistre</th>
+              <th>{t('cal-date')}</th>
+              <th>{t('contact-num')}</th>
+              <th>{t('beneficiary-num')}</th>
+              <th>{t('date-occ')}</th>
+              <th>{t('claim-start-date')}</th>
+              <th>{t('date-fin-claim')}</th>
             </tr>
           </thead>
           <tbody>
@@ -34,61 +36,61 @@ const Benifits = () => {
       <Row className="my-5" gutter={[15, 15]}>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Date de Calcul</label>
+            <label>{t('cal-date')}</label>
             <input type={"date"} />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Date de Regle</label>
+            <label>{t('rule-date')}</label>
             <input type={"date"} />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Libelle Acte</label>
+            <label>{t('wording-act')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Numero de Contrat</label>
+            <label>{t('contract-num')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Date de soin</label>
+            <label>{t('treatment-date')}</label>
             <input type={"date"} />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Montant de la d</label>
+            <label>{t('amount-of-d')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Numero de Be</label>
+            <label>{t('be-number')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Numero de Si</label>
+            <label>{t('si-number')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Montant Rembo</label>
+            <label>{t('refund-amount')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Date Survenance</label>
+            <label>{t('date-occ')}</label>
             <input type={"date"} />
           </div>
         </Col>
@@ -100,25 +102,25 @@ const Benifits = () => {
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Date Debut Sinistre</label>
+            <label>{t('claim-start-date')}</label>
             <input type={"date"} />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Code Garantie</label>
+            <label>{t('guarantee-code')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Date Fin Sinistre</label>
+            <label>{t('date-fin-claim')}</label>
             <input type={"date"} />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Code Acte</label>
+            <label>{t('code-act')}</label>
             <input />
           </div>
         </Col>

@@ -2,28 +2,30 @@ import { Col, Row } from "antd";
 import { ConfirmationBox } from "globalComponents";
 import { PillButton } from "globalComponents";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const HealthPremiumsPage = () => {
+  const { t } = useTranslation();
   return (
     <div className="card-view card-padding">
       <div className="light-grey-bordered">
         <div className="d-flex justify-space-between mb-3" style={{ gap: 10 }}>
-          <h5>Filtre</h5>
+          <h5>{t('filter')}</h5>
           <div className="d-flex" style={{ gap: 10 }}>
-            <PillButton title="Apply Filters" type="highlighted" />
-            <PillButton title="Clear" />
+            <PillButton title={t('apply-filters')} type="highlighted" />
+            <PillButton title={t('clear')} />
           </div>
         </div>
         <Row gutter={[15, 15]}>
           <Col xs={12} md={6} lg={4}>
             <div className="custom-form-field">
-              <label>Date De Calcul</label>
+              <label>{t('cal-date')}</label>
               <input type={"date"} />
             </div>
           </Col>
           <Col xs={12} md={6} lg={4}>
             <div className="custom-form-field">
-              <label>Numero De Contrat</label>
+              <label>{t('contract-num')}</label>
               <input />
             </div>
           </Col>
@@ -33,16 +35,16 @@ const HealthPremiumsPage = () => {
             <thead>
               <tr>
                 <th style={{ width: "2%" }}></th>
-                <th>Calculation Date</th>
-                <th>Numero De Contat</th>
-                <th>Numero De Benefeciaire</th>
+                <th>{t('cal-date')}</th>
+                <th>{t('contact-num')}</th>
+                <th>{t('beneficiary-num')}</th>
                 <th>Code LOB</th>
                 <th>LOB</th>
-                <th>Code Acte</th>
-                <th>Code Garantie</th>
-                <th>Date Deffet</th>
-                <th>Periodicite</th>
-                <th>Cotisation Acquise</th>
+                <th>{t('code-act')}</th>
+                <th>{t('guarantee-code')}</th>
+                <th>{t('effective-date')}</th>
+                <th>{t('periodicity')}</th>
+                <th>{t('aquired-contribution')}</th>
               </tr>
             </thead>
             <tbody>
@@ -66,13 +68,13 @@ const HealthPremiumsPage = () => {
       <Row className="mt-5" gutter={[15, 15]}>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Date de Calcul</label>
+            <label>{t('cal-date')}</label>
             <input type={"date"} />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Periodicite</label>
+            <label>{t('periodicity')}</label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -80,20 +82,20 @@ const HealthPremiumsPage = () => {
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Numero De Contrat</label>
+            <label>{t('contract-num')}</label>
             <input className="text-right" />
           </div>
         </Col>
 
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Cotisation Acquise</label>
+            <label>{t('aquired-contribution')}</label>
             <input placeholder="0" className="text-right" />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Numero de Benefeciaire</label>
+            <label>{t('beneficiary-num')}</label>
             <input placeholder="0" className="text-right" />
           </div>
         </Col>
@@ -113,20 +115,20 @@ const HealthPremiumsPage = () => {
 
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Code Acte</label>
+            <label>{t('code-act')}</label>
             <input className="text-right" />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Code Garantie</label>
+            <label>{t('guarantee-code')}</label>
             <input />
           </div>
         </Col>
 
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Date D'effet</label>
+            <label>{t('effective-date')}</label>
             <input type={"date"} />
           </div>
         </Col>

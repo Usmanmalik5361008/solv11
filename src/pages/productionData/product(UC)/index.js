@@ -2,8 +2,10 @@ import { Col, Row } from "antd";
 import { ConfirmationBox } from "globalComponents";
 import { Button } from "globalComponents";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const ProductUCPage = () => {
+  const { t } = useTranslation()
   return (
     <div className="card-view card-padding">
       <div className="custom-table-style-2-wrapper mt-5">
@@ -11,15 +13,15 @@ const ProductUCPage = () => {
           <thead>
             <tr>
               <th style={{ width: "2%" }}></th>
-              <th>Code Produit</th>
-              <th>Table Mortalite Homme</th>
-              <th>Table Mortalite Femme</th>
-              <th>Majoratian Table Prime de Risque</th>
-              <th>Majoratian Table Reassurance</th>
-              <th>Table Mortalite Reassurance Homme</th>
-              <th>Table Mortalite Reassurance Femme</th>
-              <th>Escompete</th>
-              <th>Duree Escompete</th>
+              <th>{t('prod-code')}</th>
+              <th>{t('male-mortality-table')}</th>
+              <th>{t('female-mortality-table')}</th>
+              <th>{t('maj-tab-risk-prim')}</th>
+              <th>{t('maj-tab-reasurance')}</th>
+              <th>{t('male-reinsurance-mortality-table')}</th>
+              <th>{t('female-reinsurance-mortality-table')}</th>
+              <th>{t('discount')}</th>
+              <th>{t('discount-duration')}</th>
             </tr>
           </thead>
           <tbody>
@@ -41,19 +43,19 @@ const ProductUCPage = () => {
       <Row className="mt-5" gutter={[15, 15]}>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Cod Produit</label>
+            <label>{t('prod-code')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Table Reassurance Home</label>
+            <label>{t('male-reassurance-table')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Penalite de Rachat</label>
+            <label>{t('redemp-penalty')}</label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -61,37 +63,37 @@ const ProductUCPage = () => {
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Table Mortalite Home</label>
+            <label>{t('male-mortality-table')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Table Reassurance Femme</label>
+            <label>{t('female-reassurance-table')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Duree Penalite de Rachat</label>
+            <label>{t('redemp-penalty-duration')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Table Mortalite Femme</label>
+            <label>{t('female-mortality-table')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Taux de Cession Reassurance</label>
+            <label>{t('reinsurance-cessation-rate')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Taux maximum Penalite de Rachat</label>
+            <label>{t('max-redemp-penalty-rate')}</label>
             <input />
           </div>
         </Col>
@@ -103,7 +105,7 @@ const ProductUCPage = () => {
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Escompete</label>
+            <label>{t('discount')}</label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -111,21 +113,21 @@ const ProductUCPage = () => {
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Majoratian Table Reassurance</label>
+            <label>{t('maj-tab-reasurance')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Duree Escompete</label>
+            <label>{t('discount-duration')}</label>
             <input />
           </div>
         </Col>
       </Row>
       <div className="mt-5 d-flex flex-row-reverse" style={{ gap: 20 }}>
-        <Button type="primary" title="Ajouter Produit" />
-        <Button type="default" title="Suprimer Produit" />
-        <Button type="default" title="Modifier Produit" />
+        <Button type="primary" title={t('edit-prod')} />
+        <Button type="default" title={t('del-prod')} />
+        <Button type="default" title={t('add-prod')} />
       </div>
       <br />
       <ConfirmationBox />

@@ -1,16 +1,20 @@
 import { ConfirmationBox } from "globalComponents";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Funds = () => {
+
+  const {t} = useTranslation();
+
   return (
     <div className="">
       <div className="custom-table-style-2-header">
         <div style={{ width: "50%" }}></div>
         <div style={{ width: "12.5%" }} className="text-center">
-          <h5>Tier1 lilimeite</h5>
+          <h5>Tier1 {t('unlimited')}</h5>
         </div>
         <div style={{ width: "12.5%" }} className="text-center">
-          <h5>Tier 1 Limite</h5>
+          <h5>Tier 1 {t('limited')}</h5>
         </div>
         <div style={{ width: "12.5%" }} className="text-center">
           <h5>Tier 2</h5>
@@ -25,7 +29,7 @@ const Funds = () => {
             <tr>
               <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Capital souscrit ou fonds équivalent d'une mutuelle
+                  {t('production-data.bass-equity.field-1')}
                 </span>
               </td>
               <td className="text-right">1</td>
@@ -36,56 +40,7 @@ const Funds = () => {
             <tr>
               <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Prime d'émission relatives au capital souscrit
-                </span>
-              </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-            </tr>
-            <tr>
-              <td colSpan={5}>
-                <h5 className="small-heading mb-0">
-                  Passifs subordonnés conformes aux exigences Solvabilité 2
-                </h5>
-              </td>
-            </tr>
-            <tr>
-              <td style={{ width: "50%" }}>
-                <span className="table-row-title">Actions préférentielles</span>
-              </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-            </tr>
-            <tr>
-              <td style={{ width: "50%" }}>
-                <span className="table-row-title">
-                  Primes d'émission relatives aux actions préférentielles
-                </span>
-              </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-            </tr>
-            <tr>
-              <td style={{ width: "50%" }}>
-                <span className="table-row-title">
-                  Comptes suibordonnés des membres d'une mutuelle
-                </span>
-              </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-            </tr>
-            <tr>
-              <td style={{ width: "50%" }}>
-                <span className="table-row-title">
-                  Autres passifs subordonnés
+                  {t('production-data.bass-equity.field-2')}
                 </span>
               </td>
               <td className="text-right">1</td>
@@ -96,14 +51,13 @@ const Funds = () => {
             <tr>
               <td colSpan={5}>
                 <h5 className="small-heading mb-0">
-                  Passifs subordonnés admis au titre des dispositions
-                  transitoires
+                  {t('production-data.bass-equity.title-1')}
                 </h5>
               </td>
             </tr>
             <tr>
               <td style={{ width: "50%" }}>
-                <span className="table-row-title">Actions préférentielles</span>
+                <span className="table-row-title">{t('production-data.bass-equity.field-3')}</span>
               </td>
               <td className="text-right">1</td>
               <td className="text-right">1</td>
@@ -113,7 +67,7 @@ const Funds = () => {
             <tr>
               <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Primes d'émission relatives aux actions préférentielles
+                  {t('production-data.bass-equity.field-4')}
                 </span>
               </td>
               <td className="text-right">1</td>
@@ -124,7 +78,7 @@ const Funds = () => {
             <tr>
               <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Comptes suibordonnés des membres d'une mutuelle
+                  {t('production-data.bass-equity.field-5')}
                 </span>
               </td>
               <td className="text-right">1</td>
@@ -135,29 +89,7 @@ const Funds = () => {
             <tr>
               <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Autres passifs subordonnés
-                </span>
-              </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-            </tr>
-            <tr>
-              <td style={{ width: "50%" }}>
-                <span className="table-row-title">
-                  Surplus funds Créances d'impôts latentes nettes
-                </span>
-              </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-            </tr>
-            <tr>
-              <td style={{ width: "50%" }}>
-                <span className="table-row-title">
-                  Réserve de réconciliation totale
+                  {t('production-data.bass-equity.field-6')}
                 </span>
               </td>
               <td className="text-right">1</td>
@@ -167,13 +99,24 @@ const Funds = () => {
             </tr>
             <tr>
               <td colSpan={5}>
-                <h5 className="small-heading mb-0">A déduire</h5>
+                <h5 className="small-heading mb-0">
+                {t('production-data.bass-equity.title-2')}
+                </h5>
               </td>
             </tr>
             <tr>
               <td style={{ width: "50%" }}>
+                <span className="table-row-title">{t('production-data.bass-equity.field-3')}</span>
+              </td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+            </tr>
+            <tr>
+              <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Capital souscrit non versé
+                  {t('production-data.bass-equity.field-4')}
                 </span>
               </td>
               <td className="text-right">1</td>
@@ -184,7 +127,7 @@ const Funds = () => {
             <tr>
               <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Actions propres ou parts propres
+                  {t('production-data.bass-equity.field-5')}
                 </span>
               </td>
               <td className="text-right">1</td>
@@ -195,7 +138,7 @@ const Funds = () => {
             <tr>
               <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Dividendes et distributions prévisibles
+                  {t('production-data.bass-equity.field-6')}
                 </span>
               </td>
               <td className="text-right">1</td>
@@ -206,8 +149,7 @@ const Funds = () => {
             <tr>
               <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Participations dans des établisements de crédit et des
-                  institutions
+                  {t('production-data.bass-equity.field-7')}
                 </span>
               </td>
               <td className="text-right">1</td>
@@ -218,7 +160,23 @@ const Funds = () => {
             <tr>
               <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Déduction pour ring fenced funds
+                  {t('production-data.bass-equity.field-8')}
+                </span>
+              </td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+            </tr>
+            <tr>
+              <td colSpan={5}>
+                <h5 className="small-heading mb-0">{t('production-data.bass-equity.title-3')}</h5>
+              </td>
+            </tr>
+            <tr>
+              <td style={{ width: "50%" }}>
+                <span className="table-row-title">
+                  {t('production-data.bass-equity.field-9')}
                 </span>
               </td>
               <td className="text-right">1</td>
@@ -229,7 +187,7 @@ const Funds = () => {
             <tr>
               <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Déduction pour surplus funds et créances d'impôts latentes
+                  {t('production-data.bass-equity.field-10')}
                 </span>
               </td>
               <td className="text-right">1</td>
@@ -240,7 +198,51 @@ const Funds = () => {
             <tr>
               <td style={{ width: "50%" }}>
                 <span className="table-row-title">
-                  Autres éléments admis sur autorisation du CAA
+                  {t('production-data.bass-equity.field-11')}
+                </span>
+              </td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+            </tr>
+            <tr>
+              <td style={{ width: "50%" }}>
+                <span className="table-row-title">
+                {t('production-data.bass-equity.field-12')}
+                </span>
+              </td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+            </tr>
+            <tr>
+              <td style={{ width: "50%" }}>
+                <span className="table-row-title">
+                {t('production-data.bass-equity.field-13')}
+                </span>
+              </td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+            </tr>
+            <tr>
+              <td style={{ width: "50%" }}>
+                <span className="table-row-title">
+                {t('production-data.bass-equity.field-14')}
+                </span>
+              </td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+              <td className="text-right">1</td>
+            </tr>
+            <tr>
+              <td style={{ width: "50%" }}>
+                <span className="table-row-title">
+                {t('production-data.bass-equity.field-15')}
                 </span>
               </td>
               <td className="text-right">1</td>

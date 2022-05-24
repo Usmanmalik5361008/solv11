@@ -1,31 +1,33 @@
-import { Col, Row } from "antd";
-import { ConfirmationBox } from "globalComponents";
-import React from "react";
+import { Col, Row } from 'antd'
+import { ConfirmationBox } from 'globalComponents'
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const AnnuitiesPage = () => {
+  const { t } = useTranslation()
   return (
-    <div className="card-view card-padding">
-      <div className="custom-table-style-2-wrapper mt-5">
+    <div className='card-view card-padding'>
+      <div className='custom-table-style-2-wrapper mt-5'>
         <table>
           <thead>
             <tr>
-              <th style={{ width: "2%" }}></th>
-              <th>Type Rente</th>
-              <th>Paiement Direct</th>
-              <th>Rente Certaine</th>
-              <th>Rente Viagere</th>
-              <th>Duree Rente Certaine</th>
-              <th>Age de sortie</th>
-              <th>Taux de Reversion</th>
-              <th>Difference Age Rentier Age Reversataire</th>
-              <th>Periodicite</th>
-              <th>Table Mortalite</th>
-              <th>Table Mortalite</th>
-              <th>Taux de Gestion</th>
-              <th>Cout de Gestion</th>
-              <th>Taux Garanti</th>
-              <th>Devise Rente</th>
-              <th>Pourcentage</th>
+              <th style={{ width: '2%' }}></th>
+              <th>{t('type-annually')}</th>
+              <th>{t('direct-payment')}</th>
+              <th>{t('life-annuity')}</th>
+              <th>{t('life-annuity')}</th>
+              <th>{t('duration-certain-annuity')}</th>
+              <th>{t('exit-age')}</th>
+              <th>{t('reversion-rate')}</th>
+              <th>{t('diff-age-ann-survivor-age')}</th>
+              <th>{t('periodicity')}</th>
+              <th>{t('mortality-table')}</th>
+              <th>{t('mortality-table')}</th>
+              <th>{t('mang-rate')}</th>
+              <th>{t('mang-cost')}</th>
+              <th>{t('guaranteed-rate')}</th>
+              <th>{t('currency-agency')}</th>
+              <th>{t('percentage')}</th>
             </tr>
           </thead>
           <tbody>
@@ -50,116 +52,116 @@ const AnnuitiesPage = () => {
           </tbody>
         </table>
       </div>
-      <Row className="mt-5" gutter={[15, 15]}>
+      <Row className='mt-5' gutter={[15, 15]}>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Type Rente</label>
-            <select className="dropdown-style-2">
-              <option value="1">1</option>
+          <div className='custom-form-field'>
+            <label>{t('type-annually')}</label>
+            <select className='dropdown-style-2'>
+              <option value='1'>1</option>
             </select>
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Taux De Reversion</label>
+          <div className='custom-form-field'>
+            <label>{t('reversion-rate')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Taux de Gestion</label>
+          <div className='custom-form-field'>
+            <label>{t('mang-rate')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Paiement Direct</label>
-            <select className="dropdown-style-2">
-              <option value="1">1</option>
+          <div className='custom-form-field'>
+            <label>{t('direct-payment')}</label>
+            <select className='dropdown-style-2'>
+              <option value='1'>1</option>
             </select>
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Difference Age Rentier Age Reversataire</label>
+          <div className='custom-form-field'>
+            <label>{t('diff-age-ann-survivor-age')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Cout de Gestion</label>
+          <div className='custom-form-field'>
+            <label>{t('mang-cost')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Rente Certaine</label>
-            <select className="dropdown-style-2">
-              <option value="1">1</option>
+          <div className='custom-form-field'>
+            <label>{t('life-annuity')}</label>
+            <select className='dropdown-style-2'>
+              <option value='1'>1</option>
             </select>
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Taux Garanti</label>
+          <div className='custom-form-field'>
+            <label>{t('guaranteed-rate')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Rente Viagere</label>
-            <select className="dropdown-style-2">
-              <option value="1">1</option>
+          <div className='custom-form-field'>
+            <label>{t('life-annuity')}</label>
+            <select className='dropdown-style-2'>
+              <option value='1'>1</option>
             </select>
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Periodicite</label>
-            <select className="dropdown-style-2">
-              <option value="1">1</option>
+          <div className='custom-form-field'>
+            <label>{t('periodicity')}</label>
+            <select className='dropdown-style-2'>
+              <option value='1'>1</option>
             </select>
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Devise Rente</label>
-            <select className="dropdown-style-2">
-              <option value="1">1</option>
+          <div className='custom-form-field'>
+            <label>{t('currency-agency')}</label>
+            <select className='dropdown-style-2'>
+              <option value='1'>1</option>
             </select>
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Duree Rente</label>
+          <div className='custom-form-field'>
+            <label>{t('duration-annuity')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Table Mortalite</label>
-            <select className="dropdown-style-2">
-              <option value="1">1</option>
+          <div className='custom-form-field'>
+            <label>{t('mortality-table')}</label>
+            <select className='dropdown-style-2'>
+              <option value='1'>1</option>
             </select>
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Pourcentage</label>
+          <div className='custom-form-field'>
+            <label>{t('percentage')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Age Sortie</label>
+          <div className='custom-form-field'>
+            <label>{t('exit-age')}</label>
             <input />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
-          <div className="custom-form-field">
-            <label>Table Mortalite</label>
-            <select className="dropdown-style-2">
-              <option value="1">1</option>
+          <div className='custom-form-field'>
+            <label>{t('mortality-table')}</label>
+            <select className='dropdown-style-2'>
+              <option value='1'>1</option>
             </select>
           </div>
         </Col>
@@ -167,7 +169,7 @@ const AnnuitiesPage = () => {
       <br />
       <ConfirmationBox />
     </div>
-  );
-};
+  )
+}
 
-export default AnnuitiesPage;
+export default AnnuitiesPage

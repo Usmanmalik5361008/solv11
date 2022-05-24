@@ -1,122 +1,121 @@
-import { ConfirmationBox } from "globalComponents";
-import React from "react";
+import { ConfirmationBox } from 'globalComponents'
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const Auxilaries = () => {
+  const { t } = useTranslation()
+
   return (
     <>
-      <div className="custom-table-style-2-wrapper mb-5">
+      <div className='custom-table-style-2-wrapper mb-5'>
         <table>
           <tbody>
             <tr>
-              <td style={{ width: "70%" }}>
-                <span className="table-row-title">
-                  Capital souscrit non verse
+              <td style={{ width: '70%' }}>
+                <span className='table-row-title'>
+                {t('production-data.aux-fund.field-1')}
                 </span>
               </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
             </tr>
             <tr>
-              <td style={{ width: "70%" }}>
-                <span className="table-row-title">
-                  Fonds non versés équivalents au capital souscrit non versé
-                  d'une
+              <td style={{ width: '70%' }}>
+                <span className='table-row-title'>
+                {t('production-data.aux-fund.field-2')}
                 </span>
               </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
             </tr>
             <tr>
-              <td style={{ width: "70%" }}>
-                <span className="table-row-title">
-                  Actions préférentielles appelables sur demande
+              <td style={{ width: '70%' }}>
+                <span className='table-row-title'>
+                {t('production-data.aux-fund.field-3')}
                 </span>
               </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
             </tr>
             <tr>
-              <td style={{ width: "70%" }}>
-                <span className="table-row-title">
-                  Engagements juridiquement contraignants de souscrire sur
-                  demande à des passifs subordonnés
+              <td style={{ width: '70%' }}>
+                <span className='table-row-title'>
+                {t('production-data.aux-fund.field-4')}
                 </span>
               </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
             </tr>
             <tr>
-              <td style={{ width: "70%" }}>
-                <span className="table-row-title">
-                  Primes d'émission relatives aux actions préférentielles
-                </span>
+              <td style={{ width: '70%' }}>
+                <span className='table-row-title'>
+                {t('production-data.aux-fund.field-5')}
+                  </span>
               </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
             </tr>
             <tr>
-              <td style={{ width: "70%" }}>
-                <span className="table-row-title">
-                  Lettres de crédit et garanties satisfaisant aux critères de
-                  l'article 92 de la directive SII
+              <td style={{ width: '70%' }}>
+                <span className='table-row-title'>
+                {t('production-data.aux-fund.field-6')}
                 </span>
               </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
             </tr>
             <tr>
-              <td style={{ width: "70%" }}>
-                <span className="table-row-title">
-                  Autres lettres de crédit et garanties
+              <td style={{ width: '70%' }}>
+                <span className='table-row-title'>
+                {t('production-data.aux-fund.field-7')}
                 </span>
               </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
             </tr>
             <tr>
-              <td style={{ width: "70%" }}>
-                <span className="table-row-title">
-                  Rappels de cotisations satisfaisant aux critères de l'article
-                  93 de la
+              <td style={{ width: '70%' }}>
+                <span className='table-row-title'>
+                {t('production-data.aux-fund.field-8')}
                 </span>
               </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
             </tr>
             <tr>
-              <td style={{ width: "70%" }}>
-                <span className="table-row-title">
-                  Autres rappels de cotisations
+              <td style={{ width: '70%' }}>
+                <span className='table-row-title'>
+                {t('production-data.aux-fund.field-9')}
                 </span>
               </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
             </tr>
             <tr>
-              <td style={{ width: "70%" }}>
-                <span className="table-row-title">
-                  Autres fonds propres auxiliaires
+              <td style={{ width: '70%' }}>
+                <span className='table-row-title'>
+                {t('production-data.aux-fund.field-10')}
                 </span>
               </td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
-              <td className="text-right">1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
+              <td className='text-right'>1</td>
             </tr>
           </tbody>
         </table>
       </div>
       <ConfirmationBox />
     </>
-  );
-};
+  )
+}
 
-export default Auxilaries;
+export default Auxilaries

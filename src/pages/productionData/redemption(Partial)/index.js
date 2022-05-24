@@ -1,7 +1,10 @@
 import { ConfirmationBox } from "globalComponents";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const PartialRedemptionPage = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="card-view card-padding">
       <div className="custom-table-style-2-wrapper mt-5">
@@ -9,16 +12,16 @@ const PartialRedemptionPage = () => {
           <thead>
             <tr>
               <th style={{ width: "2%" }}></th>
-              <th>Dat Calcul</th>
-              <th>Type Traitement</th>
-              <th>Code Produt</th>
-              <th>Annee 1</th>
-              <th>Annee 2</th>
-              <th>Annee 3</th>
-              <th>Annee 4</th>
-              <th>Annee 5</th>
-              <th>Annee 6</th>
-              <th>Annee 7</th>
+              <th>{t('date-cal')}</th>
+              <th>{t('type-treat')}</th>
+              <th>{t('prod-code')}</th>
+              <th>{t('year')} 1</th>
+              <th>{t('year')} 2</th>
+              <th>{t('year')} 3</th>
+              <th>{t('year')} 4</th>
+              <th>{t('year')} 5</th>
+              <th>{t('year')} 6</th>
+              <th>{t('year')} 7</th>
             </tr>
           </thead>
           <tbody>

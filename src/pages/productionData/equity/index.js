@@ -2,28 +2,30 @@ import { Col, Row } from "antd";
 import { ConfirmationBox } from "globalComponents";
 import { PillButton } from "globalComponents";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const AssetsPage = () => {
+  const { t } = useTranslation();
   return (
     <div className="card-view card-padding">
       <div className="light-grey-bordered">
         <div className="d-flex justify-space-between mb-3" style={{ gap: 10 }}>
-          <h5>Filtre</h5>
+          <h5>{t('filter')}</h5>
           <div className="d-flex" style={{ gap: 10 }}>
-            <PillButton title="Apply Filters" type="highlighted" />
-            <PillButton title="Clear" />
+            <PillButton title={t('apply-filters')} type="highlighted" />
+            <PillButton title={t('clear')} />
           </div>
         </div>
         <Row gutter={[15, 15]}>
           <Col xs={12} md={6} lg={4}>
             <div className="custom-form-field">
-              <label>Date De Calcul</label>
+              <label>{t('cal-date')}</label>
               <input type={"date"} />
             </div>
           </Col>
           <Col xs={12} md={6} lg={4}>
             <div className="custom-form-field">
-              <label>Type De Support</label>
+              <label>{t('support-type')}</label>
               <select className="dropdown-style-2">
                 <option value="1">1</option>
               </select>
@@ -39,7 +41,7 @@ const AssetsPage = () => {
           </Col>
           <Col xs={12} md={6} lg={4}>
             <div className="custom-form-field">
-              <label>Elatique</label>
+              <label>{t('elastic')}</label>
               <select className="dropdown-style-2">
                 <option value="1">1</option>
               </select>
@@ -55,7 +57,7 @@ const AssetsPage = () => {
           </Col>
           <Col xs={12} md={6} lg={4}>
             <div className="custom-form-field">
-              <label>Devise</label>
+              <label>{t('currency')}</label>
               <select className="dropdown-style-2">
                 <option value="1">1</option>
               </select>
@@ -63,7 +65,7 @@ const AssetsPage = () => {
           </Col>
           <Col xs={12} md={6} lg={4}>
             <div className="custom-form-field">
-              <label>Rating</label>
+              <label>{t('rating')}</label>
               <select className="dropdown-style-2">
                 <option value="1">1</option>
               </select>
@@ -75,14 +77,14 @@ const AssetsPage = () => {
             <thead>
               <tr>
                 <th style={{ width: "2%" }}></th>
-                <th>Calculation Date</th>
-                <th>Nom Titre</th>
+                <th>{t('cal-date')}</th>
+                <th>{t('title-name')}</th>
                 <th>Type Titre</th>
-                <th>Etatique</th>
-                <th>Type Passif</th>
-                <th>Code Support</th>
+                <th>{t('state')}</th>
+                <th>{t('passive-type')}</th>
+                <th>{t('code-support')}</th>
                 <th>OCDE</th>
-                <th>Devise Support</th>
+                <th>{t('currency')} Support</th>
               </tr>
             </thead>
             <tbody>
@@ -104,7 +106,7 @@ const AssetsPage = () => {
       <Row className="mt-5" gutter={[15, 15]}>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Nom Titre</label>
+            <label>{t('title-name')}</label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -112,7 +114,7 @@ const AssetsPage = () => {
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Devise</label>
+            <label>{t('currency')}</label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -132,13 +134,13 @@ const AssetsPage = () => {
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Taux Change</label>
+            <label>{t('exchange-rate')}</label>
             <input placeholder="0" className="text-right" />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Duration</label>
+            <label>{t('duration')}</label>
             <input placeholder="0" className="text-right" />
           </div>
         </Col>
@@ -158,13 +160,13 @@ const AssetsPage = () => {
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Date Achat</label>
+            <label>{t('purchase-date')}</label>
             <input type={"date"} />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Elatique</label>
+            <label>{t('elastic')}</label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -172,19 +174,19 @@ const AssetsPage = () => {
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Quantite</label>
+            <label>{t('quantity')}</label>
             <input placeholder="0" className="text-right" />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Date Cours</label>
+            <label>{t('date-course')}</label>
             <input type={"date"} />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Type De Support</label>
+            <label>{t('support-type')}</label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -192,13 +194,13 @@ const AssetsPage = () => {
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Valeur Devise</label>
+            <label>{t('value-curr')}</label>
             <input placeholder="0" className="text-right" />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Date Terme</label>
+            <label>{t('date-term')}</label>
             <input type={"date"} />
           </div>
         </Col>
@@ -213,13 +215,13 @@ const AssetsPage = () => {
 
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Valeur Euro</label>
+            <label>{t('euro-val')}</label>
             <input placeholder="0" className="text-right" />
           </div>
         </Col>
         <Col xs={12} md={6} lg={4}>
           <div className="custom-form-field">
-            <label>Rating</label>
+            <label>{t('rating')}</label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
