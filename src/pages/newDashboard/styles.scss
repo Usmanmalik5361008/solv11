@@ -1,0 +1,44 @@
+.card-view {
+  .dashboard-header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6eaf0;
+
+    h3 {
+      margin: 0;
+    }
+  }
+  .dashboard-body {
+    padding: 15px 20px;
+  }
+
+  .dashboard-body-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    .dashboard-body-top-left {
+      .div-gap {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        h5 {
+          font-weight: 500 !important;
+          margin: 0;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .dashboard-body-top-right {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}

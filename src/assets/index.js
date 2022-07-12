@@ -30,6 +30,21 @@ import DELETE_ICON from "./images/delete-icon.png";
 import TICKET_WHTE_ICON from "./images/tick-white-icon.png";
 import LOGIN_PAGE_BG from "./images/login_page_background.png";
 import HEADER_BOTTOM_BG from "./images/illustration_and_background.png";
+import TICK_ICON from "./images/tick.png";
+import CLOSE_ICON from "./images/close.png";
+import SCR_REPORT_ICON from "./images/google-sheet.png";
+import SCR_INPUT_ICON from "./images/scr-input.png";
+import BALANCE_SHEET_ICON from "./images/balance-sheet-entry.png";
+import EQUITY_ICON from "./images/equity.png";
+import PRODUCT_ICON from "./images/products.png";
+import REDEMPTION_ICON from "./images/redemptions.png";
+import PASSIVE_ICON from "./images/passive.png";
+import MATRIX_ICON from "./images/correlation-matrices.png";
+import ANNUALITIES_ICON from "./images/annuities.png";
+import HYPOTHESIS_ICON from "./images/shock-hypotheses.png";
+import ASSETS_ICON from "./images/assets.png";
+import VERTICAL_DOTS from "./images/vertical-dots.png";
+import CACNCEL_ICON from "./images/cancel.png";
 
 // svgs
 
@@ -262,6 +277,21 @@ export {
   TICKET_WHTE_ICON,
   LOGIN_PAGE_BG,
   HEADER_BOTTOM_BG,
+  TICK_ICON,
+  CLOSE_ICON,
+  SCR_REPORT_ICON,
+  SCR_INPUT_ICON,
+  BALANCE_SHEET_ICON,
+  EQUITY_ICON,
+  PRODUCT_ICON,
+  REDEMPTION_ICON,
+  PASSIVE_ICON,
+  MATRIX_ICON,
+  ANNUALITIES_ICON,
+  HYPOTHESIS_ICON,
+  ASSETS_ICON,
+  VERTICAL_DOTS,
+  CACNCEL_ICON,
   // svgs
   DashboardIcon,
   SettingIcon,

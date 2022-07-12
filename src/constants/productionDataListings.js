@@ -71,6 +71,13 @@ const productionListingTwo = [
     variant: "bordered",
     href: "/production-data/rachat-total",
   },
+  {
+    id: "9CI1KA2Y0Z-9CI0KA36C4033445522",
+    title: "production-data.list-item-11",
+    imgSrc: PRODUCTION_CARD_IMAGE3,
+    variant: "bordered",
+    href: "/production-data/graphs",
+  }
 ];
 
 const complianceSettings = [

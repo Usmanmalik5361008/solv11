@@ -8,6 +8,7 @@ import {
   DedicatedFunds,
 } from "./components";
 import { useTranslation } from "react-i18next";
+import { Toolbar } from "globalComponents";
 
 const { TabPane } = Tabs;
 
@@ -16,7 +17,7 @@ const ProfitabilityPage = () => {
 
   return (
     <div className="tab-screen-1-page">
-      <Tabs defaultActiveKey="1" className="custom-tabs-wrapper">
+      <Tabs defaultActiveKey="1" className="custom-tabs-wrapper mt-5">
         <TabPane tab={t("compliance-monitoring.contract-external")} key="1">
           <ExternalFunds />
         </TabPane>

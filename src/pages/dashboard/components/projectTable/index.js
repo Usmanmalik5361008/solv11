@@ -61,7 +61,7 @@ const ProjectTable = () => {
       name: 'Clark David',
       clientId: '9CI1KA2Y0Z-9CI0KA36C4',
       date: 'Thursday, Mar 10 · 2:35 PM',
-      status: false,
+      status: true,
     },
   ]
 

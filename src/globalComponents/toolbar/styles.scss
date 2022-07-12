@@ -1,0 +1,47 @@
+.toolbar {
+  background-color: #f3f8fa;
+  padding: 15px 10px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  overflow-x: auto;
+
+  .group-1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    .dropdown-style-2 {
+      width: 130px;
+    }
+  }
+
+  .group-2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    button {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+
+      img {
+        margin: auto;
+      }
+    }
+  }
+
+  .common-spacing {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+
+    p {
+      margin: 0;
+      color: #657590;
+    }
+  }
+}

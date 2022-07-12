@@ -1,12 +1,16 @@
 import { Col, Row } from "antd";
+import { Toolbar } from "globalComponents";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 const CounterpartyRisk = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   return (
     <div>
-      <h5 className="small-heading">{t("compliance-monitoring.counterparty-risk-tab.title-1")}</h5>
+      <Toolbar />
+      <h5 className="small-heading mt-5">
+        {t("compliance-monitoring.counterparty-risk-tab.title-1")}
+      </h5>
       <div className="custom-table-style-2-wrapper">
         <table>
           <thead>

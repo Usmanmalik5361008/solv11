@@ -1,31 +1,27 @@
-import React from "react";
 import { Alert, Collapse } from "antd";
 
-import { PillButton, TabsWithFilters } from "globalComponents";
-import "./index.scss";
-import { ProductionData } from "./components";
+import { DOWNLOAD_ICON, REFRESH_ICON } from "assets";
 import {
-  REFRESH_ICON,
-  DOWNLOAD_ICON,
-  PRODUCTION_CARD_IMAGE1,
-  PRODUCTION_CARD_IMAGE2,
-  PRODUCTION_CARD_IMAGE3,
-} from "assets";
-import { productionListingTwo } from "constants/productionDataListings";
-import { complianceSettings } from "constants/productionDataListings";
+  complianceSettings,
+  productionListingTwo,
+} from "constants/productionDataListings";
+import { Toolbar } from "globalComponents";
+import { PillButton, TabsWithFilters } from "globalComponents";
 import { useTranslation } from "react-i18next";
+import { ProductionData } from "./components";
+import "./index.scss";
 
 const { Panel } = Collapse;
 
 const ProjectsPage = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <div className="projects-page">
       <div className="card-view">
         <div className="top-section">
-          <PillButton title={t("refresh")} prependIcon={REFRESH_ICON} />
-          <PillButton title={t("download")} prependIcon={DOWNLOAD_ICON} />
+          <Toolbar />
         </div>
+
         <div className="card-body">
           <Alert message={infoText} type="info" showIcon />
         </div>
@@ -41,7 +37,7 @@ const ProjectsPage = () => {
             <Panel
               header={
                 <h5 className="collapse-title">
-                  {t('production-data.title')} ({productionListingTwo.length})
+                  {t("production-data.title")} ({productionListingTwo.length})
                 </h5>
               }
             >

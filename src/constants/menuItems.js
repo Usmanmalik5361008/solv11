@@ -1,13 +1,21 @@
-import { analyticsIcon, complianceIcon, DashboardIcon, productionIcon, ProjectIcon, SimulationIcon, subMenuIcon } from "assets";
+import {
+  analyticsIcon,
+  complianceIcon,
+  DashboardIcon,
+  productionIcon,
+  ProjectIcon,
+  SimulationIcon,
+  subMenuIcon,
+} from "assets";
 import {
   complianceSettings,
-  productionListingTwo
+  productionListingTwo,
 } from "./productionDataListings";
 
 const menuItems = [
   {
     key: "1",
-    name: 'dashboard.title',
+    name: "dashboard.title",
     icon: DashboardIcon,
     href: "/",
   },
@@ -15,10 +23,22 @@ const menuItems = [
     key: "2",
     name: "projects.title",
     icon: ProjectIcon,
-    href: "/projects",
+    href: "/",
   },
   {
     key: "3",
+    name: "scrcalculation.title",
+    icon: SimulationIcon,
+    href: "/scr-calculation",
+  },
+  {
+    key: "4",
+    name: "projectdata.title",
+    icon: ProjectIcon,
+    href: "/projects",
+  },
+  {
+    key: "5",
     name: "claims.title",
     icon: SimulationIcon,
     href: "/claims",
@@ -30,7 +50,7 @@ const menuItems = [
   //   href: "/reportings",
   // },
   {
-    key: "5",
+    key: "6",
     name: "production-data.title",
     icon: productionIcon,
     href: "/production-data",
@@ -44,7 +64,7 @@ const menuItems = [
     ],
   },
   {
-    key: "6",
+    key: "7",
     name: "compliance-settings.title",
     icon: analyticsIcon,
     href: "/compliance-settings",
@@ -58,19 +78,19 @@ const menuItems = [
     ],
   },
   {
-    key: "7",
+    key: "8",
     name: "compliance-monitoring.title",
     icon: complianceIcon,
     href: "/compliance-monitoring",
     subMenu: [
       {
-        key: "7-1",
+        key: "8-1",
         name: "compliance-monitoring.list-item-1",
         href: "/compliance-monitoring/scr",
         icon: subMenuIcon,
       },
       {
-        key: "7-2",
+        key: "8-2",
         name: "compliance-monitoring.list-item-2",
         href: "/compliance-monitoring/profitability",
         icon: subMenuIcon,

@@ -1,24 +1,24 @@
 {
   "home": "Domicile",
-
+  "actions": "Actions",
   "refresh": "Rafraîchir",
   "download": "Télécharger",
-
-  "new-projects": "De nouveaux projets",
+  "generateCsv": "Générer CSV",
+  "new-projects": "Nouveau projet",
   "reports": "Rapports",
-  "settings": "Réglages",
+  "settings": "Données",
   "advanced-settings": "Réglages avancés",
   "style": "Style",
-
+  "cancel": "Annuler",
   "all-projects": "Tous les projets",
-  "completed": "Terminé",
-  "pending": "En attente",
-  "approved": "A approuvé",
+  "completed": "Santé Prévoyance",
+  "pending": "Epargne",
+  "approved": "Santé",
 
-  "display-name": "Afficher un nom",
-  "client-id": "ID de l'application (client)",
-  "created-on": "Créé sur",
-  "certificates-n-secrets": "Certificats et secrets",
+  "display-name": "Crée par",
+  "client-id": "Nom projet",
+  "created-on": "Date création",
+  "certificates-n-secrets": "Catégorie",
 
   "add-filters": "Ajouter des filtres",
   "search": "Recherche",
@@ -97,12 +97,16 @@
   "max-redemp-penalty-rate": "Taux maximum Penalite de Rachat",
 
   "cal-date": "Date de Calcul",
+  "cal-date_titre": "Date du Calcul",
+  "coupon": "Coupon",
   "contract-num": "Numero De Contrat",
   "contact-num": "Numero De Contat",
   "beneficiary-num": "Numero De Benefeciaire",
   "code-act": "Code Acte",
   "effective-date": "Date D'effet",
   "aquired-contribution": "Cotisation Acquise",
+  "type_titre": "Type Titre",
+  "VNI": "VNI",
 
   "date-occ": "Date Survenance",
   "claim-start-date": "Date Debut Sinistre",
@@ -118,7 +122,7 @@
   "filter": "Filtre",
   "support-type": "Type De Support",
   "title-type": "Type Titre",
-  "elastic": "Elatique",
+  "etatique": "Etatique",
   "currency": "Devise",
   "rating": "Evaluation",
   "title-name": "Nom Titre",
@@ -131,47 +135,69 @@
   "value-curr": "Valeur Devise",
   "date-term": "Date Terme",
   "euro-val": "Valeur Euro",
+  "OCDE": "OCDE",
 
   "unlimited": "lilimeite",
   "limited": "Limite",
   "bass-equity": "Fonds Propress de Bass",
   "aux-equity-fund": "Fonds Propress Auxiliaire",
 
-  "death-guarantee":"Garantie Deces",
-  "mortant-guarantee-death":"Mortant Garantie Deces",
-  "rate-margin":"Taux Marge",
-  "d-o-b":"Date Naissance",
-  "cost-manag":"Cout Gestion",
-  "redemp-cost":"Cout Rachat",
-  "amount-margin":"Montant Marge",
-  "sex-assures":"Sexe Assure",
-  "loss-cost":"Cout Sinistre",
-  "code-support":"Prise en charge des codes",
-  "comm-rate":"Taux Comm",
-  "end-manag-cost":"Cout Gest Fin",
-  "type-support":"Prise en charge des types",
-  "bal-esc-comm":"Solde Esc Comm",
-  "curr-support":"Prise en charge des devises",
-  "com-amount":"Montant Comm",
-  "contract-effective-date":"Date Effet Contrat",
-  "Nb-contract":"Nb Contrat",
-  "prem-per-year":"Prime Per Ann",
-  "exit-in-annuity":"Sortie en Rente",
-  "amount-guarantee":"Montant Garantie",
-  "tx-expense-ges-end":"Tx Frais Ges Fin",
-  "type-of-annuity":"Type de Rente",
+  "death-guarantee": "Garantie Deces",
+  "mortant-guarantee-death": "Mortant Garantie Deces",
+  "rate-margin": "Taux Marge",
+  "d-o-b": "Date Naissance",
+  "cost-manag": "Cout Gestion",
+  "redemp-cost": "Cout Rachat",
+  "amount-margin": "Montant Marge",
+  "sex-assures": "Sexe Assure",
+  "loss-cost": "Cout Sinistre",
+  "code-support": "Prise en charge des codes",
+  "comm-rate": "Taux Comm",
+  "end-manag-cost": "Cout Gest Fin",
+  "type-support": "Prise en charge des types",
+  "bal-esc-comm": "Solde Esc Comm",
+  "curr-support": "Prise en charge des devises",
+  "com-amount": "Montant Comm",
+  "contract-effective-date": "Date Effet Contrat",
+  "Nb-contract": "Nb Contrat",
+  "prem-per-year": "Prime Per Ann",
+  "exit-in-annuity": "Sortie en Rente",
+  "amount-guarantee": "Montant Garantie",
+  "tx-expense-ges-end": "Tx Frais Ges Fin",
+  "type-of-annuity": "Type de Rente",
 
   "dashboard": {
     "title": "Tableau de bord",
-    "analytics": "Analyse de solvabilité"
+    "analytics": "Analyse de solvabilité",
+    "scr-report": "Rapport de Scr",
+    "scr-input": "Entree de Scr"
+  },
+
+  "projectdata": {
+    "title": "Données Projet"
+  },
+
+  "scrcalculation": {
+    "title": "Calcul SCR",
+    "balance-sheet": "Saisie bilan",
+    "equity": "Fonds propres",
+    "assets": "Actifs",
+    "passive": "Passif",
+    "products": "Produits",
+    "annuities": "Rentes",
+    "redemptions": "Rachats",
+    "shock-hypotheses": "Hypothès esdechoc",
+    "correlation-matrices": "Matrices de corrélation",
+    "forward-rate-graph": "Graphique taux de change",
+    "flat-rate-graph": "Graphique taux fixe"
   },
 
   "projects": {
-    "title": "Projets"
+    "title": "Projects"
   },
 
   "claims": {
-    "title": "Réclamations",
+    "title": "Demo page",
     "info-1": "Vous pouvez utiliser des paramètres dans les étapes de requête de texte et d'analyse en plaçant le nom du paramètre entre accolades, comme",
     "info-2": "Quelle que soit la valeur que vous définissez ici, elle sera remplacée dans les étapes ci-dessous qui utilisent ce paramètre",
     "info-variable": "leNomDuParamètre"
@@ -182,13 +208,14 @@
     "list-item-1": "Fond Propres",
     "list-item-2": "Actifs",
     "list-item-3": "Primes (santé) Pb Trad",
-    "list-item-4": "Prestations (santé) Pb Trad",
+    "list-item-4": "Claims (Health)",
     "list-item-5": "Passif (UC) Pb Trad",
-    "list-item-6": "Produits (UC) Pb Trad",
+    "list-item-6": "Produits Epargne",
     "list-item-7": "Produits (santé) Pb Trad",
-    "list-item-8": "Annuities",
+    "list-item-8": "Rentes",
     "list-item-9": "Rachat partiel",
     "list-item-10": "Rachat total",
+    "list-item-11": "graphiques",
 
     "bass-equity": {
       "field-1": "Capital souscrit ou fonds équivalent d'une mutuelle",
@@ -214,14 +241,14 @@
       "field-15": "Autres éléments admis sur autorisation du CAA"
     },
 
-    "aux-fund":{
+    "aux-fund": {
       "field-1": "Capital souscrit non verse",
       "field-2": "Fonds non versés équivalents au capital souscrit non versé d'une",
       "field-3": "Actions préférentielles appelables sur demande",
       "field-4": "Engagements juridiquement contraignants de souscrire sur demande à des passifs subordonnés",
       "field-5": "Primes d'émission relatives aux actions préférentielles",
       "field-6": "Lettres de crédit et garanties satisfaisant aux critères de l'article 92 de la directive SII",
-      "field-7": "Autres lettres de crédit et garanties", 
+      "field-7": "Autres lettres de crédit et garanties",
       "field-8": "Rappels de cotisations satisfaisant aux critères de l'article 93 de la",
       "field-9": "Autres rappels de cotisations",
       "field-10": "Autres fonds propres auxiliaires"
@@ -229,7 +256,7 @@
   },
 
   "compliance-settings": {
-    "title": "Paramètres de conformité",
+    "title": "Paramètres Solva 2",
     "list-item-1": "Hypothesis de choc",
     "list-item-2": "Matrice correlation 1",
     "list-item-3": "Matrice correlation 2",
@@ -285,8 +312,8 @@
   },
 
   "compliance-monitoring": {
-    "title": "Surveillance de la conformité",
-    "list-item-1": "SCR-Calcul reglementaire",
+    "title": "SCR - Hypothèses Générales",
+    "list-item-1": "SCR Santé Prevoyance",
     "list-item-2": "Profitabilite (Tests Solvabilite)",
 
     "hypothesis": "Hypothèse",

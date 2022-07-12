@@ -19,7 +19,7 @@ const Button = ({
 
   return (
     <button onClick={onClick} className={getClassName()}>
-      {prependIcon && <img src={prependIcon} alt="" />} {title}
+      {prependIcon && <img src={prependIcon} alt="" className="mr-2"/>} {title}
     </button>
   );
 };

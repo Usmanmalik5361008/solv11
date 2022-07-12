@@ -3,22 +3,25 @@
 
   "refresh": "Refresh",
   "download": "Download",
+  "generateCsv": "Generate CSV",
+  "actions": "Actions",
+  "cancel": "Cancel",
 
-  "new-projects": "New Projects",
+  "new-projects": "New Project",
   "reports": "Reports",
   "settings": "Settings",
   "advanced-settings": "Advanced Settings",
   "style": "Style",
 
   "all-projects": "All Projects",
-  "completed": "Completed",
-  "pending": "Pending",
-  "approved": "Approved",
+  "completed": "Health",
+  "pending": "Savings",
+  "approved": "Health",
 
-  "display-name": "Display Name",
-  "client-id": "Application (Client) ID",
+  "display-name": "Author",
+  "client-id": "Project name",
   "created-on": "Created On",
-  "certificates-n-secrets": "Certificates & Secrets",
+  "certificates-n-secrets": "Category",
 
   "apply-filters": "Apply Filters",
   "clear": "Clear",
@@ -78,6 +81,7 @@
   "add-prod": "Add Product",
 
   "cal-date": "Calculation Date",
+  "cal-date_titre": "DateCalcul",
   "contract-num": "Contract Number",
   "contact-num": "Contact Number",
   "beneficiary-num": "Beneficiary Number",
@@ -97,21 +101,25 @@
   "refund-amount": "Refund Amount",
 
   "filter": "Filter",
-  "support-type": "Support Type",
+  "coupon": "Coupon",
+  "support-type": "TypePassif",
   "title-type": "Title Type",
-  "elastic": "Elastic",
-  "currency": "Currency",
+  "etatique": "Etatique",
+  "currency": "DeviseSupport",
   "rating": "Rating",
-  "title-name": "Title Name",
+  "title-name": "NomTitre",
   "passive-type": "Passive Type",
-  "exchange-rate": "Exchange Rate",
-  "duration": "Duration",
-  "purchase-date": "Purchase Date",
-  "quantity": "Quantity",
-  "date-course": "Date Course",
-  "value-curr": "Value of Currency",
-  "date-term": "Date Term",
-  "euro-val": "Euro Value",
+  "exchange-rate": "TauxChange",
+  "type_titre": "TypeTitre",
+  "VNI": "VNI",
+  "duration": "DurationModifie",
+  "purchase-date": "DateAchat",
+  "quantity": "Quantite",
+  "date-course": "DateCours",
+  "value-curr": "ValeurDevise",
+  "date-term": "DateTerme",
+  "euro-val": "ValeurEuro",
+  "OCDE": "OCDE",
 
   "unlimited": "Unlimited",
   "limited": "Limited",
@@ -144,7 +152,28 @@
 
   "dashboard": {
     "title": "Dashboard",
-    "analytics": "Solvency Analytics"
+    "analytics": "Solvency Analytics",
+    "scr-report": "SCR Report",
+    "scr-input": "SCR Input"
+  },
+
+  "projectdata": {
+    "title": "Project Data"
+  },
+
+  "scrcalculation": {
+    "title": "SCR calculation",
+    "balance-sheet": "Balance Sheet",
+    "equity": "Equity",
+    "assets": "Assets",
+    "passive": "Passive",
+    "products": "Products",
+    "annuities": "Annuities",
+    "redemptions": "Redemptions",
+    "shock-hypotheses": "Shock Hypotheses",
+    "correlation-matrices": "Correlation Matrices",
+    "forward-rate-graph": "Forward Rate Graph",
+    "flat-rate-graph": "Flat Rate Graph"
   },
 
   "add-filters": "Add Filters",
@@ -171,7 +200,7 @@
   },
 
   "claims": {
-    "title": "Claims",
+    "title": "Demo page",
     "info-1": "You can use parameters in text and analytics query steps by placing the parameter name in braces, like",
     "info-2": "Whatever value you set here will be replaced in steps below which use that parameter",
     "info-variable": "parameterName"
@@ -182,13 +211,14 @@
     "list-item-1": "Equity",
     "list-item-2": "Assets",
     "list-item-3": "Premiums (health) Pb Trad",
-    "list-item-4": "Benefits (health) Pb Trad",
+    "list-item-4": "Claims (Health)",
     "list-item-5": "Liabilities (UC) Pb Trad",
-    "list-item-6": "Products (UC) Pb Trad",
+    "list-item-6": "Saving Products",
     "list-item-7": "Products (health) Pb Trad",
     "list-item-8": "Annuities",
-    "list-item-9": "Partial redemption",
-    "list-item-10": "Total redemption",
+    "list-item-9": "Buy back (partial)",
+    "list-item-10": "Buy back (full)",
+    "list-item-11": "Graphs",
 
     "bass-equity": {
       "field-1": "Subscribed capital or equivalent fund of a mutual",
@@ -229,7 +259,7 @@
   },
 
   "compliance-settings": {
-    "title": "Compliance Settings",
+    "title": "Solvency II settings",
     "list-item-1": "Shock hypothesis",
     "list-item-2": "Correlation matrix 1",
     "list-item-3": "Correlation matrix 2",
@@ -286,7 +316,7 @@
 
   "compliance-monitoring": {
     "title": "Compliance Monitoring",
-    "list-item-1": "SCR-Regulatory calculation",
+    "list-item-1": "SCR General hypothesis",
     "list-item-2": "Profitability (Solvency Tests)",
 
     "hypothesis": "Hypothesis",

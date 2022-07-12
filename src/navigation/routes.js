@@ -1,6 +1,7 @@
 // import { productionListingTwo } from "constants/productionDataListings";
-import { t } from 'i18next'
-import { AuthLayout, MainLayout } from 'layouts'
+import { t } from "i18next";
+import { AuthLayout, MainLayout } from "layouts";
+import { Stats } from "pages";
 import {
   AnnuitiesPage,
   AssetsPage,
@@ -21,133 +22,148 @@ import {
   ProjectsPage,
   SCRPage,
   SigninPage,
-} from 'pages'
+  NewDashboardPage,
+  ScrCalculationPage,
+} from "pages";
 
 const getRoutes = () => {
   return [
     {
       element: <AuthLayout />,
-      path: '/auth',
-      title: 'Sigin In',
+      path: "/auth",
+      title: "Sigin In",
       children: [
         {
           element: <SigninPage />,
-          path: '/auth/signin',
+          path: "/auth/signin",
         },
       ],
     },
     {
       element: <MainLayout />,
-      path: '/',
-      title: 'Dashboard',
+      path: "/",
+      title: "Dashboard",
       children: [
         {
-          title: t('dashboard.title'),
-          element: <DashboardPage />,
+          title: t("dashboard.title"),
+          element: <NewDashboardPage />,
           index: true,
         },
         {
-          title: t('projects.title'),
+          title: t("scrcalculation.title"),
+          element: <ScrCalculationPage />,
+          path: "scr-calculation",
+        },
+        {
+          title: t("projects.title"),
           element: <ProjectsPage />,
-          path: 'projects',
+          path: "projects",
         },
         {
-          title: t('production-data.title'),
-          path: 'production-data',
+          title: t("production-data.title"),
+          path: "production-data",
           children: [
             {
-              path: 'fond-propres',
+              path: "fond-propres",
               element: <AssetsPage />,
-              title: t('production-data.list-item-1'),
+              title: t("production-data.list-item-1"),
             },
-            { path: 'actifs', element: <EquityPage />, title: t('production-data.list-item-2') },
             {
-              path: 'primes-sante-pb-trad',
+              path: "actifs",
+              element: <EquityPage />,
+              title: t("production-data.list-item-2"),
+            },
+            {
+              path: "primes-sante-pb-trad",
               element: <HealthPremiumsPage />,
-              title: t('production-data.list-item-3'),
+              title: t("production-data.list-item-3"),
             },
             {
-              path: 'prestations-sante-pb-trad',
+              path: "prestations-sante-pb-trad",
               element: <BenifitsPage />,
-              title: 'Prestations (santé) Pb Trad',
+              title: "Prestations (santé) Pb Trad",
             },
             {
-              path: 'passif-uc-pb-trad',
+              path: "passif-uc-pb-trad",
               element: <LiabilitiesPage />,
-              title: 'Passif UC Pb Trad',
+              title: "Passif UC Pb Trad",
             },
             {
-              path: 'produits-uc-pb-trad',
+              path: "produits-uc-pb-trad",
               element: <ProductUCPage />,
-              title: 'Produits UC Pb Trad',
+              title: "Produits UC Pb Trad",
             },
             {
-              path: 'produits-sante-pb-trad',
+              path: "produits-sante-pb-trad",
               element: <ProductSantePage />,
-              title: 'Produits Santé Pb Trad',
+              title: "Produits Santé Pb Trad",
             },
             {
-              path: 'rentes',
+              path: "rentes",
               element: <AnnuitiesPage />,
-              title: 'Rentes',
+              title: "Rentes",
             },
             {
-              path: 'rachat-partiel',
+              path: "rachat-partiel",
               element: <PartialRedemptionPage />,
-              title: 'Rachat Partiel',
+              title: "Rachat Partiel",
             },
             {
-              path: 'rachat-total',
+              path: "rachat-total",
               element: <FullRedemptionPage />,
-              title: 'Rachat Total',
+              title: "Rachat Total",
+            },
+            {
+              path: "graphs",
+              element: <Stats />,
             },
           ],
         },
         {
-          title: t('compliance-settings.title'),
-          path: 'compliance-settings',
+          title: t("compliance-settings.title"),
+          path: "compliance-settings",
           children: [
             {
-              path: 'hypothesis-de-choc',
+              path: "hypothesis-de-choc",
               element: <HypothesesShockPage />,
-              title:t('compliance-settings.list-item-1'),
+              title: t("compliance-settings.list-item-1"),
             },
             {
-              path: 'matrice-correlation-1',
+              path: "matrice-correlation-1",
               element: <CorrelationMatrix1Page />,
-              title:t('compliance-settings.list-item-2'),
+              title: t("compliance-settings.list-item-2"),
             },
             {
-              path: 'matrice-correlation-2',
+              path: "matrice-correlation-2",
               element: <CorrelationMatrix2Page />,
-              title:t('compliance-settings.list-item-3'),
+              title: t("compliance-settings.list-item-3"),
             },
           ],
         },
         {
-          title: t('claims.title'),
+          title: t("claims.title"),
           element: <ClaimsPage />,
-          path: 'claims',
+          path: "claims",
         },
         {
-          title: t('compliance-monitoring.title'),
-          path: 'compliance-monitoring',
+          title: t("compliance-monitoring.title"),
+          path: "compliance-monitoring",
           children: [
             {
-              title: t('compliance-monitoring.list-item-1'),
+              title: t("compliance-monitoring.list-item-1"),
               element: <SCRPage />,
-              path: 'scr',
+              path: "scr",
             },
             {
-              title: t('compliance-monitoring.list-item-2'),
+              title: t("compliance-monitoring.list-item-2"),
               element: <ProfitabilityPage />,
-              path: 'profitability',
+              path: "profitability",
             },
           ],
         },
       ],
     },
-  ]
-}
+  ];
+};
 
-export default getRoutes
+export default getRoutes;

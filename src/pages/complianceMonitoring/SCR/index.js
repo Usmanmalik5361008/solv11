@@ -8,11 +8,12 @@ import {
   ScrUcTrad,
 } from "./components";
 import { useTranslation } from "react-i18next";
+import { Toolbar } from "globalComponents";
 
 const { TabPane } = Tabs;
 
 const SCRPage = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <div className="tab-screen-1-page">
       <Tabs defaultActiveKey="1" className="custom-tabs-wrapper">

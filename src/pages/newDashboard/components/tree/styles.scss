@@ -1,0 +1,18 @@
+.tree-item {
+  display: inline-block;
+  padding: 5px 2em;
+  border-radius: 5px;
+
+  h5,
+  p {
+    margin: 0;
+    color: white;
+  }
+
+  &.node {
+    background-color: #1283ec;
+  }
+  &.root {
+    background-color: #4c4e8d;
+  }
+}

@@ -6,3 +6,6 @@ export { default as PillButton } from "./pillButton";
 export { default as TabsWithFilters } from "./tabsWithFilters";
 export { default as Button } from "./button";
 export { default as ConfirmationBox } from "./confirmationBox";
+export { default as CsvEditor } from "./csvEditor";
+export { default as LineGraph } from "./graphs";
+export { default as Toolbar } from "./toolbar";

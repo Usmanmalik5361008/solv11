@@ -16,8 +16,7 @@ import "./index.scss";
 import { useTranslation } from "react-i18next";
 
 const Setting = () => {
-
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <div className="settings-wrapper">

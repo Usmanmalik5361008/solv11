@@ -17,3 +17,6 @@ export { default as ProjectsPage } from "./projects";
 export { default as ClaimsPage } from "./claims";
 export { default as SCRPage } from "./complianceMonitoring/SCR";
 export { default as ProfitabilityPage } from "./complianceMonitoring/Profitability";
+export { default as Stats } from "./productionData/stats";
+export { default as NewDashboardPage } from "./newDashboard";
+export { default as ScrCalculationPage } from "./scrCalculationPage";

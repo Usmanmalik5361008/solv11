@@ -1,4 +1,5 @@
 import { Row, Col, Divider, Grid } from "antd";
+import { Toolbar } from "globalComponents";
 import { ConfirmationBox } from "globalComponents";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -6,17 +7,17 @@ import { useTranslation } from "react-i18next";
 const { useBreakpoint } = Grid;
 
 const Hypothesis = () => {
-
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const screens = useBreakpoint();
 
   return (
     <>
-      <Row gutter={20}>
+      <Toolbar />
+      <Row gutter={20} className="mt-5">
         <Col xs={12}>
           <div className="custom-form-field">
-            <label>{t('compliance-monitoring.hypothesis-tab.field-1')}</label>
+            <label>{t("compliance-monitoring.hypothesis-tab.field-1")}</label>
             <select className="dropdown-style-2">
               <option value="1">1</option>
             </select>
@@ -29,7 +30,9 @@ const Hypothesis = () => {
               <Row gutter={10}>
                 <Col md={24} lg={16}>
                   <div className="custom-form-field">
-                    <label>{t("compliance-monitoring.hypothesis-tab.field-2")}</label>
+                    <label>
+                      {t("compliance-monitoring.hypothesis-tab.field-2")}
+                    </label>
                     <div className="multiple-inputs-wrapper">
                       <input placeholder="30" />
                       <input placeholder="30" />
@@ -37,13 +40,17 @@ const Hypothesis = () => {
                     </div>
                   </div>
                   <div className="custom-form-field mt-3">
-                    <label>{t("compliance-monitoring.hypothesis-tab.field-3")}</label>
+                    <label>
+                      {t("compliance-monitoring.hypothesis-tab.field-3")}
+                    </label>
                     <select className="dropdown-style-2">
                       <option value="1">1</option>
                     </select>
                   </div>
                   <div className="custom-form-field mt-3">
-                    <label>{t("compliance-monitoring.hypothesis-tab.field-4")}</label>
+                    <label>
+                      {t("compliance-monitoring.hypothesis-tab.field-4")}
+                    </label>
                     <select className="dropdown-style-2">
                       <option value="1">1</option>
                     </select>
@@ -52,15 +59,21 @@ const Hypothesis = () => {
                 {/* right side of first section */}
                 <Col md={24} lg={8}>
                   <div className="custom-form-field">
-                    <label>{t("compliance-monitoring.hypothesis-tab.field-5")}</label>
+                    <label>
+                      {t("compliance-monitoring.hypothesis-tab.field-5")}
+                    </label>
                     <input placeholder="30" />
                   </div>
                   <div className="custom-form-field mt-3">
-                    <label>{t("compliance-monitoring.hypothesis-tab.field-6")}</label>
+                    <label>
+                      {t("compliance-monitoring.hypothesis-tab.field-6")}
+                    </label>
                     <input placeholder="30" />
                   </div>
                   <div className="custom-form-field mt-3">
-                    <label>{t("compliance-monitoring.hypothesis-tab.field-7")}</label>
+                    <label>
+                      {t("compliance-monitoring.hypothesis-tab.field-7")}
+                    </label>
                     <input placeholder="30" />
                   </div>
                 </Col>
@@ -77,23 +90,37 @@ const Hypothesis = () => {
             {/* second section */}
             <Col md={24} lg={11}>
               <div className="custom-form-field">
-                <label>{t("compliance-monitoring.hypothesis-tab.field-8")}</label>
+                <label>
+                  {t("compliance-monitoring.hypothesis-tab.field-8")}
+                </label>
                 <input placeholder="30" />
               </div>
               <div className="custom-form-field mt-3">
-                <label>{t("compliance-monitoring.hypothesis-tab.field-9")}</label>
+                <label>
+                  {t("compliance-monitoring.hypothesis-tab.field-9")}
+                </label>
                 <input placeholder="30" />
               </div>
               <div className="custom-form-field mt-3">
-                <label>{t("compliance-monitoring.hypothesis-tab.field-10")}</label>
+                <label>
+                  {t("compliance-monitoring.hypothesis-tab.field-10")}
+                </label>
                 <div className="multiple-inputs-wrapper">
                   <div className="input-with-label">
-                    <p>{t("compliance-monitoring.hypothesis-tab.field-10-placeholder")}</p>
+                    <p>
+                      {t(
+                        "compliance-monitoring.hypothesis-tab.field-10-placeholder"
+                      )}
+                    </p>
                     <input placeholder="30" style={{ paddingLeft: 120 }} />
                   </div>
 
                   <div className="input-with-label">
-                  <p>{t("compliance-monitoring.hypothesis-tab.field-10-placeholder")}</p>
+                    <p>
+                      {t(
+                        "compliance-monitoring.hypothesis-tab.field-10-placeholder"
+                      )}
+                    </p>
                     <input
                       placeholder="30"
                       className="text-right"
@@ -103,14 +130,18 @@ const Hypothesis = () => {
                 </div>
               </div>
               <div className="custom-form-field mt-3">
-                <label>{t("compliance-monitoring.hypothesis-tab.field-11")}</label>
+                <label>
+                  {t("compliance-monitoring.hypothesis-tab.field-11")}
+                </label>
                 <div className="multiple-inputs-wrapper">
                   <input placeholder="30" />
                   <input placeholder="30" />
                 </div>
               </div>
               <div className="custom-form-field mt-3">
-                <label>{t("compliance-monitoring.hypothesis-tab.field-12")}</label>
+                <label>
+                  {t("compliance-monitoring.hypothesis-tab.field-12")}
+                </label>
                 <div className="multiple-inputs-wrapper">
                   <input placeholder="30" />
                   <input placeholder="30" />
