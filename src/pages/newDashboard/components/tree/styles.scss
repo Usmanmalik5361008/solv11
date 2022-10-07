@@ -1,18 +1,19 @@
-.tree-item {
-  display: inline-block;
-  padding: 5px 2em;
-  border-radius: 5px;
+.org-chart {
+  width: 100%;
 
-  h5,
-  p {
-    margin: 0;
-    color: white;
-  }
-
-  &.node {
-    background-color: #1283ec;
-  }
-  &.root {
+  .node-card {
     background-color: #4c4e8d;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    h5 {
+      color: white;
+    }
   }
 }

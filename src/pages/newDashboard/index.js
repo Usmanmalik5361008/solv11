@@ -1,5 +1,5 @@
 import { CheckCircleFilled } from "@ant-design/icons";
-import { Col, DatePicker, Row, Tag } from "antd";
+import { Alert, Col, DatePicker, Row, Tag } from "antd";
 import { SCR_INPUT_ICON, SCR_REPORT_ICON, TICKET_WHTE_ICON } from "assets";
 import { Button } from "globalComponents";
 import { OptionCard } from "pages/dashboard/components";
@@ -45,15 +45,26 @@ const NewDashboard = () => {
         </div>
 
         <div className="mt-5">
-          <Row>
-            <Col xs={24} sm={24} md={24} lg={14}>
-              <HierarchicalTree />
-            </Col>
+          {/* <Row> */}
+          {/* <Col xs={24} sm={24} md={24} lg={24}> */}
+          <div className="alerts-wrapper">
+            <Alert
+              message="Maintien des valeurs a la date initale de calibrage"
+              type="success"
+            />
+            <Alert
+              message="Recalcul des SCR marginaux a laide des proxies"
+              type="error"
+              style={{ border: "1px solid red" }}
+            />
+          </div>
+          <HierarchicalTree />
+          {/* </Col> */}
 
-            <Col xs={24} sm={24} md={24} lg={10}>
+          {/* <Col xs={24} sm={24} md={24} lg={10}>
               <Graphs />
-            </Col>
-          </Row>
+            </Col> */}
+          {/* </Row> */}
         </div>
       </div>
     </div>

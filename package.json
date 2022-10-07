@@ -11,6 +11,8 @@
     "@testing-library/user-event": "^13.2.1",
     "antd": "^4.19.3",
     "antd-css-utilities": "^1.0.3",
+    "d3": "^7.6.1",
+    "d3-org-chart": "^2.6.0",
     "i18next": "^21.8.3",
     "i18next-browser-languagedetector": "^6.1.4",
     "i18next-http-backend": "^1.4.0",

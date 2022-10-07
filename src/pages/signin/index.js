@@ -1,9 +1,16 @@
 import { COMPANY_LOGO, EMAIL_ICON, EYE_CROSSED } from "assets";
 import { InputField } from "globalComponents";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./index.scss";
 
 const SigninPage = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/");
+  };
+
   return (
     <div className="page-container sigin-page-container">
       <div className="sigin-form-container">
@@ -28,7 +35,9 @@ const SigninPage = () => {
               <option>Developement</option>
             </select>
 
-            <button className="btn-gradient">Get Started</button>
+            <button className="btn-gradient" onClick={handleLogin}>
+              Get Started
+            </button>
           </form>
         </div>
       </div>

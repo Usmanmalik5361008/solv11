@@ -25,6 +25,7 @@ import {
   NewDashboardPage,
   ScrCalculationPage,
 } from "pages";
+import { Navigate } from "react-router-dom";
 
 const getRoutes = () => {
   return [
