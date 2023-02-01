@@ -44,7 +44,7 @@ const NewDashboard = () => {
           </div>
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5" style={{ position: "relative" }}>
           {/* <Row> */}
           {/* <Col xs={24} sm={24} md={24} lg={24}> */}
           <div className="alerts-wrapper">
