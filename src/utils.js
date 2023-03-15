@@ -1,4 +1,3 @@
-import getRoutes from "navigation/routes";
 
 const flattenRoutes = (routes) => {
   return routes.reduce((acc, route) => {

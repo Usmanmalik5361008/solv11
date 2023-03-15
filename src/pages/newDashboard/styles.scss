@@ -4,6 +4,22 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #e6eaf0;
+    .left-side {
+      display: flex;
+      align-items: center;
+      .common-spacing {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        padding-left: 10px;
+        border-left: 1px solid #e7e7e7;
+        gap: 10px;
+        p {
+          margin: 0;
+          white-space: nowrap;
+        }
+      }
+    }
 
     h3 {
       margin: 0;
