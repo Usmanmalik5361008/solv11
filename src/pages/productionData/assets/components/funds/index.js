@@ -1,6 +1,4 @@
 import { CorrelationMatrixOneTable } from 'globalComponents/tables'
-import React from 'react'
-
 
 const Funds = () => {
   // const { t } = useTranslation()
@@ -8,7 +6,7 @@ const Funds = () => {
   return (
     <div className='funds-container'>
       <CorrelationMatrixOneTable />
-      
+
       {/* <Toolbar /> */}
       {/* <div className="custom-table-style-2-header mt-5">
         <div style={{ width: "50%" }}></div>
@@ -267,4 +265,3 @@ const Funds = () => {
 }
 
 export default Funds
-

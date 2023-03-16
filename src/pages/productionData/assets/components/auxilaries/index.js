@@ -1,14 +1,16 @@
-import { Toolbar } from "globalComponents";
-import { ConfirmationBox } from "globalComponents";
-import React from "react";
-import { useTranslation } from "react-i18next";
+import { Toolbar } from 'globalComponents'
+import { ConfirmationBox } from 'globalComponents'
+import { CorrelationMatrixTwoTable } from 'globalComponents/tables'
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const Auxilaries = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <>
-      <Toolbar />
+      <CorrelationMatrixTwoTable />
+      {/* <Toolbar />
       <div className="custom-table-style-2-wrapper mb-5">
         <table>
           <tbody>
@@ -114,10 +116,10 @@ const Auxilaries = () => {
             </tr>
           </tbody>
         </table>
-      </div>
-      <ConfirmationBox />
+      </div> */}
+      {/* <ConfirmationBox /> */}
     </>
-  );
-};
+  )
+}
 
-export default Auxilaries;
+export default Auxilaries
