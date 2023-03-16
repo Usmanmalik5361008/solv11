@@ -1,0 +1,8 @@
+.rdg-light {
+  &::before {
+    pointer-events: none;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    z-index: 2;
+  }
+}

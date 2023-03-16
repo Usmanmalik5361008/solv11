@@ -1,15 +1,16 @@
-import { Toolbar } from "globalComponents";
-import { ConfirmationBox } from "globalComponents";
-import React from "react";
-import { useTranslation } from "react-i18next";
+import { CorrelationMatrixOneTable } from 'globalComponents/tables'
+import React from 'react'
+
 
 const Funds = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation()
 
   return (
-    <div className="">
-      <Toolbar />
-      <div className="custom-table-style-2-header mt-5">
+    <div className='funds-container'>
+      <CorrelationMatrixOneTable />
+      
+      {/* <Toolbar /> */}
+      {/* <div className="custom-table-style-2-header mt-5">
         <div style={{ width: "50%" }}></div>
         <div style={{ width: "12.5%" }} className="text-center">
           <h5>Tier1 {t("unlimited")}</h5>
@@ -23,8 +24,8 @@ const Funds = () => {
         <div style={{ width: "12.5%" }} className="text-center">
           <h5>Tier 3</h5>
         </div>
-      </div>
-      <div className="custom-table-style-2-wrapper mb-5">
+      </div> */}
+      {/* <div className="custom-table-style-2-wrapper mb-5">
         <table>
           <tbody>
             <tr>
@@ -259,10 +260,11 @@ const Funds = () => {
             </tr>
           </tbody>
         </table>
-      </div>
-      <ConfirmationBox />
+      </div> */}
+      {/* <ConfirmationBox /> */}
     </div>
-  );
-};
+  )
+}
 
-export default Funds;
+export default Funds
+
