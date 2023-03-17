@@ -1,9 +1,9 @@
 import DataGrid from 'react-data-grid'
-import { BSCR_Data as data } from './data'
+import { Table1_data as data } from './data'
 import { useMemo } from 'react'
 import { useState } from 'react'
 
-export const BSCR = () => {
+export const Table1 = () => {
   const columns = useMemo(() => data.columns, [])
 
   const [rows, setRows] = useState(

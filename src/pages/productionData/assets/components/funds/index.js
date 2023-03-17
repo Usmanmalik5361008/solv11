@@ -2,6 +2,8 @@ import { CorrelationMatrixTwoTable } from 'globalComponents/tables'
 import { YieldCurveMatrixTable } from 'globalComponents/tables'
 import { Hypothesis } from 'globalComponents/tables'
 import { CorrelationMatrixOneTable } from 'globalComponents/tables'
+import { SCRHypothesis } from 'globalComponents/tables/scr-hypothesis'
+import { SCRCounterPartRiskTable } from 'globalComponents/tables/scrCounterpartRisk'
 
 const Funds = () => {
   // const { t } = useTranslation()
@@ -9,6 +11,11 @@ const Funds = () => {
     <div className='funds-container'>
       {/* // dummy data */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+        <h2>{'Menu: SCR'}</h2>
+        <h4>{'Menu: Menu: SCR➔Hypothèses'}</h4>
+        <SCRHypothesis />
+        <h4>{'Menu: Menu: SCR➔Risque-de-contrepartie'}</h4>
+        <SCRCounterPartRiskTable />
         <h2>{'Menu: Paramètres'}</h2>
         <h4>{'Menu: Menu: Paramètres➔Hypothèses de choc'}</h4>
         <Hypothesis />

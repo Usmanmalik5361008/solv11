@@ -1,5 +1,6 @@
 .rdg-light {
   height: fit-content;
+  user-select: none;
   // width: fit-content;
   // border:none;
   &::before {
@@ -14,4 +15,42 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.tables-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cell-selector {
+  width: calc(100% - 10px);
+  height: 100%;
+  border: none;
+  position: relative;
+  padding: 0 10px;
+  background-color: transparent;
+  user-select: none;
+}
+.cell-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: relative;
+  padding: 0 10px;
+  user-select: none;
+  &:focus {
+    border: 1px solid rgb(0, 153, 255);
+  }
+}
+
+.scr-counter-part-table {
+  .custom-form-field {
+    margin-top: 20px;
+    display: flex;
+    label {
+      width: 60%;
+      white-space: normal;
+    }
+  }
 }
