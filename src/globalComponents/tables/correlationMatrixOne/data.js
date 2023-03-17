@@ -7,7 +7,6 @@ export const data = {
       name: 'Souscription Vie',
       width: 'max-content',
       colSpan(args) {
-        console.log({ args })
         if (args.type === 'ROW') {
           if(args.row.id === 14) return 2;
           if(args.row.id > 14) return 4;
@@ -59,7 +58,7 @@ export const data = {
   ],
   // [label, value, label, value] ---> format
   rows: [
-    ['Incorporel', -80, 'Devise Chochausser', '', '2 Pb Trad', ''],
+    ['Incorporel', '', 'Devise Chochausser', '', '2 Pb Trad', ''],
     ['Rachat Choc haussier', '', 'Devise Choc hausser', '', '2 Pb Trad', ''],
     ['Rachat Choc baissier', '', 'Devise Choc baisser', '', '1 Pb Trad', ''],
     ['Rachat Choc baissier', '', 'Action OCDE', '', '0', ''],

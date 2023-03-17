@@ -7,7 +7,6 @@ export const data = {
       name: 'Souscription Vie',
       width: 'max-content',
       colSpan(args) {
-        console.log({ args })
         if (args.type === 'ROW') {
           if(args.row.id === 14) return 2;
           if(args.row.id > 14) return 4;

@@ -1,11 +1,25 @@
+import { CorrelationMatrixTwoTable } from 'globalComponents/tables'
+import { YieldCurveMatrixTable } from 'globalComponents/tables'
+import { Hypothesis } from 'globalComponents/tables'
 import { CorrelationMatrixOneTable } from 'globalComponents/tables'
 
 const Funds = () => {
   // const { t } = useTranslation()
-
   return (
     <div className='funds-container'>
-      <CorrelationMatrixOneTable />
+      {/* // dummy data */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+        <h2>{'Menu: Paramètres'}</h2>
+        <h4>{'Menu: Menu: Paramètres➔Hypothèses de choc'}</h4>
+        <Hypothesis />
+        <h4>{'Menu: Menu: Paramètres ➔ Matrice de correlation 1'}</h4>
+        <CorrelationMatrixOneTable />
+        <h4>{'Menu: Menu: Paramètres ➔ Matrice de correlation 2'}</h4>
+        <CorrelationMatrixTwoTable />
+        <h4>{'Menu: Menu: Paramètres ➔ Matrice de courbe des taux'}</h4>
+        <YieldCurveMatrixTable />
+      </div>
+      {/* // dummy data */}
 
       {/* <Toolbar /> */}
       {/* <div className="custom-table-style-2-header mt-5">
