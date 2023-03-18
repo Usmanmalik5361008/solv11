@@ -108,9 +108,9 @@ export const HNL_Data = {
   ],
   // [label, value, label, value] ---> format
   rows: [
-    ['Med Exp', '', '', '', '', ''],
-    ['Inc Protec', '', '', '', '', ''],
-    ['Work Comp', '', '', '', '', ''],
-    ['Non Prop', '', '', '', '', ''],
+    ['Med Exp', '', '2', '', ''],
+    ['Inc Protec', '', '', '3', ''],
+    ['Work Comp', '', '', '', ''],
+    ['Non Prop', '2', '4', '', ''],
   ],
 }

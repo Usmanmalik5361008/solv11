@@ -5,12 +5,13 @@ import { useMemo, useState } from 'react'
 export const Counterpart = () => {
   const columns = useMemo(() => data.columns, [])
   const [rows, setRows] = useState(
-    data.rows.map((val, index) => ({
-      id: index + 1,
-      label: val[0],
-      col1: val[1],
-      col2: val[2],
-    }))
+    data.rows.map((row, index) => {
+      const newRow = { id: index + 1 }
+      data.columns.forEach((column, i) => {
+        newRow[column.key] = row[i] ?? ''
+      })
+      return newRow
+    })
   )
 
   return (

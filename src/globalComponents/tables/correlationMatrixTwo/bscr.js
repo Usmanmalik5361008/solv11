@@ -7,15 +7,13 @@ export const BSCR = () => {
   const columns = useMemo(() => data.columns, [])
 
   const [rows, setRows] = useState(
-    data.rows.map((val, index) => ({
-      id: index + 1,
-      col1: val[0],
-      col2: val[1],
-      col3: val[2],
-      col4: val[3],
-      col5: val[4],
-      col6: val[5],
-    }))
+    data.rows.map((row, index) => {
+      const newRow = { id: index + 1 }
+      data.columns.forEach((column, i) => {
+        newRow[column.key] = row[i] ?? ''
+      })
+      return newRow
+    })
   )
 
   return (
@@ -24,7 +22,6 @@ export const BSCR = () => {
       columns={columns}
       onRowsChange={(row) => setRows(row)}
       rows={rows}
-      onSelectedRowsChange={(selected) => console.log({ selected })}
       onCellClick={(e) => console.log({ e })}
     />
   )

@@ -7,13 +7,13 @@ export const YieldCurveMatrixTable = () => {
   const columns = useMemo(() => data.columns, [])
 
   const [rows, setRows] = useState(
-    data.rows.map((val, index) => ({
-      id: index + 1,
-      col1: val[0],
-      col2: val[1],
-      col3: val[2],
-      col4: val[3],
-    }))
+    data.rows.map((row, index) => {
+      const newRow = { id: index + 1 }
+      data.columns.forEach((column, i) => {
+        newRow[column.key] = row[i] ?? ''
+      })
+      return newRow
+    })
   )
 
   return (
