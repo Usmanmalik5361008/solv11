@@ -4,6 +4,14 @@ import './index.scss'
 export * from './scrHypothesis'
 export * from './scrCounterpartRisk'
 export * from './scrUCTG'
+export * from './scrSante'
+
+
+// Sante Tables
+
+export * from './prevoyancePrimesSante'
+export * from './santeBilanActif'
+export * from './santeBilanPassif'
 
 // Parameters Table
 export * from './hypothesis'

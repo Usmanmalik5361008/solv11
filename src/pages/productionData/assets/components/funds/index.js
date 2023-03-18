@@ -1,18 +1,22 @@
-import { DatePicker, Form } from 'antd'
-import dayjs from 'dayjs'
-import { CorrelationMatrixTwoTable } from 'globalComponents/tables'
-import { YieldCurveMatrixTable } from 'globalComponents/tables'
-import { SCRUCTGTable } from 'globalComponents/tables'
-import { SCRHypothesis } from 'globalComponents/tables'
-import { Hypothesis } from 'globalComponents/tables'
-import { CorrelationMatrixOneTable } from 'globalComponents/tables'
+import { SCRSanteTable } from 'globalComponents/tables'
+import { SanteBilanActifTable } from 'globalComponents/tables'
+import { SanteBilanPassifTable } from 'globalComponents/tables'
+import { PrevoyancePrimesSanteTable } from 'globalComponents/tables'
+import {
+  CorrelationMatrixOneTable,
+  CorrelationMatrixTwoTable,
+  Hypothesis,
+  SCRHypothesis,
+  SCRUCTGTable,
+  YieldCurveMatrixTable,
+} from 'globalComponents/tables'
+import { SanteFPPage1 } from 'globalComponents/tables/santeFPPage1'
+import { SanteFPPage2 } from 'globalComponents/tables/santeFPPage2'
 import { SCRCounterPartRiskTable } from 'globalComponents/tables/scrCounterpartRisk'
-import moment from 'moment'
-import { useState } from 'react'
 
 const Funds = () => {
   // const { t } = useTranslation()
-  
+
   return (
     <div className='funds-container'>
       {/* // dummy data */}
@@ -25,6 +29,23 @@ const Funds = () => {
         <SCRCounterPartRiskTable />
         <h4>{'Menu: Menu: SCR➔UC/TG'}</h4>
         <SCRUCTGTable />
+        <h4>{'Menu: Menu: SCR➔Sante'}</h4>
+        <SCRSanteTable />
+
+        <h2>{'Menu: Santé – Prévoyance'}</h2>
+        <h4>{'Menu: Santé – Prévoyance ➔ Primes santé'}</h4>
+        <PrevoyancePrimesSanteTable />
+
+        <h4>{'Menu: Menu: Santé – Bilan ➔ Actif'}</h4>
+        <SanteBilanActifTable />
+        <h4>{'Menu: Menu: Santé – Bilan ➔ Passif'}</h4>
+        <SanteBilanPassifTable />
+        <h4>{'Menu: Menu: Santé – Fonds propres ➔ Page 1'}</h4>
+        <SanteFPPage1 />
+        <h4>{'Menu: Menu: Santé – Fonds propres ➔ Page 2'}</h4>
+        <SanteFPPage2 />
+
+
         <h2>{'Menu: Paramètres'}</h2>
         <h4>{'Menu: Menu: Paramètres➔Hypothèses de choc'}</h4>
         <Hypothesis />
