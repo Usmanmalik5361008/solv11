@@ -1,44 +1,13 @@
-import { DatePicker, Form } from 'antd'
-import dayjs from 'dayjs'
-import { CorrelationMatrixTwoTable } from 'globalComponents/tables'
-import { YieldCurveMatrixTable } from 'globalComponents/tables'
-import { SCRUCTGTable } from 'globalComponents/tables'
-import { SCRHypothesis } from 'globalComponents/tables'
-import { Hypothesis } from 'globalComponents/tables'
-import { CorrelationMatrixOneTable } from 'globalComponents/tables'
-import { SCRCounterPartRiskTable } from 'globalComponents/tables/scrCounterpartRisk'
-import moment from 'moment'
-import { useState } from 'react'
+import { ConfirmationBox, Toolbar } from "globalComponents";
+import { useTranslation } from "react-i18next";
 
 const Funds = () => {
-  // const { t } = useTranslation()
-  
+  const { t } = useTranslation();
+
   return (
-    <div className='funds-container'>
-      {/* // dummy data */}
-
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
-        <h2>{'Menu: SCR'}</h2>
-        <h4>{'Menu: Menu: SCR➔Hypothèses'}</h4>
-        <SCRHypothesis />
-        <h4>{'Menu: Menu: SCR➔Risque-de-contrepartie'}</h4>
-        <SCRCounterPartRiskTable />
-        <h4>{'Menu: Menu: SCR➔UC/TG'}</h4>
-        <SCRUCTGTable />
-        <h2>{'Menu: Paramètres'}</h2>
-        <h4>{'Menu: Menu: Paramètres➔Hypothèses de choc'}</h4>
-        <Hypothesis />
-        <h4>{'Menu: Menu: Paramètres ➔ Matrice de correlation 1'}</h4>
-        <CorrelationMatrixOneTable />
-        <h4>{'Menu: Menu: Paramètres ➔ Matrice de correlation 2'}</h4>
-        <CorrelationMatrixTwoTable />
-        <h4>{'Menu: Menu: Paramètres ➔ Matrice de courbe des taux'}</h4>
-        <YieldCurveMatrixTable />
-      </div>
-      {/* // dummy data */}
-
-      {/* <Toolbar /> */}
-      {/* <div className="custom-table-style-2-header mt-5">
+    <div className="">
+      <Toolbar />
+      <div className="custom-table-style-2-header mt-5">
         <div style={{ width: "50%" }}></div>
         <div style={{ width: "12.5%" }} className="text-center">
           <h5>Tier1 {t("unlimited")}</h5>
@@ -52,8 +21,8 @@ const Funds = () => {
         <div style={{ width: "12.5%" }} className="text-center">
           <h5>Tier 3</h5>
         </div>
-      </div> */}
-      {/* <div className="custom-table-style-2-wrapper mb-5">
+      </div>
+      <div className="custom-table-style-2-wrapper mb-5">
         <table>
           <tbody>
             <tr>
@@ -288,10 +257,10 @@ const Funds = () => {
             </tr>
           </tbody>
         </table>
-      </div> */}
-      {/* <ConfirmationBox /> */}
+      </div>
+      <ConfirmationBox />
     </div>
-  )
-}
+  );
+};
 
-export default Funds
+export default Funds;
