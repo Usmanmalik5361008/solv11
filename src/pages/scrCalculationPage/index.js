@@ -1,13 +1,9 @@
-import { Col, Row, Tabs } from "antd";
-import { ConfirmationBox } from "globalComponents";
-import { LineGraph } from "globalComponents";
-import { Toolbar } from "globalComponents";
-import React from "react";
+import { Col, Row } from "antd";
+import { ConfirmationBox, Toolbar } from "globalComponents";
 import { useTranslation } from "react-i18next";
-import { Jobs, WorkStatuses } from "./components";
+import { Jobs } from "./components";
 import "./styles.scss";
 
-const { TabPane } = Tabs;
 
 const ScrCalculationPage = () => {
   const { t } = useTranslation();
@@ -22,17 +18,18 @@ const ScrCalculationPage = () => {
           <Col xs={24} sm={24} md={24} lg={16}>
             <Row gutter={[30, 30]}>
               <Col xs={24}>
-                <WorkStatuses />
+                
+                {/* <WorkStatuses /> */}
               </Col>
               <Col xs={24}>
-                <Tabs defaultActiveKey="1" className="custom-tabs-wrapper">
+                {/* <Tabs defaultActiveKey="1" className="custom-tabs-wrapper">
                   <TabPane tab={t("forward-rate-graph")} key="1">
                     <LineGraph />
                   </TabPane>
                   <TabPane tab={t("flat-rate-graph")} key="2">
                     <LineGraph />
                   </TabPane>
-                </Tabs>
+                </Tabs> */}
                 <ConfirmationBox btnText="Run SCR" />
               </Col>
             </Row>

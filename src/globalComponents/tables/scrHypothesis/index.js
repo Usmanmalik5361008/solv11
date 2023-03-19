@@ -5,7 +5,7 @@
 export const SCRHypothesis = () => {
   return (
     <div className={'tables-gap'}>
-      <p>{'Some queries regarding this'}</p>
+      <p>{'This is under progress'}</p>
       {/* <Table1 /> */}
 
       {/* <BSCR />

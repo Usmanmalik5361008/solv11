@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 // import './index.scss'
 const { TabPane } = Tabs
 
-const EquityPage = () => {
+const BalanceSheetPage = () => {
   const { t } = useTranslation()
   return (
     <div className='tab-screen-1-page toolbar-table-container'>
@@ -14,7 +14,7 @@ const EquityPage = () => {
         <Toolbar />
       </div>
       <Row style={{ width: '100%', padding: '0 10px' }}>
-        <Tabs defaultActiveKey='1' className='custom-tabs-wrapper' style={{ width: '100%' }}>
+        <Tabs defaultActiveKey='1' className='custom-tabs-wrapper' style={{width:'100%'}}>
           <TabPane tab={'Actif'} key='1'>
             <SanteBilanActifTable />
           </TabPane>
@@ -29,4 +29,4 @@ const EquityPage = () => {
     </div>
   )
 }
-export default EquityPage
+export default BalanceSheetPage

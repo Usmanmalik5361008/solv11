@@ -5,7 +5,7 @@ export * from './scrHypothesis'
 export * from './scrCounterpartRisk'
 export * from './scrUCTG'
 export * from './scrSante'
-
+export * from './scrProjectionTable'
 
 // Sante Tables
 

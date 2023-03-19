@@ -6,42 +6,55 @@ import {
   ProjectIcon,
   SimulationIcon,
   subMenuIcon,
-} from "assets";
-import {
-  complianceSettings,
-  productionListingTwo,
-} from "./productionDataListings";
+} from 'assets'
+import { epargneRetraitesMenu, santePrevoyanceMenu } from './subMenu'
 
 const menuItems = [
   {
-    key: "1",
-    name: "dashboard.title",
+    key: '1',
+    name: 'sidebar.dashboard',
     icon: DashboardIcon,
-    href: "/",
+    href: '/',
   },
   {
-    key: "2",
-    name: "projects.title",
+    key: '2',
+    name: 'sidebar.projects',
     icon: ProjectIcon,
-    href: "/",
+    href: '/',
   },
   {
-    key: "3",
-    name: "scrcalculation.title",
+    key: '3',
+    name: 'sidebar.scr.title',
     icon: SimulationIcon,
-    href: "/scr-calculation",
+    href: '/scr',
+    // subMenu: [
+    //   ...scrMenu.map(({ href, title }) => ({
+    //     key: href,
+    //     name: title,
+    //     icon: subMenuIcon,
+    //     href: `/scr/${href}`,
+    //   })),
+    // ],
   },
   {
-    key: "4",
-    name: "projectdata.title",
+    key: '4',
+    name: 'sidebar.scr-projection',
     icon: ProjectIcon,
-    href: "/projects",
+    href: '/scr-projection',
   },
   {
-    key: "5",
-    name: "claims.title",
+    key: '5',
+    name: 'sidebar.sante-prevoyance.title',
     icon: SimulationIcon,
-    href: "/claims",
+    href: '/health-insurance',
+    subMenu: [
+      ...santePrevoyanceMenu.map(({ href, title }) => ({
+        key: href,
+        name: title,
+        icon: subMenuIcon,
+        href: `/health-insurance/${href}`,
+      })),
+    ],
   },
   // {
   //   key: "4",
@@ -50,53 +63,43 @@ const menuItems = [
   //   href: "/reportings",
   // },
   {
-    key: "6",
-    name: "production-data.title",
+    key: '6',
+    name: 'sidebar.epargne-retraites.title',
     icon: productionIcon,
-    href: "/production-data",
+    href: '/retirement-savings',
     subMenu: [
-      ...productionListingTwo.map(({ href, title }) => ({
+      ...epargneRetraitesMenu.map(({ href, title }) => ({
         key: href,
         name: title,
         icon: subMenuIcon,
-        href,
+        href: `/retirement-savings/${href}`,
       })),
     ],
   },
   {
-    key: "7",
-    name: "compliance-settings.title",
+    key: '7',
+    name: 'sidebar.bilan',
     icon: analyticsIcon,
-    href: "/compliance-settings",
-    subMenu: [
-      ...complianceSettings.map(({ href, title }) => ({
-        key: href,
-        name: title,
-        icon: subMenuIcon,
-        href,
-      })),
-    ],
+    href: '/balance-sheet',
   },
   {
-    key: "8",
-    name: "compliance-monitoring.title",
+    key: '8',
+    name: 'sidebar.fonds-propres',
     icon: complianceIcon,
-    href: "/compliance-monitoring",
-    subMenu: [
-      {
-        key: "8-1",
-        name: "compliance-monitoring.list-item-1",
-        href: "/compliance-monitoring/scr",
-        icon: subMenuIcon,
-      },
-      {
-        key: "8-2",
-        name: "compliance-monitoring.list-item-2",
-        href: "/compliance-monitoring/profitability",
-        icon: subMenuIcon,
-      },
-    ],
+    href: '/equity',
   },
-];
+  {
+    key: '9',
+    name: 'sidebar.parametres',
+    icon: complianceIcon,
+    href: '/settings',
+  },
+  {
+    key: '10',
+    name: 'sidebar.database',
+    icon: complianceIcon,
+    href: '/database',
+  },
+]
 
-export default menuItems;
+export default menuItems

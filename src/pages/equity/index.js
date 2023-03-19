@@ -1,7 +1,8 @@
 import { Row, Tabs } from 'antd'
 
 import { ConfirmationBox, Toolbar } from 'globalComponents'
-import { SanteBilanActifTable, SanteBilanPassifTable } from 'globalComponents/tables'
+import { SanteFPPage1 } from 'globalComponents/tables/santeFPPage1'
+import { SanteFPPage2 } from 'globalComponents/tables/santeFPPage2'
 import { useTranslation } from 'react-i18next'
 // import './index.scss'
 const { TabPane } = Tabs
@@ -15,11 +16,11 @@ const EquityPage = () => {
       </div>
       <Row style={{ width: '100%', padding: '0 10px' }}>
         <Tabs defaultActiveKey='1' className='custom-tabs-wrapper' style={{ width: '100%' }}>
-          <TabPane tab={'Actif'} key='1'>
-            <SanteBilanActifTable />
+          <TabPane tab={'Page 1'} key='1'>
+            <SanteFPPage1 />
           </TabPane>
-          <TabPane tab={'Pasif'} key='2'>
-            <SanteBilanPassifTable />
+          <TabPane tab={'Page 2'} key='2'>
+            <SanteFPPage2 />
           </TabPane>
         </Tabs>
       </Row>

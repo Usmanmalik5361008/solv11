@@ -160,7 +160,51 @@
   "projectdata": {
     "title": "Project Data"
   },
-
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "scr": {
+      "title": "SCR",
+      "hypothesis": "Hypothesis",
+      "counterparty-risk": "Risque de contrepartie",
+      "health-scr": "Health SCR",
+      "scr-ul": "SCR UL"
+    },
+    "scr-projection": "SCR (Projection)",
+    "sante-prevoyance": {
+      "title": "Santé - Prévoyance",
+      "primes-sante": "Primes santé",
+      "prestation-sante": "Prestation santé",
+      "produit-sante": "Produits santé"
+    },
+    "epargne-retraites": {
+      "title": "Epargne - Retraites",
+      "passif-uc": "Passif UC",
+      "produit-uc": "Produits UC",
+      "primes": "Primes",
+      "rachat": "Rachat",
+      "taux-rachat-partiel": "Taux de rachat partiel",
+      "taux-rachat-total": "Taux de rachat total",
+      "rentes": "Rentes",
+      "actifs": "Actifs"
+    },
+    "bilan": "Bilan",
+    "fonds-propres": "Fonds propres",
+    "parametres": "Paramètres",
+    "database": "Database"
+  },
+  "scr-tabs": {
+    "tab1": "Hypothèse",
+    "tab2": "Risque de contrepartie",
+    "tab3": "Health SCR",
+    "tab4": "SCR UL"
+  },
+  "paramatres-tabs": {
+    "tab1": "Hypothèses de choc",
+    "tab2": "Matrice de correlation 1",
+    "tab3": "Matrice de correlation 2",
+    "tab4": "Courbe des taux"
+  },
   "scrcalculation": {
     "title": "SCR calculation",
     "balance-sheet": "Balance Sheet",
@@ -321,7 +365,7 @@
 
     "hypothesis": "Hypothesis",
     "counterparty-risk": "Counterparty Risk",
-    "scr-sante_en": "SCR Health_EN",
+    "scr-sante_en": "SCR Health",
 
     "hypothesis-tab": {
       "field-1": "Calculation Date",

@@ -2,6 +2,8 @@ import { textEditor } from 'react-data-grid'
 import { cellInput } from '../components/cellInput'
 import { cellSelector } from '../components/cellSelector'
 import { getYearList } from '../core/helpers'
+import { Tooltip } from 'antd'
+import { cellText } from '../components/cellText'
 
 export const BSCR_Data = {
   columns: [
@@ -19,29 +21,67 @@ export const BSCR_Data = {
     },
     {
       key: 'col3',
-      name: 'Assurance Avec participation aux benefices',
+      name: cellText('Assurance Avec participation aux benefices'),
       editable: true,
       editor: (params) => cellInput({ type: 'number', params, columnId: 'col3' }),
+      width: 200,
+      resizable: true,
     },
     {
       key: 'col4',
-      name: 'Contrats lies a des indices et a des unites de comptes',
+      name: cellText('Contrats lies a des indices et a des unites de comptes'),
       editable: true,
       editor: (params) => cellInput({ type: 'number', params, columnId: 'col4' }),
+      width: 200,
+      resizable: true,
     },
     {
       key: 'col5',
-      name: `Autres activities d'assurance vie`,
+      name: cellText(`Autres activities d'assurance vie`),
       editable: true,
       editor: (params) => cellInput({ type: 'number', params, columnId: 'col5' }),
+      width: 200,
+      resizable: true,
     },
     {
       key: 'col6',
-      name: `Rentes issues d`,
+      name: cellText(`Rentes issues de l'assurance non-vie autre que sante`),
       editable: true,
-      editor: (params) => cellInput({ type: 'number', params, columnId: 'col5' }),
+      editor: (params) => cellInput({ type: 'number', params, columnId: 'col6' }),
+      width: 200,
+      resizable: true,
+    },
+    {
+      key: 'col7',
+      name: cellText(
+        `Rentes resultant de contrats d-assurance non-vie at lies a des engagement d-assurance sante Pb Trad`
+      ),
+      editable: true,
+      editor: (params) => cellInput({ type: 'number', params, columnId: 'col7' }),
+      width: 200,
+      resizable: true,
+    },
+    {
+      key: 'col8',
+      name: `Reassurance acceptee`,
+      editable: true,
+      editor: (params) => cellInput({ type: 'number', params, columnId: 'col8' }),
+    },
+
+    {
+      key: 'col9',
+      name: `Assurance sante`,
+      editable: true,
+      editor: (params) => cellInput({ type: 'number', params, columnId: 'col9' }),
+    },
+
+    {
+      key: 'col10',
+      name: `Reassurance sante`,
+      editable: true,
+      editor: (params) => cellInput({ type: 'number', params, columnId: 'col10' }),
     },
   ],
   // [label, value, label, value] ---> format
-  rows: [['Coute acquisition', '2024', 0, 0, 0, 0]],
+  rows: [['Coute acquisition', '2024', 0, 0, 0, 0, 0, 0, 0, 0]],
 }
