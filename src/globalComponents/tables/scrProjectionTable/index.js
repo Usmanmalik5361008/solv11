@@ -15,12 +15,12 @@ export const SCRProjectionTable = () => {
     })
   )
 
-  // <DataGrid
-  //   className='rdg-light'
-  //   style={{ height: 'fit-content' }}
-  //   onRowsChange={(row) => setRows(row)}
-  //   columns={columns}
-  //   rows={rows}
-  // />
-  return <div>{'Table Under progress'}</div>
+  return (
+    <DataGrid
+      className='rdg-light'
+      onRowsChange={(row) => setRows(row)}
+      columns={columns}
+      rows={rows}
+    />
+  )
 }

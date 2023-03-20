@@ -10,7 +10,7 @@ const ProjectsPage = () => {
       <div className='mb-5'>
         <Toolbar />
       </div>
-      <Row gutter={[30, 20]} style={{ padding: '0 10px' }}>
+      <Row gutter={[30, 20]} style={{ padding: '0 20px' }}>
         <SCRProjectionTable />
       </Row>
       <div className='mt-5'>

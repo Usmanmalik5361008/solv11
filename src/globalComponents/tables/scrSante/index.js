@@ -18,7 +18,7 @@ export const SCRSanteTable = () => {
   return (
     <DataGrid
       className='rdg-light'
-      style={{ height: 'fit-content' }}
+      
       onRowsChange={(row) => setRows(row)}
       columns={columns}
       rows={rows}

@@ -18,7 +18,7 @@ export const Hypothesis = () => {
   return (
     <DataGrid
       className='rdg-light'
-      style={{ height: 'fit-content' }}
+      
       onRowsChange={(row) => setRows(row)}
       // style={{ width: '100%',background:'red' }}
       columns={columns}

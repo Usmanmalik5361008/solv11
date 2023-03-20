@@ -18,7 +18,7 @@ export const SanteFPPage1 = () => {
   return (
     <DataGrid
       className='rdg-light'
-      style={{ height: 'fit-content' }}
+      
       onRowsChange={(row) => setRows(row)}
       columns={columns}
       rows={rows}
