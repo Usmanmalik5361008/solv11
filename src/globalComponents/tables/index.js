@@ -1,4 +1,5 @@
 import './index.scss'
+import './index.css'
 
 // SCR Tables
 export * from './scrHypothesis'

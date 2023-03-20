@@ -32,11 +32,11 @@ export const epargneRetraitesMenu = [
   },
   {
     title: 'sidebar.epargne-retraites.taux-rachat-partiel',
-    href: 'taux-rachat-partiel',
+    href: 'rachat-partial',
   },
   {
     title: 'sidebar.epargne-retraites.taux-rachat-total',
-    href: 'taux-rachat-total',
+    href: 'rachat-total',
   },
   {
     title: 'sidebar.epargne-retraites.rentes',

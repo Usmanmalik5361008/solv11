@@ -1,23 +1,31 @@
 // import { productionListingTwo } from "constants/productionDataListings";
 import { t } from 'i18next'
 import { AuthLayout, MainLayout } from 'layouts'
+import { SettingsPage } from 'pages'
+import { DatabasePage } from 'pages'
+import { HealthProductsPage } from 'pages'
+import { HealthBenefitPage } from 'pages'
 import {
   AnnuitiesPage,
   AssetsPage,
   BenifitsPage,
   ClaimsPage,
   CorrelationMatrix1Page,
-  CorrelationMatrix2Page, EquityPage,
-  FullRedemptionPage,
+  CorrelationMatrix2Page,
   HealthPremiumsPage,
+  EquityPage,
+  FullRedemptionPage,
   HypothesesShockPage,
-  LiabilitiesPage, NewDashboardPage, PartialRedemptionPage,
+  LiabilitiesPage,
+  NewDashboardPage,
+  PartialRedemptionPage,
   ProductSantePage,
   ProductUCPage,
   ProfitabilityPage,
   ProjectsPage,
   SCRPage,
-  SigninPage, Stats
+  SigninPage,
+  Stats,
 } from 'pages'
 import BalanceSheetPage from 'pages/balanceSheet'
 
@@ -40,7 +48,7 @@ const getRoutes = () => {
       title: 'Dashboard',
       children: [
         {
-          title: t('dashboard.title'),
+          title: t('sidebar.dashboard'),
           element: <NewDashboardPage />,
           index: true,
         },
@@ -55,122 +63,139 @@ const getRoutes = () => {
           path: 'scr-projection',
         },
         {
+          title: t('sidebar.sante-prevoyance.title'),
+          path: 'health-insurance',
+          children: [
+            {
+              title: t('sidebar.sante-prevoyance.primes-sante'),
+              element: <HealthPremiumsPage />,
+              path: 'health-premiums',
+            },
+            {
+              title: t('sidebar.sante-prevoyance.prestation-sante'),
+              element: <HealthBenefitPage />,
+              path: 'health-benefit',
+            },
+            {
+              title: t('sidebar.sante-prevoyance.produit-sante'),
+              element: <HealthProductsPage />,
+              path: 'health-products',
+            },
+          ],
+        },
+        {
+          title: t('sidebar.epargne-retraites.title'),
+          path: 'retirement-savings',
+          children: [
+            // {
+            //   path: 'fond-propres',
+            //   title: t('production-data.list-item-1'),
+            // },
+            {
+              path: 'passif-uc',
+              element: <LiabilitiesPage />,
+              title: t('sidebar.epargne-retraites.passif-uc'),
+            },
+            {
+              title: t('sidebar.epargne-retraites.produit-uc'),
+              element: <ProductUCPage />,
+              path: 'produit-uc',
+            },
+            {
+              title: t('sidebar.epargne-retraites.primes'),
+              element: <HealthPremiumsPage />,
+              path: 'primes',
+            },
+            {
+              path: 'rachat',
+              element: <PartialRedemptionPage />,
+              title: t('sidebar.epargne-retraites.rachat'),
+            },
+            {
+              title: t('sidebar.epargne-retraites.taux-rachat-partiel'),
+              element: <PartialRedemptionPage />,
+              path: 'rachat-partial',
+            },
+            {
+              title: t('sidebar.epargne-retraites.taux-rachat-total'),
+              element: <FullRedemptionPage />,
+              path: 'rachat-total',
+            },
+            {
+              title: t('sidebar.epargne-retraites.rentes'),
+              element: <AnnuitiesPage />,
+              path: 'rentes',
+            },
+            {
+              title: t('sidebar.epargne-retraites.actifs'),
+              element: <AssetsPage />,
+              path: 'actifs',
+            },
+
+            // {
+            //   path: 'prestations-sante-pb-trad',
+            //   element: <BenifitsPage />,
+            //   title: 'Prestations (santé) Pb Trad',
+            // },
+
+            // {
+            //   path: 'produits-sante-pb-trad',
+            //   element: <ProductSantePage />,
+            //   title: 'Produits Santé Pb Trad',
+            // },
+
+            // {
+            //   path: 'graphs',
+            //   element: <Stats />,
+            // },
+          ],
+        },
+        {
           title: t('sidebar.bilan'),
           element: <BalanceSheetPage />,
           path: 'balance-sheet',
         },
         {
-        title: t('sidebar.fonds-propres'),
+          title: t('sidebar.fonds-propres'),
           element: <EquityPage />,
           path: 'equity',
         },
         {
-          title: t('projects.title'),
-          element: <ProjectsPage />,
-          path: 'projects',
+          title: t('sidebar.parametres'),
+          element: <SettingsPage />,
+          path: 'settings',
         },
         {
-          title: t('production-data.title'),
-          path: 'production-data',
-          children: [
-            {
-              path: 'fond-propres',
-              element: <AssetsPage />,
-              title: t('production-data.list-item-1'),
-            },
-            {
-              path: 'actifs',
-              element: <EquityPage />,
-              title: t('production-data.list-item-2'),
-            },
-            {
-              path: 'primes-sante-pb-trad',
-              element: <HealthPremiumsPage />,
-              title: t('production-data.list-item-3'),
-            },
-            {
-              path: 'prestations-sante-pb-trad',
-              element: <BenifitsPage />,
-              title: 'Prestations (santé) Pb Trad',
-            },
-            {
-              path: 'passif-uc-pb-trad',
-              element: <LiabilitiesPage />,
-              title: 'Passif UC Pb Trad',
-            },
-            {
-              path: 'produits-uc-pb-trad',
-              element: <ProductUCPage />,
-              title: 'Produits UC Pb Trad',
-            },
-            {
-              path: 'produits-sante-pb-trad',
-              element: <ProductSantePage />,
-              title: 'Produits Santé Pb Trad',
-            },
-            {
-              path: 'rentes',
-              element: <AnnuitiesPage />,
-              title: 'Rentes',
-            },
-            {
-              path: 'rachat-partiel',
-              element: <PartialRedemptionPage />,
-              title: 'Rachat Partiel',
-            },
-            {
-              path: 'rachat-total',
-              element: <FullRedemptionPage />,
-              title: 'Rachat Total',
-            },
-            {
-              path: 'graphs',
-              element: <Stats />,
-            },
-          ],
+          title: t('sidebar.database'),
+          element: <DatabasePage />,
+          path: 'database',
         },
-        {
-          title: t('compliance-settings.title'),
-          path: 'compliance-settings',
-          children: [
-            {
-              path: 'hypothesis-de-choc',
-              element: <HypothesesShockPage />,
-              title: t('compliance-settings.list-item-1'),
-            },
-            {
-              path: 'matrice-correlation-1',
-              element: <CorrelationMatrix1Page />,
-              title: t('compliance-settings.list-item-2'),
-            },
-            {
-              path: 'matrice-correlation-2',
-              element: <CorrelationMatrix2Page />,
-              title: t('compliance-settings.list-item-3'),
-            },
-          ],
-        },
-        {
-          title: t('claims.title'),
-          element: <ClaimsPage />,
-          path: 'claims',
-        },
-        {
-          title: t('compliance-monitoring.title'),
-          path: 'compliance-monitoring',
-          children: [
-            {
-              title: t('compliance-monitoring.list-item-1'),
-              element: <SCRPage />,
-              path: 'scr',
-            },
-            {
-              title: t('compliance-monitoring.list-item-2'),
-              element: <ProfitabilityPage />,
-              path: 'profitability',
-            },
-          ],
-        },
+        // {
+        //   title: t('projects.title'),
+        //   element: <ProjectsPage />,
+        //   path: 'projects',
+        // },
+        // {
+        //   title: t('claims.title'),
+        //   element: <ClaimsPage />,
+        //   path: 'claims',
+        // },
+        // {
+        //   title: t('compliance-monitoring.title'),
+        //   path: 'compliance-monitoring',
+        //   children: [
+        //     {
+        //       title: t('compliance-monitoring.list-item-1'),
+        //       element: <SCRPage />,
+        //       path: 'scr',
+        //     },
+        //     {
+        //       title: t('compliance-monitoring.list-item-2'),
+        //       element: <ProfitabilityPage />,
+        //       path: 'profitability',
+        //     },
+        //   ],
+        // },
       ],
     },
   ]

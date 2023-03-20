@@ -1,0 +1,6 @@
+.rdg-cell[role="columnheader"] {
+  background-color:#dbf4fc;
+}
+/* .rdg-cell[role="columnheader"]:not(:last-of-type) {
+  border-right: 1px solid white !important;
+} */
