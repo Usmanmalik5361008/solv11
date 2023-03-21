@@ -10,9 +10,9 @@ export const cellInput = ({ type, params, columnId }) =>
   type === 'date' ? (
     <>
       <DatePicker
-        defaultValue={moment()}
+        defaultValue={moment(undefined)}
         className={'cell-input'}
-        value={moment(params.row[columnId], dateFormat)}
+        value={params.row[columnId] ? moment(params.row[columnId], dateFormat) : moment()}
         format={dateFormat}
         allowClear={false}
         onChange={(e) => handleChange(moment(e).format('DD/MM/YYYY'), params, columnId)}

@@ -11,6 +11,7 @@ export * from './scrProjectionTable'
 // Sante Tables
 
 export * from './prevoyancePrimesSante'
+export * from './prevoyancePrestationSante'
 export * from './santeBilanActif'
 export * from './santeBilanPassif'
 

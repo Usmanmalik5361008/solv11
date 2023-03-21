@@ -1,12 +1,13 @@
 import { ConfirmationBox, Toolbar } from 'globalComponents'
+import { PrevoyancePrestationSanteTable } from 'globalComponents/tables'
 
 const HealthBenefitPage = () => {
   // const { t } = useTranslation()
   return (
     <div className='card-view card-padding'>
       <Toolbar />
-      <div className='light-grey-bordered mt-5'>
-        <div>{'Table Under Progress'}</div>
+      <div className='mt-5'>
+        <PrevoyancePrestationSanteTable />
       </div>
       <br />
       <ConfirmationBox />
@@ -15,4 +16,3 @@ const HealthBenefitPage = () => {
 }
 
 export default HealthBenefitPage
-
