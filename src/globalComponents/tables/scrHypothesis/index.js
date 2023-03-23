@@ -1,16 +1,28 @@
-// import { BSCR } from './bscr'
-// import { Counterpart } from './counterpart'
-// import { HNL } from './hnl'
+import DataGrid from 'react-data-grid'
+import { useMemo, useState } from 'react'
+import { data } from './data'
 
 export const SCRHypothesis = () => {
-  return (
-    <div className={'tables-gap'}>
-      <p>{'This is under progress'}</p>
-      {/* <Table1 /> */}
+  const columns = useMemo(() => data.columns, [])
 
-      {/* <BSCR />
-      <Counterpart />
-      <HNL/> */}
-    </div>
+  const [rows, setRows] = useState(
+    data.rows.map((row, index) => {
+      const newRow = { id: index + 1 }
+      data.columns.forEach((column, i) => {
+        newRow[column.key] = row[i] ?? ''
+      })
+      return newRow
+    })
+  )
+
+  return (
+    <DataGrid
+      className={'rdg-light'}
+      columns={columns}
+      onRowsChange={(row) => setRows(row)}
+      rows={rows}
+      onSelectedRowsChange={(selected) => console.log({ selected })}
+      onCellClick={(e) => console.log({ e })}
+    />
   )
 }

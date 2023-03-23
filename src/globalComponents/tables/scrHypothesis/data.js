@@ -1,48 +1,45 @@
-import { textEditor } from 'react-data-grid'
+import { cellInput } from '../components/cellInput'
 
-export const Table1_data = {
+export const data = {
   columns: [
     {
+      key: 'label',
+      name: '',
+      width: 450,
+      resizable:true,
+    },
+    {
       key: 'col1',
-      name: 'Type',
+      name: 'Exercise N',
+      editable: true,
+      width: 180,
+      resizable:true,
+      editor: (params) =>
+        cellInput({
+          type: 'number',
+          params,
+          columnId: 'col1',
+        }),
     },
     {
       key: 'col2',
-      name: 'Interest',
+      name: 'Exercise N-1',
       editable: true,
-      editor: textEditor,
-    },
-    {
-      key: 'col3',
-      name: 'Equity',
-      editable: true,
-      editor: textEditor,
-    },
-    {
-      key: 'col4',
-      name: 'Property',
-      editable: true,
-      editor: textEditor,
-    },
-    {
-      key: 'col5',
-      name: 'Spread',
-      editable: true,
-      editor: textEditor,
-    },
-    {
-      key: 'col6',
-      name: 'Currency',
-      editable: true,
-      editor: textEditor,
+      width: 180,
+      resizable:true,
+      editor: (params) =>
+        cellInput({
+          type: 'number',
+          params,
+          columnId: 'col2',
+        }),
     },
   ],
   // [label, value, label, value] ---> format
   rows: [
-    // ['Interest', '', '', '', '', ''],
-    // ['Equity', '', '', '', '', ''],
-    // ['Property', '', '', '', '', ''],
-    // ['Spread', '', '', '', '', ''],
-    // ['Currency', '', '', '', '', ''],
+    ['Primes brutes acquises d`assurance-vie non liee', 0, 0],
+    ['Primes brutes acquises d`assurance-vie liee', 0, 0],
+    ['Primes brutes acquises d`assurance non liee', 0, 0],
+    ['Tx Gestion Financiere Pb Trad', 0, 0],
   ],
 }

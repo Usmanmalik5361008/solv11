@@ -65,6 +65,11 @@
     }
   }
 }
+.df-label-center {
+  display: flex;
+  align-items: center;
+  height: 35px;
+}
 
 .cell-text {
   position: relative;
