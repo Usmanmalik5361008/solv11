@@ -6,9 +6,85 @@
 .main-layout {
   min-height: 100vh;
 }
+
 .auth-layout {
   height: 100vh;
   overflow-y: auto;
+
+  .auth-page-container {
+    background-color: #f2fbfe !important;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/images/background.png');
+    background-size: cover;
+    padding-left: 15%;
+
+    @media screen and (max-width: 880px) {
+      padding-left: 0;
+      justify-content: center;
+
+      .auth-landing-image {
+        display: none;
+      }
+    }
+
+    .auth-landing {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+
+      .auth-landing-image {
+        width: calc(32vw + 40px);
+        object-fit: contain;
+        position: absolute;
+        margin-top: 16vw;
+      }
+    }
+
+    .auth-form-container {
+      max-width: 400px;
+      width: 100%;
+
+      .sigin-logo {
+        width: auto;
+        height: 70px;
+        margin-bottom: 30px;
+      }
+
+      .form-field {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        label,
+        label {
+          color: #57647a;
+        }
+      }
+
+      .greetings {
+        p {
+          margin-bottom: 0;
+        }
+
+        h1 {
+          font-family: 'Engschrift Caps';
+          text-transform: uppercase;
+        }
+      }
+
+      button {
+        margin-top: 30px;
+      }
+    }
+  }
+
+
 }
 
 .page-layout {
@@ -44,6 +120,7 @@
     }
 
     svg {
+
       path,
       rect {
         fill: #109ce7 !important;
@@ -116,6 +193,7 @@
       }
     }
   }
+
   .bottom-section {
     min-height: 65%;
     background-size: cover;

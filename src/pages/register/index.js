@@ -2,18 +2,31 @@ import { EMAIL_ICON, EYE_CROSSED } from "assets";
 import { SubLoader } from "globalComponents";
 import { InputField } from "globalComponents";
 import { getFormRules } from "./formRules";
-import useSignin from "./useSignin";
+import useRegister from "./useRegister";
 
-const SigninPage = () => {
-  const { handleLoginFormSubmit, handleNavigation, loading, register, errors } =
-    useSignin();
+const RegisterPage = () => {
+  const {
+    handleRegisterFormSubmit,
+    register,
+    errors,
+    loading,
+    handleNavigation,
+  } = useRegister();
 
   const formRules = getFormRules(register);
 
   return (
     <>
       <SubLoader loading={loading} overlay={true} />
-      <form onSubmit={handleLoginFormSubmit}>
+      <form onSubmit={handleRegisterFormSubmit}>
+        <div className="form-field">
+          <label>Full Name</label>
+          <InputField
+            name="name"
+            error={errors["name"]}
+            {...formRules["name"]}
+          />
+        </div>
         <div className="form-field">
           <label>Email</label>
           <InputField
@@ -27,9 +40,9 @@ const SigninPage = () => {
           <label>Password</label>
           <InputField
             name="password"
+            type="password"
             prependIcon={EYE_CROSSED}
             error={errors["password"]}
-            type="password"
             {...formRules["password"]}
           />
         </div>
@@ -37,17 +50,16 @@ const SigninPage = () => {
           <option>Production</option>
           <option>Developement</option>
         </select>
-
         <button className="btn-gradient" type="submit">
           Get Started
-        </button>
+        </button>{" "}
         <p className="text-xxs mt-2 subtle-text">
-          Dont have an account ?{" "}
+          Already have an account ?{" "}
           <mark
             className="primary-text-color cursor-pointer"
-            onClick={handleNavigation("/auth/register")}
+            onClick={handleNavigation("/auth/signin")}
           >
-            Register
+            Login
           </mark>{" "}
         </p>
       </form>
@@ -55,4 +67,4 @@ const SigninPage = () => {
   );
 };
 
-export default SigninPage;
+export default RegisterPage;

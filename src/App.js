@@ -1,23 +1,29 @@
-import RouterConfig from 'navigation'
-import { useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router-dom'
-import 'styles/main.scss'
-import 'react-data-grid/lib/styles.css'
+import RouterConfig from "navigation";
+import "react-data-grid/lib/styles.css";
+import { useTranslation } from "react-i18next";
+import store from "services/redux/store";
+import { Provider } from "react-redux";
+import "styles/main.scss";
+import useApp from "useApp";
+import { SubLoader } from "globalComponents";
 
 function App() {
-  const { ready } = useTranslation()
-  const navigate = useNavigate()
+  const { ready } = useTranslation();
 
-  useEffect(() => {
-    navigate('/auth/signin')
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const { appLoading } = useApp();
 
   if (!ready) {
-    return <div />
+    return <div />;
   }
-  return <RouterConfig />
+  return (
+    <Provider store={store}>
+      {appLoading ? (
+        <SubLoader overlay={true} loading={true} />
+      ) : (
+        <RouterConfig />
+      )}
+    </Provider>
+  );
 }
 
-export default App
+export default App;

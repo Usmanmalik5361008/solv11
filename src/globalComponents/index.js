@@ -9,3 +9,4 @@ export { default as ConfirmationBox } from "./confirmationBox";
 export { default as CsvEditor } from "./csvEditor";
 export { default as LineGraph } from "./graphs";
 export { default as Toolbar } from "./toolbar";
+export { default as SubLoader } from "./SubLoader";

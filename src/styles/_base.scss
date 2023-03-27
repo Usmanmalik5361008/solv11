@@ -4,10 +4,12 @@
   font-family: "Inter-Regular";
   src: url("../assets/fonts/Inter/static/Inter-Regular.ttf");
 }
+
 @font-face {
   font-family: "Inter-Medium";
   src: url("../assets/fonts/Inter/static/Inter-Medium.ttf");
 }
+
 @font-face {
   font-family: "Inter-Bold";
   src: url("../assets/fonts/Inter/static/Inter-Bold.ttf");
@@ -30,7 +32,7 @@ $footer-height: 60px;
 
 //text sizes
 
-$text-xxs: 8px;
+$text-xxs: 12px;
 $text-xs: 14px;
 $text-sm: 16px;
 $text-nm: 18px;
@@ -120,6 +122,7 @@ h4,
   font-size: $text-md;
   font-family: "Inter-Bold";
 }
+
 h5,
 .text-mormal {
   font-size: $text-xs;
@@ -135,7 +138,15 @@ small {
   font-size: $text-xs;
 }
 
+.text-xxs {
+  font-size: $text-xxs;
+}
+
 // utils
+
+.cursor-pointer {
+  cursor: pointer;
+}
 
 .uppercase {
   text-transform: uppercase;
@@ -158,9 +169,11 @@ small {
 .text-center {
   text-align: center;
 }
+
 .text-right {
   text-align: right;
 }
+
 .dark-grey {
   color: #57647a;
 }
@@ -183,17 +196,29 @@ small {
   @if $width {
     width: $width;
   }
+
   &:hover {
     background: darken($btn-primary-bg, 10%);
   }
 }
 
 @mixin unselectable() {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+mark {
+  background-color: transparent;
 }

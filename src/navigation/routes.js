@@ -1,10 +1,10 @@
 // import { productionListingTwo } from "constants/productionDataListings";
-import { t } from 'i18next'
-import { AuthLayout, MainLayout } from 'layouts'
-import { SettingsPage } from 'pages'
-import { DatabasePage } from 'pages'
-import { HealthProductsPage } from 'pages'
-import { HealthBenefitPage } from 'pages'
+import { t } from "i18next";
+import { AuthLayout, MainLayout } from "layouts";
+import { SettingsPage } from "pages";
+import { DatabasePage } from "pages";
+import { HealthProductsPage } from "pages";
+import { HealthBenefitPage } from "pages";
 import {
   AnnuitiesPage,
   AssetsPage,
@@ -26,110 +26,120 @@ import {
   SCRPage,
   SigninPage,
   Stats,
-} from 'pages'
-import BalanceSheetPage from 'pages/balanceSheet'
+  Register,
+} from "pages";
+import BalanceSheetPage from "pages/balanceSheet";
+import { Navigate } from "react-router-dom";
 
-const getRoutes = () => {
+const getRoutes = (isAuthenticated = false) => {
   return [
     {
-      element: <AuthLayout />,
-      path: '/auth',
-      title: 'Sigin In',
+      element: isAuthenticated ? <Navigate replace to={"/"} /> : <AuthLayout />,
+      path: "/auth",
+      title: "Sigin In",
       children: [
         {
           element: <SigninPage />,
-          path: '/auth/signin',
+          path: "/auth/signin",
+        },
+        {
+          element: <Register />,
+          path: "/auth/register",
         },
       ],
     },
     {
-      element: <MainLayout />,
-      path: '/',
-      title: 'Dashboard',
+      element: isAuthenticated ? (
+        <MainLayout />
+      ) : (
+        <Navigate replace to={"/auth/signin"} />
+      ),
+      path: "/",
+      title: "Dashboard",
       children: [
         {
-          title: t('sidebar.dashboard'),
+          title: t("sidebar.dashboard"),
           element: <NewDashboardPage />,
           index: true,
         },
         {
-          title: t('sidebar.scr.title'),
+          title: t("sidebar.scr.title"),
           element: <SCRPage />,
-          path: 'scr',
+          path: "scr",
         },
         {
-          title: t('sidebar.scr-projection'),
+          title: t("sidebar.scr-projection"),
           element: <ProjectsPage />,
-          path: 'scr-projection',
+          path: "scr-projection",
         },
         {
-          title: t('sidebar.sante-prevoyance.title'),
-          path: 'health-insurance',
+          title: t("sidebar.sante-prevoyance.title"),
+          path: "health-insurance",
           children: [
             {
-              title: t('sidebar.sante-prevoyance.primes-sante'),
+              title: t("sidebar.sante-prevoyance.primes-sante"),
               element: <HealthPremiumsPage />,
-              path: 'health-premiums',
+              path: "health-premiums",
             },
             {
-              title: t('sidebar.sante-prevoyance.prestation-sante'),
+              title: t("sidebar.sante-prevoyance.prestation-sante"),
               element: <HealthBenefitPage />,
-              path: 'health-benefit',
+              path: "health-benefit",
             },
             {
-              title: t('sidebar.sante-prevoyance.produit-sante'),
+              title: t("sidebar.sante-prevoyance.produit-sante"),
               element: <HealthProductsPage />,
-              path: 'health-products',
+              path: "health-products",
             },
           ],
         },
         {
-          title: t('sidebar.epargne-retraites.title'),
-          path: 'retirement-savings',
+          title: t("sidebar.epargne-retraites.title"),
+          path: "retirement-savings",
           children: [
             // {
             //   path: 'fond-propres',
             //   title: t('production-data.list-item-1'),
             // },
             {
-              path: 'passif-uc',
+              path: "passif-uc",
               element: <LiabilitiesPage />,
-              title: t('sidebar.epargne-retraites.passif-uc'),
+              title: t("sidebar.epargne-retraites.passif-uc"),
             },
             {
-              title: t('sidebar.epargne-retraites.produit-uc'),
+              title: t("sidebar.epargne-retraites.produit-uc"),
               element: <ProductUCPage />,
-              path: 'produit-uc',
+              path: "produit-uc",
             },
             {
-              title: t('sidebar.epargne-retraites.primes'),
+              title: t("sidebar.epargne-retraites.primes"),
               element: <HealthPremiumsPage />,
-              path: 'primes',
+              path: "primes",
             },
             {
-              path: 'rachat',
+              path: "rachat",
               element: <PartialRedemptionPage />,
-              title: t('sidebar.epargne-retraites.rachat'),
+              title: t("sidebar.epargne-retraites.rachat"),
             },
             {
-              title: t('sidebar.epargne-retraites.taux-rachat-partiel'),
+              title: t("sidebar.epargne-retraites.taux-rachat-partiel"),
               element: <PartialRedemptionPage />,
-              path: 'rachat-partial',
+              path: "rachat-partial",
             },
             {
-              title: t('sidebar.epargne-retraites.taux-rachat-total'),
+              title: t("sidebar.epargne-retraites.taux-rachat-total"),
               element: <FullRedemptionPage />,
-              path: 'rachat-total',
+              path: "rachat-total",
             },
             {
-              title: t('sidebar.epargne-retraites.rentes'),
+              title: t("sidebar.epargne-retraites.rentes"),
               element: <AnnuitiesPage />,
-              path: 'rentes',
+              path: "rentes",
             },
             {
-              title: t('sidebar.epargne-retraites.actifs'),
+              title: t("sidebar.epargne-retraites.actifs"),
               element: <AssetsPage />,
-              path: 'actifs',
+              path: "actifs",
             },
 
             // {
@@ -151,24 +161,24 @@ const getRoutes = () => {
           ],
         },
         {
-          title: t('sidebar.bilan'),
+          title: t("sidebar.bilan"),
           element: <BalanceSheetPage />,
-          path: 'balance-sheet',
+          path: "balance-sheet",
         },
         {
-          title: t('sidebar.fonds-propres'),
+          title: t("sidebar.fonds-propres"),
           element: <EquityPage />,
-          path: 'equity',
+          path: "equity",
         },
         {
-          title: t('sidebar.parametres'),
+          title: t("sidebar.parametres"),
           element: <SettingsPage />,
-          path: 'settings',
+          path: "settings",
         },
         {
-          title: t('sidebar.database'),
+          title: t("sidebar.database"),
           element: <DatabasePage />,
-          path: 'database',
+          path: "database",
         },
         // {
         //   title: t('projects.title'),
@@ -198,7 +208,7 @@ const getRoutes = () => {
         // },
       ],
     },
-  ]
-}
+  ];
+};
 
-export default getRoutes
+export default getRoutes;
