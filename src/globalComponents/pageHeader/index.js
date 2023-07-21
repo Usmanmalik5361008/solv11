@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import Breadcrums from "../breadcrums";
 import { LOCAL_STORAGE_VALUES } from "constants/common";
 import { onLogout } from "services/redux/slices/user";
+import { Jobs } from "globalComponents";
 
 const { Option } = Select;
 
@@ -55,7 +56,9 @@ const PageHeader = () => {
             <Option value="fr">French</Option>
           </Select>
           <img src={INFORMATION_ICON} alt="" />
-          <img src={COMMENT_ICON} alt="" />
+          <Dropdown overlay={<Jobs />} overlayStyle={{ maxWidth: 400 }}>
+            <img src={COMMENT_ICON} alt="" />
+          </Dropdown>
           <img src={SETTINGS_ICON} alt="" />
           <Dropdown overlay={userMenu}>
             <span>

@@ -1,3 +1,4 @@
+import { Spin } from "antd";
 import React from "react";
 
 const Button = ({
@@ -6,6 +7,7 @@ const Button = ({
   style,
   prependIcon,
   type = "primary",
+  loading,
 }) => {
   const getClassName = () => {
     let className = "";
@@ -19,7 +21,13 @@ const Button = ({
 
   return (
     <button onClick={onClick} className={getClassName()}>
-      {prependIcon && <img src={prependIcon} alt="" className="mr-2"/>} {title}
+      {loading && (
+        <Spin className="spin-white" style={{ marginRight: 10 }} size="small" />
+      )}{" "}
+      {!loading && prependIcon && (
+        <img src={prependIcon} alt="" className="mr-2" />
+      )}{" "}
+      {title}
     </button>
   );
 };

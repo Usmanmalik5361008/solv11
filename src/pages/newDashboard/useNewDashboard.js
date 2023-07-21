@@ -1,3 +1,4 @@
+import { message } from "antd";
 import { runScrAxiosParams } from "api/axiosHookParams";
 import { NOTIFICATION_TYPE } from "constants/common";
 import { useAxios } from "hooks";
@@ -6,30 +7,30 @@ import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { scrValueMap } from "./config";
 import scrHierarchy from "./data.json";
-import { message } from "antd";
-import axios from "axios";
-import API_ENDPOINTS from "api/endpoints";
+import { Buffer } from "buffer";
 
 const useNewDashboard = () => {
-  const { callAxios: callRunScrApi } = useAxios(runScrAxiosParams);
+  const { callAxios: callRunScrApi, loading: runScrApiLoading } =
+    useAxios(runScrAxiosParams);
 
   const notificationSlice = useSelector((state) => state.notification);
   const [scrHierarchyFormatted, setScrHierarchyFormatted] = useState([]);
 
   useEffect(() => {
-    const latestNotification = notificationSlice?.notifications?.[0];
-    console.log({ latestNotification });
-    if (!latestNotification) return;
-    const notificationBody = latestNotification.body;
-    const [notificationType, encodedMessage] = notificationBody.split(":");
-    if (notificationType === NOTIFICATION_TYPE.INFO_COMPLETED) {
-      const decodedMessage = Buffer.from(encodedMessage, "base64");
-      const decodedMessageJson = JSON.parse(decodedMessage);
-      const scrHierarchyFormatted = scrHierarchy.map((value) => ({
-        ...value,
-        value: decodedMessageJson?.[scrValueMap[value?.positionName]] || null,
-      }));
-      setScrHierarchyFormatted(scrHierarchyFormatted);
+    for (const notification of notificationSlice?.notifications) {
+      const notificationBody = notification.body;
+      const [notificationType, encodedMessage] = notificationBody.split(":");
+      if (notificationType === NOTIFICATION_TYPE.INFO_COMPLETED) {
+        const decodedMessage = Buffer.from(encodedMessage, "base64").toString();
+        const decodedMessageJson = JSON.parse(decodedMessage);
+        console.log({ decodedMessageJson });
+        const scrHierarchyFormatted = scrHierarchy.map((value) => ({
+          ...value,
+          value: decodedMessageJson?.[scrValueMap[value?.positionName]] || null,
+        }));
+        setScrHierarchyFormatted(scrHierarchyFormatted);
+        break;
+      }
     }
   }, [notificationSlice.notifications]);
 
@@ -38,6 +39,7 @@ const useNewDashboard = () => {
       message.error(
         "Please enable notification access to get notified once the calculations are done"
       );
+      return;
     }
 
     const data = {
@@ -89,26 +91,16 @@ const useNewDashboard = () => {
       cmPerQRTText: "Annuel",
     };
 
-    console.log({ url: process.env.REACT_APP_SCR_API_URL });
-
-    await callRunScrApi({
+    const result = await callRunScrApi({
       data,
       baseUrl: process.env.REACT_APP_SCR_API_URL,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-      },
     });
-    // await axios({
-    //   data,
-    //   url: `${process.env.REACT_APP_SCR_API_URL}/${API_ENDPOINTS.RUN_SCR}`,
-    //   // headers: {
-    //   //   "ngrok-skip-browser-warning": "true",
-    //   // },
-    // });
+    if (result) {
+      message.info(result);
+    }
   }, [notificationSlice, callRunScrApi]);
 
-  return { handleRunScr, scrHierarchyFormatted };
+  return { handleRunScr, scrHierarchyFormatted, runScrApiLoading };
 };
 
 export default useNewDashboard;

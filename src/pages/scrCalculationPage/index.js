@@ -1,9 +1,8 @@
 import { Col, Row } from "antd";
-import { ConfirmationBox, Toolbar } from "globalComponents";
+import { ConfirmationBox, Toolbar, Jobs } from "globalComponents";
 import { useTranslation } from "react-i18next";
-import { Jobs } from "./components";
-import "./styles.scss";
 
+import "./styles.scss";
 
 const ScrCalculationPage = () => {
   const { t } = useTranslation();
@@ -17,10 +16,7 @@ const ScrCalculationPage = () => {
         <Row gutter={[30, 20]}>
           <Col xs={24} sm={24} md={24} lg={16}>
             <Row gutter={[30, 30]}>
-              <Col xs={24}>
-                
-                {/* <WorkStatuses /> */}
-              </Col>
+              <Col xs={24}>{/* <WorkStatuses /> */}</Col>
               <Col xs={24}>
                 {/* <Tabs defaultActiveKey="1" className="custom-tabs-wrapper">
                   <TabPane tab={t("forward-rate-graph")} key="1">

@@ -63,7 +63,7 @@ const JobCard = ({ color, projectName, dateTime, progress, title }) => {
           />
           <Dropdown className="ml-2" overlay={menu}>
             <a>
-              <img src={VERTICAL_DOTS} className="job-mmenu" />
+              <img src={VERTICAL_DOTS} className="job-menu" />
             </a>
           </Dropdown>
         </div>

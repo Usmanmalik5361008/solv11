@@ -1,31 +1,20 @@
 import { notification } from "antd";
-import { fetchToken, onMessageListener } from "../firebase/utils";
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { onPermissionDenied } from "services/redux/slices/notification";
-import { setToken } from "services/redux/slices/notification";
 import { NOTIFICATION_TYPE } from "constants/common";
-import { onNewNotification } from "services/redux/slices/notification";
+import { useCallback, useEffect, useRef } from "react";
+import { useDispatch } from "react-redux";
+import {
+  onNewNotification,
+  onPermissionDenied,
+  setToken,
+} from "services/redux/slices/notification";
+import { fetchToken, onMessageListener } from "../firebase/utils";
 
 const WithFirebaseNotification = ({ children }) => {
   const dispatch = useDispatch();
-  const [message, setMessage] = useState(null);
+  const broadcast = useRef(new BroadcastChannel("background-message"));
 
-  useEffect(() => {
-    const init = async () => {
-      const token = await fetchToken();
-      if (token !== null) {
-        console.log({ token });
-        dispatch(setToken(token));
-      } else {
-        dispatch(onPermissionDenied());
-      }
-    };
-    init();
-  }, [dispatch]);
-
-  useEffect(() => {
-    const init = async () => {
+  const saveAndDisplayMessage = useCallback(
+    async (message) => {
       if (!message) return;
       dispatch(onNewNotification(message?.notification));
       const [messageType, messageContent] =
@@ -35,15 +24,31 @@ const WithFirebaseNotification = ({ children }) => {
         message: message?.notification?.title,
         description: messageContent,
       });
-    };
-
-    init();
-  }, [message, dispatch]);
+    },
+    [dispatch]
+  );
 
   onMessageListener().then((message) => {
-    console.log({ message });
-    setMessage(message);
+    saveAndDisplayMessage(message);
   });
+
+  useEffect(() => {
+    broadcast.current.onmessage = (event) => {
+      saveAndDisplayMessage(event?.data);
+    };
+  }, [saveAndDisplayMessage]);
+
+  useEffect(() => {
+    const init = async () => {
+      const token = await fetchToken();
+      if (token !== null) {
+        dispatch(setToken(token));
+      } else {
+        dispatch(onPermissionDenied());
+      }
+    };
+    init();
+  }, [dispatch]);
 
   return children;
 };

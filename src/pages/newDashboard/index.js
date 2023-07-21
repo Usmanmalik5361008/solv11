@@ -10,7 +10,8 @@ import useNewDashboard from "./useNewDashboard";
 
 const NewDashboard = () => {
   const { t } = useTranslation();
-  const { handleRunScr, scrHierarchyFormatted } = useNewDashboard();
+  const { handleRunScr, scrHierarchyFormatted, runScrApiLoading } =
+    useNewDashboard();
 
   return (
     <div className="card-view">
@@ -30,6 +31,7 @@ const NewDashboard = () => {
           title="RUN SCR"
           prependIcon={TICKET_WHTE_ICON}
           onClick={handleRunScr}
+          loading={runScrApiLoading}
         />
       </div>
       <div className="dashboard-body">
