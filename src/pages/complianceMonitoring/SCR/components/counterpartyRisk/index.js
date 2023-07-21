@@ -1,14 +1,11 @@
-import { Toolbar } from 'globalComponents'
-import { SCRCounterPartRiskTable } from 'globalComponents/tables'
-import { useTranslation } from 'react-i18next'
+import { SCRCounterPartRiskTable } from "globalComponents/tables";
 
 const CounterpartyRisk = () => {
-  const { t } = useTranslation()
   return (
     <div>
       <SCRCounterPartRiskTable />
     </div>
-  )
-}
+  );
+};
 
-export default CounterpartyRisk
+export default CounterpartyRisk;

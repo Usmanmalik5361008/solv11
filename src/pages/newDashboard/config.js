@@ -1,0 +1,17 @@
+export const scrValueMap = {
+  SCR: "txtSCRMarcheBrut",
+  Market: "txtSCRMarcheNet",
+  Life: "txtSCRVieNet",
+  Longevity: "txtSCRVieBrut",
+  Default: "txtSCRContrepartieBrut",
+  Intang: "txtSCRContrepartieNet",
+  "Premium reserve": "txtSCRActiflncorpBrut",
+  Expenses: "txtSCRActiflncorpNet",
+  Health: "txtSCRMaladieBrut",
+  "SLT Health": "txtSCRMaladieNet",
+  BSCR: "txtSCRGlobal",
+  Mortality: "txteltselig",
+  CAT: "txtImpotDiff",
+  Concentration: "AtxtTauxCouverture",
+  0: "txtMCR",
+};

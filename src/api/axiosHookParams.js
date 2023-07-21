@@ -31,3 +31,12 @@ export const verifyTokenAxiosParams = {
   shouldCallOnMount: true,
   showMessage: false,
 };
+
+export const runScrAxiosParams = {
+  config: {
+    method: AXIOS_METHODS.POST,
+    url: `${process.env.REACT_APP_SCR_API_URL}/${API_ENDPOINTS.RUN_SCR}`,
+  },
+  shouldCallOnMount: false,
+  showMessage: false,
+};

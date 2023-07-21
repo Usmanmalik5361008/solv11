@@ -25,11 +25,11 @@ const useSignin = () => {
 
   const handleLoginFormSubmit = handleSubmit(async (values) => {
     const payload = { ...values };
-    const { success = false, data } = await callAxios({
+    const result = await callAxios({
       data: payload,
     });
-    if (success) {
-      let { user, token } = data;
+    if (result?.success) {
+      let { user, token } = result?.data;
       localStorage.setItem(LOCAL_STORAGE_VALUES.TOKEN, token);
 
       dispatch(onLogin(user));

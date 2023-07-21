@@ -251,7 +251,7 @@ const Icon = ({ type = "", onClick, tooltipMessage = "" }) => {
       return (
         <Tooltip title={tooltipMessage}>
           <span className="cross-icon" onClick={onClick}>
-            <img src={TICK_ICON} />
+            <img src={TICK_ICON} alt="" />
           </span>
         </Tooltip>
       );
@@ -260,7 +260,7 @@ const Icon = ({ type = "", onClick, tooltipMessage = "" }) => {
       return (
         <Tooltip title={tooltipMessage}>
           <span className="save-icon" onClick={onClick}>
-            <img src={CLOSE_ICON} />
+            <img src={CLOSE_ICON} alt="" />
           </span>
         </Tooltip>
       );

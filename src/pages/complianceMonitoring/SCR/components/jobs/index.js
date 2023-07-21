@@ -1,8 +1,13 @@
 import { Dropdown, Menu, Progress } from "antd";
 import { VERTICAL_DOTS } from "assets";
 import "./styles.scss";
+import { useSelector } from "react-redux";
 
 const Jobs = () => {
+  const notifications = useSelector(
+    (state) => state.notification.notifications
+  );
+
   return (
     <div className="jobs-container">
       <div className="jobs-header">

@@ -1,14 +1,12 @@
-import React from "react";
 
 import { Tabs } from "antd";
+import { useTranslation } from "react-i18next";
 import {
-  ExternalFunds,
-  Hypothesis,
   Contract,
   DedicatedFunds,
+  ExternalFunds,
+  Hypothesis,
 } from "./components";
-import { useTranslation } from "react-i18next";
-import { Toolbar } from "globalComponents";
 
 const { TabPane } = Tabs;
 

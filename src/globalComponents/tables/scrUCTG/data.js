@@ -1,9 +1,8 @@
 import { textEditor } from 'react-data-grid'
 import { cellInput } from '../components/cellInput'
 import { cellSelector } from '../components/cellSelector'
-import { getYearList } from '../core/helpers'
-import { Tooltip } from 'antd'
 import { cellText } from '../components/cellText'
+import { getYearList } from '../core/helpers'
 
 export const BSCR_Data = {
   columns: [

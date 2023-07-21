@@ -1,7 +1,6 @@
-import React, { useState } from "react";
 import { ResponsiveLine } from "@nivo/line";
-import data from "./data.json";
 import Spreadsheet from "react-spreadsheet";
+import data from "./data.json";
 import "./styles.scss";
 
 const Graph = () => {

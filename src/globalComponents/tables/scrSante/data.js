@@ -1,4 +1,3 @@
-import { textEditor } from 'react-data-grid'
 import { cellInput } from '../components/cellInput'
 
 export const data = {

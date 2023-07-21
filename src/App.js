@@ -1,11 +1,12 @@
+import { SubLoader } from "globalComponents";
+import WithFirebaseNotification from "hoc/WithFirebaseNotification";
 import RouterConfig from "navigation";
 import "react-data-grid/lib/styles.css";
 import { useTranslation } from "react-i18next";
-import store from "services/redux/store";
 import { Provider } from "react-redux";
+import store from "services/redux/store";
 import "styles/main.scss";
 import useApp from "useApp";
-import { SubLoader } from "globalComponents";
 
 function App() {
   const { ready } = useTranslation();
@@ -17,11 +18,13 @@ function App() {
   }
   return (
     <Provider store={store}>
-      {appLoading ? (
-        <SubLoader overlay={true} loading={true} />
-      ) : (
-        <RouterConfig />
-      )}
+      <WithFirebaseNotification>
+        {appLoading ? (
+          <SubLoader overlay={true} loading={true} />
+        ) : (
+          <RouterConfig />
+        )}
+      </WithFirebaseNotification>
     </Provider>
   );
 }

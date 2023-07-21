@@ -1,7 +1,5 @@
-import { textEditor } from 'react-data-grid'
 import { cellInput } from '../components/cellInput'
 import { cellSelector } from '../components/cellSelector'
-import moment from 'moment'
 import { cellText } from '../components/cellText'
 
 export const data = {

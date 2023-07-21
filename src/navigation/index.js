@@ -1,4 +1,3 @@
-import { useRoutes } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import getRoutes from "./routes";

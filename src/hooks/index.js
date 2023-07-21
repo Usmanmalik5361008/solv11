@@ -26,6 +26,7 @@ const useAxios = (config) => {
   const [error, setError] = useState(null);
   const axiosProps = useRef(config);
   const isMounted = useRef(false);
+  const controllerRef = useRef(new AbortController());
 
   const callAxios = useCallback(
     async (additionalParams) => {
@@ -39,14 +40,26 @@ const useAxios = (config) => {
             ...additionalParams,
           };
         }
+        config = {
+          ...config,
+          signal: controllerRef.current.signal,
+        };
 
         const response = await axios(config);
         setResult(response?.data);
 
-        showMessage &&
-          message[response.data.success ? "success" : "error"]?.(
-            response.data.message
-          );
+        if (showMessage) {
+          if (response.status === 200) {
+            message.success(
+              response?.data?.message ||
+                response?.data?.msg ||
+                "Operation done successfully"
+            );
+          } else {
+            message.error("Something went wrong");
+          }
+        }
+
         return response.data;
       } catch (error) {
         setError(error);
@@ -58,8 +71,14 @@ const useAxios = (config) => {
         setLoading(false);
       }
     },
-    [setLoading, axiosProps, setResult]
+    [setLoading, axiosProps, setResult, controllerRef]
   );
+
+  const cancelRequest = useCallback(() => {
+    controllerRef.current.abort();
+    controllerRef.current = new AbortController();
+  }, []);
+
   useEffect(() => {
     if (!isMounted.current && process.env.NODE_ENV === "development") {
       isMounted.current = true;
@@ -70,9 +89,11 @@ const useAxios = (config) => {
     if (shouldCallOnMount) {
       callAxios();
     }
-  }, [axiosProps, callAxios]);
 
-  return { result, loading, error, callAxios };
+    return () => cancelRequest();
+  }, [axiosProps, callAxios, cancelRequest]);
+
+  return { result, loading, error, callAxios, cancelRequest };
 };
 
 export { usePathPattern, useAxios };

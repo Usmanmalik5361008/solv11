@@ -1,32 +1,12 @@
 // import { productionListingTwo } from "constants/productionDataListings";
 import { t } from "i18next";
 import { AuthLayout, MainLayout } from "layouts";
-import { SettingsPage } from "pages";
-import { DatabasePage } from "pages";
-import { HealthProductsPage } from "pages";
-import { HealthBenefitPage } from "pages";
 import {
   AnnuitiesPage,
-  AssetsPage,
-  BenifitsPage,
-  ClaimsPage,
-  CorrelationMatrix1Page,
-  CorrelationMatrix2Page,
-  HealthPremiumsPage,
-  EquityPage,
-  FullRedemptionPage,
-  HypothesesShockPage,
-  LiabilitiesPage,
+  AssetsPage, DatabasePage, EquityPage,
+  FullRedemptionPage, HealthBenefitPage, HealthPremiumsPage, HealthProductsPage, LiabilitiesPage,
   NewDashboardPage,
-  PartialRedemptionPage,
-  ProductSantePage,
-  ProductUCPage,
-  ProfitabilityPage,
-  ProjectsPage,
-  SCRPage,
-  SigninPage,
-  Stats,
-  Register,
+  PartialRedemptionPage, ProductUCPage, ProjectsPage, Register, SCRPage, SettingsPage, SigninPage
 } from "pages";
 import BalanceSheetPage from "pages/balanceSheet";
 import { Navigate } from "react-router-dom";

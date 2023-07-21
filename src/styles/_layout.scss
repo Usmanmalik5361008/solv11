@@ -4,7 +4,8 @@
 }
 
 .main-layout {
-  min-height: 100vh;
+  height: calc(100vh);
+
 }
 
 .auth-layout {
@@ -93,6 +94,7 @@
 
 .sider {
   padding: 20px;
+  overflow-y: auto;
 
   .-title-content {
     margin-left: 10px;
@@ -144,6 +146,8 @@
 .header-content-container {
   padding: 10px;
   overflow-y: auto;
+  height: 100vh;
+
 
   &:last-child {
     margin-bottom: 20px;
@@ -157,6 +161,7 @@
   background-color: #19202e;
   color: white;
   margin-bottom: 20px;
+  flex-shrink: 0;
 
   .upper-section {
     display: flex;
