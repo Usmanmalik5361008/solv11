@@ -21,5 +21,4 @@ export const firebaseConfig = {
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 export const messaging = getMessaging(firebaseApp);
-//const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(firebaseApp);

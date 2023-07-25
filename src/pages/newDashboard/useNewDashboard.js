@@ -10,8 +10,12 @@ import scrHierarchy from "./data.json";
 import { Buffer } from "buffer";
 
 const useNewDashboard = () => {
-  const { callAxios: callRunScrApi, loading: runScrApiLoading } =
-    useAxios(runScrAxiosParams);
+  const {
+    callAxios: callRunScrApi,
+    loading: runScrApiLoading,
+    success,
+    status,
+  } = useAxios(runScrAxiosParams);
 
   const notificationSlice = useSelector((state) => state.notification);
   const [scrHierarchyFormatted, setScrHierarchyFormatted] = useState([]);
@@ -97,6 +101,10 @@ const useNewDashboard = () => {
     });
     if (result) {
       message.info(result);
+    } else {
+      message.warn(
+        "A calculation job might already be in progress. Please wait for its completion"
+      );
     }
   }, [notificationSlice, callRunScrApi]);
 

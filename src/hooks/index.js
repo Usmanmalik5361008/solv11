@@ -49,6 +49,7 @@ const useAxios = (config) => {
         };
 
         const response = await axios(config);
+
         setStatus(response?.status);
         setResult(response?.data);
 
@@ -97,7 +98,7 @@ const useAxios = (config) => {
     return () => cancelRequest();
   }, [axiosProps, callAxios, cancelRequest]);
 
-  return { result, loading, error, callAxios, cancelRequest };
+  return { result, loading, error, callAxios, cancelRequest, status };
 };
 
 export { usePathPattern, useAxios };
