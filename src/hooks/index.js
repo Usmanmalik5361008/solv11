@@ -24,7 +24,7 @@ const useAxios = (config) => {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [status, setStatus] = useState(null);
+
   const axiosProps = useRef(config);
   const isMounted = useRef(false);
   const controllerRef = useRef(new AbortController());
@@ -35,7 +35,6 @@ const useAxios = (config) => {
       try {
         setLoading(true);
         setResult(null);
-        setStatus(null);
 
         if (additionalParams) {
           config = {
@@ -50,7 +49,6 @@ const useAxios = (config) => {
 
         const response = await axios(config);
 
-        setStatus(response?.status);
         setResult(response?.data);
 
         if (showMessage) {
@@ -98,7 +96,7 @@ const useAxios = (config) => {
     return () => cancelRequest();
   }, [axiosProps, callAxios, cancelRequest]);
 
-  return { result, loading, error, callAxios, cancelRequest, status };
+  return { result, loading, error, callAxios, cancelRequest };
 };
 
 export { usePathPattern, useAxios };

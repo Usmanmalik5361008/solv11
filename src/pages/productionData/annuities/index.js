@@ -1,7 +1,4 @@
-import { Col, Row } from "antd";
-import { Toolbar } from "globalComponents";
-import { ConfirmationBox } from "globalComponents";
-import React from "react";
+import { ConfirmationBox, Toolbar } from "globalComponents";
 import { useTranslation } from "react-i18next";
 
 const AnnuitiesPage = () => {

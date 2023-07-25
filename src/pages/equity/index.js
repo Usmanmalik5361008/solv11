@@ -3,12 +3,11 @@ import { Row, Tabs } from 'antd'
 import { ConfirmationBox, Toolbar } from 'globalComponents'
 import { SanteFPPage1 } from 'globalComponents/tables/santeFPPage1'
 import { SanteFPPage2 } from 'globalComponents/tables/santeFPPage2'
-import { useTranslation } from 'react-i18next'
 // import './index.scss'
 const { TabPane } = Tabs
 
 const EquityPage = () => {
-  const { t } = useTranslation()
+
   return (
     <div className='tab-screen-1-page toolbar-table-container'>
       <div className='mb-5'>

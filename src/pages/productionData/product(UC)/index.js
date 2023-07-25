@@ -1,8 +1,4 @@
-import { Col, Row } from "antd";
-import { ConfirmationBox } from "globalComponents";
-import { Toolbar } from "globalComponents";
-import { Button } from "globalComponents";
-import React from "react";
+import { Button, ConfirmationBox, Toolbar } from "globalComponents";
 import { useTranslation } from "react-i18next";
 
 const ProductUCPage = () => {

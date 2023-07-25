@@ -1,11 +1,10 @@
 import { Col, Row } from "antd";
-import { ConfirmationBox, Toolbar, Jobs } from "globalComponents";
-import { useTranslation } from "react-i18next";
+import { ConfirmationBox, Jobs, Toolbar } from "globalComponents";
 
 import "./styles.scss";
 
 const ScrCalculationPage = () => {
-  const { t } = useTranslation();
+
 
   return (
     <div className="card-view scr-calculation-page">

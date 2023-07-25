@@ -1,4 +1,4 @@
-import { Badge, Empty, Menu } from "antd";
+import { Badge, Empty } from "antd";
 import { NOTIFICATION_TYPE } from "constants/common";
 import { useCallback } from "react";
 import { useSelector } from "react-redux";
@@ -53,13 +53,13 @@ const Jobs = () => {
 };
 
 const JobCard = ({ color, projectName, dateTime, progress, title }) => {
-  const menu = (
-    <Menu>
-      <Menu.Item>Delete</Menu.Item>
-      <Menu.Item>Update</Menu.Item>
-      <Menu.Item>Add</Menu.Item>
-    </Menu>
-  );
+  // const menu = (
+  //   <Menu>
+  //     <Menu.Item>Delete</Menu.Item>
+  //     <Menu.Item>Update</Menu.Item>
+  //     <Menu.Item>Add</Menu.Item>
+  //   </Menu>
+  // );
 
   return (
     <div className="job-card">
