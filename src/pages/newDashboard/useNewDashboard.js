@@ -23,7 +23,6 @@ const useNewDashboard = () => {
       if (notificationType === NOTIFICATION_TYPE.INFO_COMPLETED) {
         const decodedMessage = Buffer.from(encodedMessage, "base64").toString();
         const decodedMessageJson = JSON.parse(decodedMessage);
-        console.log({ decodedMessageJson });
         const scrHierarchyFormatted = scrHierarchy.map((value) => ({
           ...value,
           value: decodedMessageJson?.[scrValueMap[value?.positionName]] || null,

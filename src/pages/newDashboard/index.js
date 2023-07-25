@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { HierarchicalTree } from "./components";
 import "./styles.scss";
 import useNewDashboard from "./useNewDashboard";
+import { Jobs } from "globalComponents";
 
 const NewDashboard = () => {
   const { t } = useTranslation();
@@ -78,8 +79,12 @@ const NewDashboard = () => {
               />
             </div>
           )}
-          {scrHierarchyFormatted.length > 0 && (
+          {scrHierarchyFormatted.length > 0 ? (
             <HierarchicalTree scrHierarchyFormatted={scrHierarchyFormatted} />
+          ) : (
+            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <Jobs />
+            </div>
           )}
           {/* </Col> */}
 

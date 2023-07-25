@@ -16,6 +16,7 @@ const WithFirebaseNotification = ({ children }) => {
   const saveAndDisplayMessage = useCallback(
     async (message) => {
       if (!message) return;
+      console.log({ message });
       dispatch(onNewNotification(message?.notification));
       const [messageType, messageContent] =
         message?.notification.body.split(":");
