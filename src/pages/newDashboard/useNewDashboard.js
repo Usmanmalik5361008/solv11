@@ -43,7 +43,7 @@ const useNewDashboard = () => {
 
     const data = {
       registrationToken: notificationSlice.token,
-      jobId: uuidv4(),
+      jobID: uuidv4(),
       dtDateCalculValue: "2021-12-31",
       txtMortReelleText: "50",
       txtMortRelle80AnsText: "50",
