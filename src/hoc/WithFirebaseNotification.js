@@ -7,7 +7,7 @@ import {
   onPermissionDenied,
   setToken,
 } from "services/redux/slices/notification";
-import { fetchToken, onMessageListener } from "../firebase/utils";
+import { getFirebaseToken, onMessageListener } from "../firebase/utils";
 
 const WithFirebaseNotification = ({ children }) => {
   const dispatch = useDispatch();
@@ -41,7 +41,8 @@ const WithFirebaseNotification = ({ children }) => {
 
   useEffect(() => {
     const init = async () => {
-      const token = await fetchToken();
+      const token = await getFirebaseToken();
+      console.log({ token });
       if (token !== null) {
         dispatch(setToken(token));
       } else {
