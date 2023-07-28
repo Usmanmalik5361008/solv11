@@ -15,16 +15,20 @@ const WithFirebaseNotification = ({ children }) => {
 
   const saveAndDisplayMessage = useCallback(
     async (message) => {
-      if (!message) return;
-      console.log({ message });
-      dispatch(onNewNotification(message?.notification));
-      const [messageType, messageContent] =
-        message?.notification.body.split(":");
-      if (messageType === NOTIFICATION_TYPE.INFO_COMPLETED) return;
-      notification[messageType.toLowerCase()]({
-        message: message?.notification?.title,
-        description: messageContent,
-      });
+      try {
+        if (!message) return;
+        console.log({ message });
+        dispatch(onNewNotification(message?.notification));
+        const [messageType, messageContent] =
+          message?.notification.body.split(":");
+        if (messageType === NOTIFICATION_TYPE.INFO_COMPLETED) return;
+        notification[messageType.toLowerCase()]({
+          message: message?.notification?.title,
+          description: messageContent,
+        });
+      } catch (err) {
+        console.error(err);
+      }
     },
     [dispatch]
   );
