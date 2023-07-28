@@ -42,9 +42,11 @@ export const fetchToken = async () => {
       }
     } catch (err) {
       console.log("An error occurred while retrieving token. ", err);
+      return null;
     }
   } catch (err_1) {
     console.log("Permission denied: ", err_1);
+    return null;
   }
 };
 
