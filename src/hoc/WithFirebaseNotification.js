@@ -1,5 +1,7 @@
 import { notification } from "antd";
 import { NOTIFICATION_TYPE } from "constants/common";
+import { onMessageListener } from "firebaseConfig";
+import { fetchToken } from "firebaseConfig";
 import { useCallback, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import {
@@ -7,7 +9,6 @@ import {
   onPermissionDenied,
   setToken,
 } from "services/redux/slices/notification";
-import { getFirebaseToken, onMessageListener } from "../firebase/utils";
 
 const WithFirebaseNotification = ({ children }) => {
   const dispatch = useDispatch();
@@ -17,25 +18,22 @@ const WithFirebaseNotification = ({ children }) => {
     async (message) => {
       try {
         if (!message) return;
-        console.log({ message });
-        // dispatch(onNewNotification(message?.notification));
-        // const [messageType, messageContent] =
-        //   message?.notification.body.split(":");
-        // if (messageType === NOTIFICATION_TYPE.INFO_COMPLETED) return;
-        // notification[messageType?.toLowerCase()]({
-        //   message: message?.notification?.title,
-        //   description: messageContent,
-        // });
+
+        dispatch(onNewNotification(message?.notification));
+        const [messageType, messageContent] =
+          message?.notification.body.split(":");
+        if (messageType === NOTIFICATION_TYPE.INFO_COMPLETED) return;
+        console.log({ messageType, messageContent });
+        notification[messageType?.toLowerCase()]({
+          message: message?.notification?.title,
+          description: messageContent,
+        });
       } catch (err) {
         console.error(err);
       }
     },
     [dispatch]
   );
-
-  onMessageListener().then((message) => {
-    saveAndDisplayMessage(message);
-  });
 
   useEffect(() => {
     broadcast.current.onmessage = (event) => {
@@ -44,9 +42,18 @@ const WithFirebaseNotification = ({ children }) => {
   }, [saveAndDisplayMessage]);
 
   useEffect(() => {
+    const unsubscribe = onMessageListener((payload) => {
+      saveAndDisplayMessage(payload);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, [saveAndDisplayMessage]);
+
+  useEffect(() => {
     const init = async () => {
-      const token = await getFirebaseToken();
-      console.log({ token });
+      const token = await fetchToken();
       if (token !== null) {
         dispatch(setToken(token));
       } else {

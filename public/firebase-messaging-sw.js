@@ -1,12 +1,11 @@
-// Scripts for firebase and firebase messaging
 importScripts(
-  "https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"
+  "https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"
 );
 importScripts(
-  "https://www.gstatic.com/firebasejs/9.18.0/firebase-messaging-compat.js"
+  "https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging-compat.js"
 );
 
-// Initialize the Firebase app in the service worker by passing the generated configs
+// Initialize the Firebase app in the service worker by passing the generated config
 const firebaseConfig = {
   apiKey: "AIzaSyDD8YJjwcklO31erF7PDvPZRyRgwPqs3tQ",
   authDomain: "neon-fiber-339917.firebaseapp.com",
@@ -28,10 +27,11 @@ const broadcast = new BroadcastChannel("background-message");
 messaging.onBackgroundMessage(function (payload) {
   console.log("Received background message ", payload);
 
-  const notificationTitle = payload?.notification?.title;
+  const notificationTitle = payload.notification.title;
   const notificationOptions = {
-    body: payload?.notification?.body,
+    body: payload.notification.body,
   };
+
   broadcast.postMessage(payload);
 
   self.registration.showNotification(notificationTitle, notificationOptions);
