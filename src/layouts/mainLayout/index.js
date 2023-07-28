@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import { Footer, PageHeader, Sidebar } from "globalComponents";
+import { PageHeader, Sidebar } from "globalComponents";
 import React from "react";
 import { Outlet } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const MainLayout = () => {
           </Layout>
         </Layout>
       </Layout>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
