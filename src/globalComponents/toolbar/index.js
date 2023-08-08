@@ -7,48 +7,56 @@ import {
   DELETE_ICON,
   DOWNLOAD_ARROW_ICON,
   UP_ICON,
-} from 'assets'
+} from "assets";
 
-import PillButton from 'globalComponents/pillButton'
-import React from 'react'
-import './styles.scss'
+import { PillButton, Button } from "globalComponents";
+import React from "react";
+import "./styles.scss";
+import { TICKET_WHTE_ICON } from "assets";
 
-const Toolbar = ({ showToolbar }) => {
+const Toolbar = ({ showToolbar, handleRunScr, runScrApiLoading }) => {
   return (
-    <div className='toolbar'>
-      <div className='group-1'>
+    <div className="toolbar">
+      <div className="group-1">
         <PillButton
           rounded={false}
-          type='highlighted'
-          title={'DemoApp1'}
+          type="highlighted"
+          title={"DemoApp1"}
           prependIcon={BLUE_RELOAD_ICON}
         />
-        <div className='common-spacing'>
+        <div className="common-spacing">
           <p>Switch to</p>
-          <select className='dropdown-style-2'>
+          <select className="dropdown-style-2">
             <option>Project 2</option>
           </select>
+          <Button
+            type="primary"
+            title="RUN SCR"
+            prependIcon={TICKET_WHTE_ICON}
+            onClick={handleRunScr}
+            loading={runScrApiLoading}
+          />
         </div>
       </div>
       {showToolbar && (
-        <div className='group-2'>
-          <div className='common-spacing'>
+        <div className="group-2">
+          <div className="common-spacing">
             <PillButton prependIcon={EDIT_PEN_ICON} />
             <PillButton prependIcon={COPY_ICON} />
           </div>
-          <div className='common-spacing'>
+          <div className="common-spacing">
             <PillButton prependIcon={UP_ICON} />
             <PillButton prependIcon={DOWN_ICON} />
             <PillButton prependIcon={DOWNLOAD_ARROW_ICON} />
             <PillButton prependIcon={UPLOAD_ARROW_ICON} />
           </div>
-          <div className='common-spacing'>
+          <div className="common-spacing">
             <PillButton prependIcon={DELETE_ICON} />
           </div>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Toolbar
+export default Toolbar;

@@ -3,12 +3,25 @@ import { t } from "i18next";
 import { AuthLayout, MainLayout } from "layouts";
 import {
   AnnuitiesPage,
-  AssetsPage, DatabasePage, EquityPage,
-  FullRedemptionPage, HealthBenefitPage, HealthPremiumsPage, HealthProductsPage, LiabilitiesPage,
+  AssetsPage,
+  DatabasePage,
+  EquityPage,
+  FullRedemptionPage,
+  HealthBenefitPage,
+  HealthPremiumsPage,
+  HealthProductsPage,
+  LiabilitiesPage,
   NewDashboardPage,
-  PartialRedemptionPage, ProductUCPage, ProjectsPage, Register, SCRPage, SettingsPage, SigninPage
+  PartialRedemptionPage,
+  ProductUCPage,
+  ProjectsPage,
+  Register,
+  SCRPage,
+  SettingsPage,
+  SigninPage,
+  AppChoice,
+  BalanceSheetPage,
 } from "pages";
-import BalanceSheetPage from "pages/balanceSheet";
 import { Navigate } from "react-router-dom";
 
 const getRoutes = (isAuthenticated = false) => {
@@ -187,6 +200,10 @@ const getRoutes = (isAuthenticated = false) => {
         //   ],
         // },
       ],
+    },
+    {
+      path: "choose",
+      element: <AppChoice />,
     },
   ];
 };

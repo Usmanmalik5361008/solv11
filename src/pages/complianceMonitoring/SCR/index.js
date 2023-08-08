@@ -10,14 +10,20 @@ import {
 import { ConfirmationBox, Jobs, Toolbar } from "globalComponents";
 
 import "./index.scss";
+import useSCR from "./useSCR";
+
 const { TabPane } = Tabs;
 
 const SCRPage = () => {
   const { t } = useTranslation();
+  const { handleRunScr, runScrApiLoading } = useSCR();
   return (
     <div className="tab-screen-1-page toolbar-table-container">
-      <div className="mb-5">
-        <Toolbar />
+      <div className="mb-5 ">
+        <Toolbar
+          handleRunScr={handleRunScr}
+          runScrApiLoading={runScrApiLoading}
+        />
       </div>
       <Row gutter={[30, 20]} style={{ padding: "0 10px" }}>
         <Col xs={24} sm={24} md={24} lg={16}>

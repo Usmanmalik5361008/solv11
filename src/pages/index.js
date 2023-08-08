@@ -25,3 +25,5 @@ export { default as HealthBenefitPage } from "./healthInsurance/healthBenefit";
 export { default as HealthProductsPage } from "./healthInsurance/healthProducts";
 export { default as SettingsPage } from "./settings";
 export { default as DatabasePage } from "./database";
+export { default as AppChoice } from "./appChoice";
+export { default as BalanceSheetPage } from "./balanceSheet";

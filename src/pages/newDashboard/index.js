@@ -1,5 +1,5 @@
 import { CheckCircleFilled } from "@ant-design/icons";
-import { Alert, DatePicker, Tag } from "antd";
+import { Alert, DatePicker, Empty, Tag } from "antd";
 import { SCR_INPUT_ICON, SCR_REPORT_ICON, TICKET_WHTE_ICON } from "assets";
 import { Button } from "globalComponents";
 import { OptionCard } from "pages/dashboard/components";
@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next";
 import { HierarchicalTree } from "./components";
 import "./styles.scss";
 import useNewDashboard from "./useNewDashboard";
-import { Jobs } from "globalComponents";
 
 const NewDashboard = () => {
   const { t } = useTranslation();
@@ -82,9 +81,7 @@ const NewDashboard = () => {
           {scrHierarchyFormatted.length > 0 ? (
             <HierarchicalTree scrHierarchyFormatted={scrHierarchyFormatted} />
           ) : (
-            <div style={{ display: "flex", justifyContent: "flex-end" }}>
-              <Jobs />
-            </div>
+            <Empty description="SCR Empty" />
           )}
           {/* </Col> */}
 

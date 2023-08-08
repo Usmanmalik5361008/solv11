@@ -1,37 +1,15 @@
 import { message } from "antd";
 import { runScrAxiosParams } from "api/axiosHookParams";
-import { Buffer } from "buffer";
-import { NOTIFICATION_TYPE } from "constants/common";
 import { useAxios } from "hooks";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback } from "react";
 import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-import { scrValueMap } from "./config";
-import scrHierarchy from "./data.json";
 
-const useNewDashboard = () => {
+const useSCR = () => {
   const { callAxios: callRunScrApi, loading: runScrApiLoading } =
     useAxios(runScrAxiosParams);
 
   const notificationSlice = useSelector((state) => state.notification);
-  const [scrHierarchyFormatted, setScrHierarchyFormatted] = useState([]);
-
-  useEffect(() => {
-    for (const notification of notificationSlice?.notifications) {
-      const notificationBody = notification.body;
-      const [notificationType, encodedMessage] = notificationBody.split(":");
-      if (notificationType === NOTIFICATION_TYPE.INFO_COMPLETED) {
-        const decodedMessage = Buffer.from(encodedMessage, "base64").toString();
-        const decodedMessageJson = JSON.parse(decodedMessage);
-        const scrHierarchyFormatted = scrHierarchy.map((value) => ({
-          ...value,
-          value: decodedMessageJson?.[scrValueMap[value?.positionName]] || null,
-        }));
-        setScrHierarchyFormatted(scrHierarchyFormatted);
-        break;
-      }
-    }
-  }, [notificationSlice.notifications]);
 
   const handleRunScr = useCallback(async () => {
     if (!notificationSlice.permissionGranted) {
@@ -103,7 +81,7 @@ const useNewDashboard = () => {
     }
   }, [notificationSlice, callRunScrApi]);
 
-  return { handleRunScr, scrHierarchyFormatted, runScrApiLoading };
+  return { runScrApiLoading, handleRunScr };
 };
 
-export default useNewDashboard;
+export default useSCR;

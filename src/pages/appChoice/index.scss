@@ -1,0 +1,32 @@
+.app-choice-page-wrapper {
+  min-height: 100vh;
+  background-color: #00000050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+
+  .choice-btn {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    position: relative;
+
+    .right-icon {
+      position: absolute;
+      opacity: 0;
+      transition: 0.3s opacity, 0.3s transform;
+      top: 17px;
+      right: 0;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    &:hover {
+      .right-icon {
+        opacity: 1;
+        transform: translateX(25px);
+      }
+    }
+  }
+}

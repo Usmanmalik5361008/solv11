@@ -177,6 +177,12 @@ small {
 .dark-grey {
   color: #57647a;
 }
+.gap-5 {
+  gap: 5px;
+}
+.align-item-start {
+  align-items: flex-start;
+}
 
 // mixins
 
@@ -217,7 +223,6 @@ small {
   /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
 }
-
 
 mark {
   background-color: transparent;

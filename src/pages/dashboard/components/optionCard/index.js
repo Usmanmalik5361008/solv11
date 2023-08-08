@@ -1,5 +1,5 @@
-import React from 'react'
-import './index.scss'
+import React from "react";
+import "./index.scss";
 
 const OptionCard = ({ title, icon, onClick = null, bgColor }) => {
   return (
@@ -7,13 +7,13 @@ const OptionCard = ({ title, icon, onClick = null, bgColor }) => {
       style={{
         backgroundColor: bgColor,
       }}
-      className='option-card'
+      className="option-card"
       onClick={onClick}
     >
-      <img src={icon} alt='' />
-      <h5>{title}</h5>
+      <img src={icon} alt="" />
+      <p>{title}</p>
     </div>
-  )
-}
+  );
+};
 
-export default OptionCard
+export default OptionCard;
