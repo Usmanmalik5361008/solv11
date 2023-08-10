@@ -196,12 +196,16 @@
   .bottom-section {
     min-height: 30%;
     background: linear-gradient(90.26deg, #0e5fd9 2.2%, #11b4ed 99.02%);
-
+    display: flex;
+    justify-content: space-between;
     padding: 10px 20px;
     border-radius: 0 0 10px 10px;
     display: flex;
-    flex-direction: column;
-    // background-repeat: no-repeat;
+    align-items: center;
+
+    .bar-icon {
+      font-size: 50px !important;
+    }
 
     h2 {
       margin-bottom: 0;
@@ -215,9 +219,11 @@
       color: #acb5c5;
     }
 
-    .ant-breadcrumb a {
-      color: #acb5c5;
-      font-size: 11px;
+    .ant-breadcrumb {
+      a {
+        color: #acb5c5;
+        font-size: 11px;
+      }
     }
   }
 }

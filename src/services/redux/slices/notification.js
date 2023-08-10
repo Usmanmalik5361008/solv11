@@ -3,7 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialSlice = {
   permissionGranted: null,
   token: null,
-  notifications: [],
+  notifications: [
+    {
+      title: "Test",
+      body: "INFO: STEP 5 traitement_ACtifs DONE",
+    },
+  ],
 };
 
 const notificationSlice = createSlice({

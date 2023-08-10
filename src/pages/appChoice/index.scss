@@ -1,22 +1,39 @@
 .app-choice-page-wrapper {
   min-height: 100vh;
-  background-color: #00000050;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10%;
+  background-image: url("../../assets/images/colorful-charts-diagrams\ \(1\).jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-color: #000000ae;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
 
   .choice-btn {
+    z-index: 2;
     cursor: pointer;
     user-select: none;
     display: inline-flex;
     position: relative;
+    color: white;
+
+    h1 {
+      font-size: 4rem;
+    }
 
     .right-icon {
       position: absolute;
       opacity: 0;
       transition: 0.3s opacity, 0.3s transform;
-      top: 17px;
+      top: 37%;
       right: 0;
       font-weight: bold;
       font-size: 20px;

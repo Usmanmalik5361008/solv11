@@ -7,8 +7,9 @@ import {
   ScrUcTrad,
 } from "./components";
 
-import { ConfirmationBox, Jobs, Toolbar } from "globalComponents";
+import { ConfirmationBox, Toolbar } from "globalComponents";
 
+import { CalculationStepper } from "globalComponents";
 import "./index.scss";
 import useSCR from "./useSCR";
 
@@ -43,7 +44,7 @@ const SCRPage = () => {
           </Tabs>
         </Col>
         <Col xs={24} sm={24} md={24} lg={8}>
-          <Jobs />
+          <CalculationStepper />
         </Col>
       </Row>
       <div className="mt-5">

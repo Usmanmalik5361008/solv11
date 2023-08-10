@@ -1,0 +1,23 @@
+@use "styles/variables.scss" as vars;
+
+.calculation-steps-wrapper {
+  background-color: #f2fbfe;
+  border-radius: 0 0 6px;
+  .calculation-steps-header {
+    height: 50px;
+    background-color: vars.$primary-color;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > h4 {
+      color: white;
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+  .calculation-steps-body {
+    padding: 20px 10px;
+  }
+}

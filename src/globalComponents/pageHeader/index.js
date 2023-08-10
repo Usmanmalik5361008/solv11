@@ -14,6 +14,7 @@ import Breadcrums from "../breadcrums";
 import { LOCAL_STORAGE_VALUES } from "constants/common";
 import { onLogout } from "services/redux/slices/user";
 import { Jobs } from "globalComponents";
+import { BarChartOutlined } from "@ant-design/icons";
 
 const { Option } = Select;
 
@@ -69,9 +70,12 @@ const PageHeader = () => {
         </div>
       </div>
       <div className="bottom-section">
-        <h2 className="font-Engschrift-Caps">SOLV11</h2>
-        <p>{t("dashboard.analytics")}</p>
-        <Breadcrums />
+        <div>
+          <h2 className="font-Engschrift-Caps">SOLV11</h2>
+          <p>{t("dashboard.analytics")}</p>
+          <Breadcrums />
+        </div>
+        <BarChartOutlined className="bar-icon"/>
       </div>
     </header>
   );
