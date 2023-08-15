@@ -7,6 +7,7 @@ const useCalculationStepper = () => {
   const { notifications } = useSelector((state) => state.notification);
 
   const items = useMemo(() => {
+    if (!notifications?.length) return [];
     const distinctSteps = new Map();
 
     notifications.forEach(({ body }) => {
