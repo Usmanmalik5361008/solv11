@@ -6,27 +6,32 @@ import {
   ProjectIcon,
   SimulationIcon,
   subMenuIcon,
-} from 'assets'
-import { epargneRetraitesMenu, santePrevoyanceMenu } from './subMenu'
+} from "assets";
+import {
+  donneesProduction,
+  epargneRetraitesMenu,
+  parametresMenu,
+  santePrevoyanceMenu,
+} from "./subMenu";
 
 const menuItems = [
   {
-    key: '1',
-    name: 'sidebar.dashboard',
+    key: "1",
+    name: "sidebar.dashboard",
     icon: DashboardIcon,
-    href: '/',
+    href: "/",
   },
   {
-    key: '2',
-    name: 'sidebar.projects',
+    key: "2",
+    name: "sidebar.projects",
     icon: ProjectIcon,
-    href: '/',
+    href: "/",
   },
   {
-    key: '3',
-    name: 'sidebar.scr.title',
+    key: "3",
+    name: "sidebar.scr.title",
     icon: SimulationIcon,
-    href: '/scr',
+    href: "/scr",
     // subMenu: [
     //   ...scrMenu.map(({ href, title }) => ({
     //     key: href,
@@ -37,16 +42,16 @@ const menuItems = [
     // ],
   },
   {
-    key: '4',
-    name: 'sidebar.scr-projection',
+    key: "4",
+    name: "sidebar.scr-projection",
     icon: ProjectIcon,
-    href: '/scr-projection',
+    href: "/scr-projection",
   },
   {
-    key: '5',
-    name: 'sidebar.sante-prevoyance.title',
+    key: "5",
+    name: "sidebar.sante-prevoyance.title",
     icon: SimulationIcon,
-    href: '/health-insurance',
+    href: "/health-insurance",
     subMenu: [
       ...santePrevoyanceMenu.map(({ href, title }) => ({
         key: href,
@@ -63,10 +68,10 @@ const menuItems = [
   //   href: "/reportings",
   // },
   {
-    key: '6',
-    name: 'sidebar.epargne-retraites.title',
+    key: "6",
+    name: "sidebar.epargne-retraites.title",
     icon: productionIcon,
-    href: '/retirement-savings',
+    href: "/retirement-savings",
     subMenu: [
       ...epargneRetraitesMenu.map(({ href, title }) => ({
         key: href,
@@ -77,29 +82,36 @@ const menuItems = [
     ],
   },
   {
-    key: '7',
-    name: 'sidebar.bilan',
+    key: "7",
+    name: "sidebar.bilan",
     icon: analyticsIcon,
-    href: '/balance-sheet',
+    href: "/balance-sheet",
   },
   {
-    key: '8',
-    name: 'sidebar.fonds-propres',
+    key: "8",
+    name: "sidebar.fonds-propres",
     icon: complianceIcon,
-    href: '/equity',
+    href: "/equity",
   },
   {
-    key: '9',
-    name: 'sidebar.parametres',
+    key: "9",
+    name: "sidebar.parametres",
     icon: complianceIcon,
-    href: '/settings',
+    href: "/settings",
+    subMenu: parametresMenu,
   },
   {
-    key: '10',
-    name: 'sidebar.database',
+    key: "10",
+    name: "sidebar.database",
     icon: complianceIcon,
-    href: '/database',
+    href: "/database",
   },
-]
+  {
+    key: "11",
+    name: "Donnes Production",
+    href: "donnesProduction",
+    subMenu: donneesProduction,
+  },
+];
 
-export default menuItems
+export default menuItems;

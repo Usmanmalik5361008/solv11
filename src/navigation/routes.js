@@ -21,8 +21,10 @@ import {
   SigninPage,
   AppChoice,
   BalanceSheetPage,
+  ExcelDataPage,
 } from "pages";
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
+import { excelDataLoader } from "./loaders";
 
 const getRoutes = (isAuthenticated = false) => {
   return [
@@ -165,8 +167,118 @@ const getRoutes = (isAuthenticated = false) => {
         },
         {
           title: t("sidebar.parametres"),
-          element: <SettingsPage />,
+          element: <Outlet />,
           path: "settings",
+          children: [
+            {
+              title: "",
+              element: <SettingsPage />,
+              index: true,
+            },
+            {
+              title: "Choc Intérêt",
+              path: "choc-interet",
+              element: <ExcelDataPage />,
+            },
+
+            {
+              title: "Courbe Taux Sans Risque",
+              path: "courbe-taux-sans-risque",
+              element: <ExcelDataPage />,
+            },
+            {
+              title: "Code Gestion",
+              path: "code-gestion",
+              element: <ExcelDataPage />,
+            },
+            {
+              title: "Hypothèses Chocs",
+              path: "hypotheses-chocs",
+              element: <ExcelDataPage />,
+            },
+            {
+              title: "Matrices Corrélation",
+              path: "matrices-corrélation",
+              element: <ExcelDataPage />,
+            },
+            {
+              title: "Table Mortalité",
+              path: "table-mortalité",
+              element: <ExcelDataPage />,
+            },
+          ],
+        },
+        {
+          title: "Données Production",
+          element: <Outlet />,
+          path: "donneesProduction",
+          children: [
+            {
+              title: "Actifs",
+              path: "actifs",
+              element: <ExcelDataPage />,
+              loader: () => excelDataLoader("DonneesProduction/Actifs.xlsx"),
+            },
+
+            {
+              title: "Contrats Epargne",
+              path: "contrats-epargne",
+              element: <ExcelDataPage />,
+              loader: () =>
+                excelDataLoader("DonneesProduction/ContratEpargne.xlsx"),
+            },
+            {
+              title: "Contrats Vie Trad",
+              path: "contrats-vie-trad",
+              element: <ExcelDataPage />,
+              loader: () =>
+                excelDataLoader("DonneesProduction/ContratVieTrad.xlsx"),
+            },
+            {
+              title: "Emetteurs",
+              path: "emetteurs",
+              element: <ExcelDataPage />,
+              loader: () => excelDataLoader("DonneesProduction/Emetteurs.xlsx"),
+            },
+            {
+              title: "Fonds",
+              path: "fonds",
+              element: <ExcelDataPage />,
+              loader: () => excelDataLoader("DonneesProduction/Fonds.xlsx"),
+            },
+            {
+              title: "Produits Epargne",
+              path: "produits-epargne",
+              element: <ExcelDataPage />,
+              loader: () =>
+                excelDataLoader("DonneesProduction/ProduitEpargne.xlsx"),
+            },
+            {
+              title: "produits-vie-trad",
+              path: "produits-epargne",
+              element: <ExcelDataPage />,
+              loader: () =>
+                excelDataLoader("DonneesProduction/ProduitVieTrad.xlsx"),
+            },
+            {
+              title: "Rentes",
+              path: "rentes",
+              element: <ExcelDataPage />,
+              loader: () => excelDataLoader("DonneesProduction/Rente.xlsx"),
+            },
+            {
+              title: "Supports",
+              path: "supports",
+              element: <ExcelDataPage />,
+              loader: () => excelDataLoader("DonneesProduction/Support.xlsx"),
+            },
+            {
+              title: "Titres",
+              path: "titres",
+              element: <ExcelDataPage />,
+              loader: () => excelDataLoader("DonneesProduction/Titres.xlsx"),
+            },
+          ],
         },
         {
           title: t("sidebar.database"),

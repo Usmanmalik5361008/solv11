@@ -27,3 +27,4 @@ export { default as SettingsPage } from "./settings";
 export { default as DatabasePage } from "./database";
 export { default as AppChoice } from "./appChoice";
 export { default as BalanceSheetPage } from "./balanceSheet";
+export { default as ExcelDataPage } from "./excelDataPage";
