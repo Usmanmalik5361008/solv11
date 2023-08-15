@@ -5,7 +5,6 @@ import "./index.scss";
 const CalculationStepper = () => {
   const { items, current } = useCalculationStepper();
 
-  console.log({ items });
   return (
     <div className="calculation-steps-wrapper">
       <div className="calculation-steps-header">

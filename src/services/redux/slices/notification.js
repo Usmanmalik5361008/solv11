@@ -4,10 +4,10 @@ const initialSlice = {
   permissionGranted: null,
   token: null,
   notifications: [
-    {
-      title: "Test",
-      body: "INFO: STEP 5 traitement_ACtifs DONE",
-    },
+    // {
+    //   title: "Test",
+    //   body: "INFO: STEP 5 traitement_ACtifs DONE",
+    // },
   ],
 };
 

@@ -1,17 +1,45 @@
+import { useState, useEffect, useCallback } from "react";
+import { useSelector } from "react-redux";
+import { useAxios } from "hooks";
+import { v4 as uuidv4 } from "uuid";
 import { message } from "antd";
 import { runScrAxiosParams } from "api/axiosHookParams";
-import { useAxios } from "hooks";
-import { useCallback } from "react";
-import { useSelector } from "react-redux";
-import { v4 as uuidv4 } from "uuid";
+
+const COOLDOWN_DURATION = 5 * 60 * 1000; // 5 minutes in milliseconds
 
 const useSCR = () => {
+  const [cooldownEnd, setCooldownEnd] = useState(() => {
+    const savedCooldown = localStorage.getItem("cooldownEnd");
+    return savedCooldown ? Number(savedCooldown) : 0;
+  });
+
+  const isCooldownActive = Date.now() < cooldownEnd;
+
+  useEffect(() => {
+    if (isCooldownActive) {
+      const timeoutId = setTimeout(() => {
+        setCooldownEnd(0);
+        localStorage.removeItem("cooldownEnd");
+      }, cooldownEnd - Date.now());
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [isCooldownActive, cooldownEnd]);
+
   const { callAxios: callRunScrApi, loading: runScrApiLoading } =
     useAxios(runScrAxiosParams);
-
   const notificationSlice = useSelector((state) => state.notification);
 
   const handleRunScr = useCallback(async () => {
+    if (isCooldownActive) {
+      const minutesLeft = Math.floor((cooldownEnd - Date.now()) / 60000);
+      const secondsLeft = Math.floor((cooldownEnd - Date.now()) / 1000) % 60;
+      message.warn(
+        `Please wait ${minutesLeft} minutes and ${secondsLeft} seconds before trying again.`
+      );
+      return;
+    }
+
     if (!notificationSlice.permissionGranted) {
       message.error(
         "Please enable notification access to get notified once the calculations are done"
@@ -72,14 +100,20 @@ const useSCR = () => {
       data,
       baseUrl: process.env.REACT_APP_SCR_API_URL,
     });
+
     if (result) {
+      setCooldownEnd(Date.now() + COOLDOWN_DURATION);
+      localStorage.setItem(
+        "cooldownEnd",
+        (Date.now() + COOLDOWN_DURATION).toString()
+      );
       message.info(result);
     } else {
       message.warn(
         "A calculation job might already be in progress. Please wait for its completion"
       );
     }
-  }, [notificationSlice, callRunScrApi]);
+  }, [notificationSlice, callRunScrApi, isCooldownActive, cooldownEnd]);
 
   return { runScrApiLoading, handleRunScr };
 };

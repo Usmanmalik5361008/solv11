@@ -6,28 +6,41 @@ import { mapper } from "./mapper";
 const useCalculationStepper = () => {
   const { notifications } = useSelector((state) => state.notification);
 
-  const items = useMemo(
-    () =>
-      notifications.map(({ title, body }) => {
-        const step = getStepNumber(body);
-        let toReturn = null;
-        for (const stepRange in mapper) {
+  const items = useMemo(() => {
+    const distinctSteps = new Map();
+
+    notifications.forEach(({ body }) => {
+      const step = getStepNumber(body);
+
+      if (body.startsWith("INFO COMPLETED")) {
+        distinctSteps.set(
+          `INFO_COMPLETED_${Date.now()}`,
+          mapper["INFO_COMPLETED"]
+        ); // Ensure uniqueness
+        return;
+      }
+
+      for (const stepRange in mapper) {
+        if (stepRange.includes("_")) {
           const [lowerRange, upperRange] = stepRange.split("_");
-          console.log({ step, lowerRange, upperRange });
-          if (step > +lowerRange && step < +upperRange) {
-            toReturn = mapper[stepRange];
-            break;
-          } else if (step === lowerRange || step === upperRange) {
-            toReturn = mapper[stepRange];
+          if (step >= +lowerRange && step <= +upperRange) {
+            distinctSteps.set(mapper[stepRange].title, mapper[stepRange]);
             break;
           }
+        } else if (step == stepRange) {
+          distinctSteps.set(mapper[stepRange].title, mapper[stepRange]);
+          break;
         }
-        return toReturn;
-      }),
-    [notifications]
-  );
+      }
+    });
 
-  const current = 1;
+    const stepsArray = [...distinctSteps.values()].reverse();
+    // Append a new step at the end
+
+    return stepsArray;
+  }, [notifications]);
+
+  const current = items.length - 1;
 
   return { items, current };
 };

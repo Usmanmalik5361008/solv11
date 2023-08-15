@@ -14,7 +14,12 @@ import React from "react";
 import "./styles.scss";
 import { TICKET_WHTE_ICON } from "assets";
 
-const Toolbar = ({ showToolbar, handleRunScr, runScrApiLoading }) => {
+const Toolbar = ({
+  showToolbar,
+  handleRunScr,
+  runScrApiLoading,
+  isRunScrBtnDisabled,
+}) => {
   return (
     <div className="toolbar">
       <div className="group-1">
@@ -29,13 +34,16 @@ const Toolbar = ({ showToolbar, handleRunScr, runScrApiLoading }) => {
           <select className="dropdown-style-2">
             <option>Project 2</option>
           </select>
-          <Button
-            type="primary"
-            title="RUN SCR"
-            prependIcon={TICKET_WHTE_ICON}
-            onClick={handleRunScr}
-            loading={runScrApiLoading}
-          />
+          {handleRunScr && (
+            <Button
+              type="primary"
+              title="RUN SCR"
+              prependIcon={TICKET_WHTE_ICON}
+              onClick={handleRunScr}
+              loading={runScrApiLoading}
+              disabled={isRunScrBtnDisabled}
+            />
+          )}
         </div>
       </div>
       {showToolbar && (

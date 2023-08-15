@@ -8,6 +8,7 @@ const Button = ({
   prependIcon,
   type = "primary",
   loading,
+  disabled = false,
 }) => {
   const getClassName = () => {
     let className = "";
@@ -20,7 +21,7 @@ const Button = ({
   };
 
   return (
-    <button onClick={onClick} className={getClassName()}>
+    <button onClick={onClick} className={getClassName()} disabled={disabled}>
       {loading && (
         <Spin className="spin-white" style={{ marginRight: 10 }} size="small" />
       )}{" "}
