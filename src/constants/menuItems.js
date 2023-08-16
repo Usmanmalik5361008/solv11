@@ -8,10 +8,11 @@ import {
   subMenuIcon,
 } from "assets";
 import {
-  donneesProduction,
+  donneesProductionMenu,
   epargneRetraitesMenu,
   parametresMenu,
   santePrevoyanceMenu,
+  rachatsSubMenu,
 } from "./subMenu";
 
 const menuItems = [
@@ -57,7 +58,7 @@ const menuItems = [
         key: href,
         name: title,
         icon: subMenuIcon,
-        href: `/health-insurance/${href}`,
+        href: `/health-insurance${href}`,
       })),
     ],
   },
@@ -77,7 +78,7 @@ const menuItems = [
         key: href,
         name: title,
         icon: subMenuIcon,
-        href: `/retirement-savings/${href}`,
+        href: `/retirement-savings${href}`,
       })),
     ],
   },
@@ -95,22 +96,44 @@ const menuItems = [
   },
   {
     key: "9",
-    name: "sidebar.parametres",
-    icon: complianceIcon,
-    href: "/settings",
-    subMenu: parametresMenu,
-  },
-  {
-    key: "10",
     name: "sidebar.database",
     icon: complianceIcon,
     href: "/database",
   },
   {
+    key: "10",
+    name: "Compte Resultat",
+    href: "/compte_resultat",
+  },
+  {
     key: "11",
+    name: "Fonds Propres",
+    href: "/fonds_propres",
+  },
+  {
+    key: "12",
+    name: "Risque Contrepartie",
+    href: "/risque_contrepartie",
+  },
+  {
+    key: "13",
+    name: "sidebar.parametres",
+    icon: complianceIcon,
+    href: "/settings",
+    subMenu: parametresMenu,
+  },
+
+  {
+    key: "14",
     name: "Donnes Production",
     href: "donnesProduction",
-    subMenu: donneesProduction,
+    subMenu: donneesProductionMenu,
+  },
+  {
+    key: "15",
+    name: "Rachats",
+    href: "rachats",
+    subMenu: rachatsSubMenu,
   },
 ];
 

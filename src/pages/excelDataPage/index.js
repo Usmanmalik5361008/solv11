@@ -1,17 +1,21 @@
-import { useLoaderData } from "react-router-dom";
+import { useMemo } from "react";
 import DataGrid from "react-data-grid";
-
+import { useLoaderData } from "react-router-dom";
 const ExcelDataPage = () => {
   const excelData = useLoaderData();
 
-  if (!excelData) return <h1>No Excel Data</h1>;
+  const columns = useMemo(
+    () =>
+      Object.keys(excelData[0] || {}).map((key) => ({
+        key: key,
+        name: key,
+        resizable: true,
+        sortable: true,
+      })),
+    [excelData]
+  );
 
-  const columns = Object.keys(excelData[0] || {}).map((key) => ({
-    key: key,
-    name: key,
-    resizable: true,
-    sortable: true,
-  }));
+  if (!excelData || excelData.length === 0) return <h1>No Excel Data</h1>;
 
   return (
     <DataGrid

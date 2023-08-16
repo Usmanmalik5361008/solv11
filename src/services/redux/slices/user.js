@@ -5,6 +5,7 @@ const initialSlice = {
   user: {},
   error: null,
   loading: true,
+  isCurrentAppChosen: null,
 };
 
 const userSlice = createSlice({
@@ -24,6 +25,7 @@ const userSlice = createSlice({
       state.user = {};
       state.error = null;
       state.loading = false;
+      state.isCurrentAppChosen = null;
     },
     onSignup: (state, action) => {
       state.isAuthenticated = true;
@@ -36,6 +38,9 @@ const userSlice = createSlice({
       state.loading = false;
       state.user = {};
     },
+    onCurrentAppChosen: (state) => {
+      state.isCurrentAppChosen = true;
+    },
   },
 });
 
@@ -46,6 +51,7 @@ export const {
   onAuthenticationRequest,
   onAuthenticationFailure,
   onUserUpdate,
+  onCurrentAppChosen,
 } = userSlice.actions;
 
 export default userSlice.reducer;

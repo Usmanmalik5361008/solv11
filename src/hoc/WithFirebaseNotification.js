@@ -1,9 +1,9 @@
 import { notification } from "antd";
 import { NOTIFICATION_TYPE } from "constants/common";
-import { onMessageListener } from "firebaseConfig";
-import { fetchToken } from "firebaseConfig";
+import { fetchToken, onMessageListener } from "firebaseConfig";
 import { useCallback, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
+import { onCalculationCompletion } from "services/redux/slices/notification";
 import {
   onNewNotification,
   onPermissionDenied,
@@ -23,7 +23,9 @@ const WithFirebaseNotification = ({ children }) => {
         const [messageType, messageContent] =
           message?.notification.body.split(":");
         console.log({ messageType, messageContent });
-        if (messageType === NOTIFICATION_TYPE.INFO_COMPLETED) return;
+        if (messageType === NOTIFICATION_TYPE.INFO_COMPLETED) {
+          dispatch(onCalculationCompletion());
+        }
         console.log({ messageType, messageContent });
         notification[messageType?.toLowerCase()]({
           message: message?.notification?.title,

@@ -4,9 +4,12 @@ import getRoutes from "./routes";
 
 const RouterConfig = () => {
   const user = useSelector((state) => state.user);
+
   return (
     <RouterProvider
-      router={createBrowserRouter(getRoutes(user.isAuthenticated))}
+      router={createBrowserRouter(
+        getRoutes(user.isAuthenticated, user.isCurrentAppChosen)
+      )}
     />
   );
 };

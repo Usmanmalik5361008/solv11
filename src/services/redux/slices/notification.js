@@ -9,6 +9,7 @@ const initialSlice = {
     //   body: "INFO: STEP 5 traitement_ACtifs DONE",
     // },
   ],
+  calculationCompletionCount: 0,
 };
 
 const notificationSlice = createSlice({
@@ -25,10 +26,17 @@ const notificationSlice = createSlice({
     onNewNotification: (state, action) => {
       state.notifications = [action.payload, ...state.notifications];
     },
+    onCalculationCompletion: (state) => {
+      state.calculationCompletionCount = state.calculationCompletionCount + 1;
+    },
   },
 });
 
-export const { setToken, onPermissionDenied, onNewNotification } =
-  notificationSlice.actions;
+export const {
+  setToken,
+  onPermissionDenied,
+  onNewNotification,
+  onCalculationCompletion,
+} = notificationSlice.actions;
 
 export default notificationSlice.reducer;

@@ -143,6 +143,7 @@
   padding: 10px;
   overflow-y: auto;
   height: 100vh;
+  flex: 1;
 
   &:last-child {
     margin-bottom: 20px;
@@ -159,7 +160,7 @@
 
   .upper-section {
     display: flex;
-    padding: 0 20px;
+    padding: 5px 20px;
     justify-content: space-between;
     align-items: center;
     height: 35%;

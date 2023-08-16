@@ -26,10 +26,14 @@ import {
 import { Navigate, Outlet } from "react-router-dom";
 import { excelDataLoader } from "./loaders";
 
-const getRoutes = (isAuthenticated = false) => {
+const getRoutes = (isAuthenticated = false, isCurrentAppChosen) => {
   return [
     {
-      element: isAuthenticated ? <Navigate replace to={"/"} /> : <AuthLayout />,
+      element: !isAuthenticated ? (
+        <AuthLayout />
+      ) : (
+        <Navigate to={isCurrentAppChosen ? "/" : "/choose"} replace />
+      ),
       path: "/auth",
       title: "Sigin In",
       children: [
@@ -44,10 +48,12 @@ const getRoutes = (isAuthenticated = false) => {
       ],
     },
     {
-      element: isAuthenticated ? (
+      element: !isAuthenticated ? (
+        <Navigate replace to={"/auth/signin"} />
+      ) : isCurrentAppChosen ? (
         <MainLayout />
       ) : (
-        <Navigate replace to={"/auth/signin"} />
+        <Navigate to={"/choose"} />
       ),
       path: "/",
       title: "Dashboard",
@@ -166,6 +172,11 @@ const getRoutes = (isAuthenticated = false) => {
           path: "equity",
         },
         {
+          title: t("sidebar.database"),
+          element: <DatabasePage />,
+          path: "database",
+        },
+        {
           title: t("sidebar.parametres"),
           element: <Outlet />,
           path: "settings",
@@ -179,32 +190,40 @@ const getRoutes = (isAuthenticated = false) => {
               title: "Choc Intérêt",
               path: "choc-interet",
               element: <ExcelDataPage />,
+              loader: () => excelDataLoader("Parameters/Choc_Interet.xlsx"),
             },
 
             {
               title: "Courbe Taux Sans Risque",
               path: "courbe-taux-sans-risque",
               element: <ExcelDataPage />,
+              loader: () => excelDataLoader("Parameters/CodeGestion.xlsx"),
             },
             {
               title: "Code Gestion",
               path: "code-gestion",
               element: <ExcelDataPage />,
+              loader: () =>
+                excelDataLoader("Parameters/Courbe_Taux_Sans_Risque.xlsx"),
             },
             {
               title: "Hypothèses Chocs",
               path: "hypotheses-chocs",
               element: <ExcelDataPage />,
+              loader: () => excelDataLoader("Parameters/Hypotheses_Chocs.xlsx"),
             },
             {
               title: "Matrices Corrélation",
-              path: "matrices-corrélation",
+              path: "matrices-correlation",
               element: <ExcelDataPage />,
+              loader: () =>
+                excelDataLoader("Parameters/Matrices_Correlation.xlsx"),
             },
             {
-              title: "Table Mortalité",
-              path: "table-mortalité",
+              title: "Table Mortalite",
+              path: "table-mortalite",
               element: <ExcelDataPage />,
+              loader: () => excelDataLoader("Parameters/TableMortalite.xlsx"),
             },
           ],
         },
@@ -254,8 +273,8 @@ const getRoutes = (isAuthenticated = false) => {
                 excelDataLoader("DonneesProduction/ProduitEpargne.xlsx"),
             },
             {
-              title: "produits-vie-trad",
-              path: "produits-epargne",
+              title: "Produits Vie Trad",
+              path: "produits-vie-trad",
               element: <ExcelDataPage />,
               loader: () =>
                 excelDataLoader("DonneesProduction/ProduitVieTrad.xlsx"),
@@ -281,10 +300,43 @@ const getRoutes = (isAuthenticated = false) => {
           ],
         },
         {
-          title: t("sidebar.database"),
-          element: <DatabasePage />,
-          path: "database",
+          title: "Rachats",
+          element: <Outlet />,
+          path: "rachats",
+          children: [
+            {
+              title: "Rachats Partiel",
+              path: "rachats-partiel",
+              element: <ExcelDataPage />,
+              loader: () => excelDataLoader("Rachats/Rachat_Partiel.xlsx"),
+            },
+            {
+              title: "Rachats Total",
+              path: "rachats-total",
+              element: <ExcelDataPage />,
+              loader: () => excelDataLoader("Rachats/Rachat_Total.xlsx"),
+            },
+          ],
         },
+        {
+          title: "Compte Resultat",
+          path: "compte_resultat",
+          element: <ExcelDataPage />,
+          loader: () => excelDataLoader("Compte_Resultat.xlsx"),
+        },
+        {
+          title: "Fonds Propres",
+          path: "fonds_propres",
+          element: <ExcelDataPage />,
+          loader: () => excelDataLoader("FondsPropres.xlsx"),
+        },
+        {
+          title: "Risque Contrepartie",
+          path: "risque_contrepartie",
+          element: <ExcelDataPage />,
+          loader: () => excelDataLoader("Risque_contrepartie.xlsx"),
+        },
+
         // {
         //   title: t('projects.title'),
         //   element: <ProjectsPage />,
@@ -315,7 +367,14 @@ const getRoutes = (isAuthenticated = false) => {
     },
     {
       path: "choose",
-      element: <AppChoice />,
+
+      element: !isAuthenticated ? (
+        <Navigate replace to={"/auth/signin"} />
+      ) : isCurrentAppChosen === null ? (
+        <AppChoice />
+      ) : (
+        <Navigate replace to={"/"} />
+      ),
     },
   ];
 };
