@@ -1,4 +1,4 @@
-import { Avatar, Dropdown, Menu, Select } from "antd";
+import { Avatar, Badge, Dropdown, Menu, Select } from "antd";
 import {
   COMMENT_ICON,
   DOWN_ARROW_WHITE,
@@ -21,7 +21,10 @@ const { Option } = Select;
 const PageHeader = () => {
   const activePath = usePathPattern();
   const { t } = useTranslation();
-  const { user } = useSelector((state) => state.user);
+  const {
+    user: { user },
+    notification,
+  } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const handleLogout = () => {
@@ -58,11 +61,13 @@ const PageHeader = () => {
           </Select>
           <img src={INFORMATION_ICON} alt="" />
           <Dropdown overlay={<Jobs />} overlayStyle={{ maxWidth: 400 }}>
-            <img src={COMMENT_ICON} alt="" />
+            <Badge count={notification?.notifications?.length} offset={[1 , -5]}>
+              <img src={COMMENT_ICON} alt="" />
+            </Badge>
           </Dropdown>
           <img src={SETTINGS_ICON} alt="" />
           <Dropdown overlay={userMenu}>
-            <span>
+            <span className="user-info-wrapper">
               <Avatar className="mr-1">{user?.name?.substring(0, 1)}</Avatar>{" "}
               {user?.name} <img src={DOWN_ARROW_WHITE} alt="" />
             </span>
@@ -75,7 +80,7 @@ const PageHeader = () => {
           <p>{t("dashboard.analytics")}</p>
           <Breadcrums />
         </div>
-        <BarChartOutlined className="bar-icon"/>
+        <BarChartOutlined className="bar-icon" />
       </div>
     </header>
   );

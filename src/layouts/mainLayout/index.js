@@ -25,7 +25,8 @@ const MainLayout = () => {
       return;
     }
     navigate("/");
-  }, [notification.calculationCompletionCount, navigate]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [notification.calculationCompletionCount]);
 
   return (
     <>
