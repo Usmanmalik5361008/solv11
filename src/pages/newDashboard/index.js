@@ -26,13 +26,13 @@ const NewDashboard = () => {
             </select>
           </div>
         </div>
-        <Button
+        {/* <Button
           type="primary"
           title="RUN SCR"
           prependIcon={TICKET_WHTE_ICON}
           onClick={handleRunScr}
           loading={runScrApiLoading}
-        />
+        /> */}
       </div>
       <div className="dashboard-body">
         <div className="dashboard-body-top">
