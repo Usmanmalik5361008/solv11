@@ -13,12 +13,14 @@ import { PillButton, Button } from "globalComponents";
 import React from "react";
 import "./styles.scss";
 import { TICKET_WHTE_ICON } from "assets";
+import Countdown from "antd/lib/statistic/Countdown";
 
 const Toolbar = ({
   showToolbar,
   handleRunScr,
   runScrApiLoading,
   isRunScrBtnDisabled,
+  timeLeft,
 }) => {
   return (
     <div className="toolbar">
@@ -45,6 +47,9 @@ const Toolbar = ({
             />
           )}
         </div>
+        {timeLeft > 0 && (
+          <Countdown value={Date.now() + timeLeft} format="mm:ss" />
+        )}
       </div>
       {showToolbar && (
         <div className="group-2">

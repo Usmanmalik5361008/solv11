@@ -104,16 +104,19 @@ const menuItems = [
     key: "10",
     name: "Compte Resultat",
     href: "/compte_resultat",
+    icon: SimulationIcon,
   },
   {
     key: "11",
     name: "Fonds Propres",
     href: "/fonds_propres",
+    icon: SimulationIcon,
   },
   {
     key: "12",
     name: "Risque Contrepartie",
     href: "/risque_contrepartie",
+    icon: SimulationIcon,
   },
   {
     key: "13",
@@ -128,12 +131,14 @@ const menuItems = [
     name: "Donnes Production",
     href: "donnesProduction",
     subMenu: donneesProductionMenu,
+    icon: SimulationIcon,
   },
   {
     key: "15",
     name: "Rachats",
     href: "rachats",
     subMenu: rachatsSubMenu,
+    icon: SimulationIcon,
   },
 ];
 

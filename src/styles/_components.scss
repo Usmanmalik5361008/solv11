@@ -8,6 +8,9 @@
     height: 15px;
     margin-right: 5px;
   }
+  &.disabled {
+    opacity: 0.5;
+  }
 }
 
 .btn-gradient {
@@ -31,6 +34,10 @@
   transition: 0.2s ease-in-out;
   padding: 8px 15px;
   transition-property: color, background-color, border;
+
+  &.disabled {
+    opacity: 0.5;
+  }
 }
 
 .pill-button {

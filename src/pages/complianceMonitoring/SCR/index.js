@@ -17,13 +17,15 @@ const { TabPane } = Tabs;
 
 const SCRPage = () => {
   const { t } = useTranslation();
-  const { handleRunScr, runScrApiLoading } = useSCR();
+  const { handleRunScr, runScrApiLoading, timeLeft } = useSCR();
   return (
     <div className="tab-screen-1-page toolbar-table-container">
       <div className="mb-5 ">
         <Toolbar
           handleRunScr={handleRunScr}
           runScrApiLoading={runScrApiLoading}
+          timeLeft={timeLeft}
+          isRunScrBtnDisabled={timeLeft > 0}
         />
       </div>
       <Row gutter={[30, 20]} style={{ padding: "0 10px" }}>

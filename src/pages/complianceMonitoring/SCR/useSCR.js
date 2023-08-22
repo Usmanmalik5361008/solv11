@@ -13,16 +13,17 @@ const useSCR = () => {
     return savedCooldown ? Number(savedCooldown) : 0;
   });
 
+  const [timeLeft, setTimeLeft] = useState(cooldownEnd - Date.now());
+
   const isCooldownActive = Date.now() < cooldownEnd;
 
   useEffect(() => {
     if (isCooldownActive) {
-      const timeoutId = setTimeout(() => {
-        setCooldownEnd(0);
-        localStorage.removeItem("cooldownEnd");
-      }, cooldownEnd - Date.now());
+      const intervalId = setInterval(() => {
+        setTimeLeft(cooldownEnd - Date.now());
+      }, 1000);
 
-      return () => clearTimeout(timeoutId);
+      return () => clearInterval(intervalId);
     }
   }, [isCooldownActive, cooldownEnd]);
 
@@ -115,7 +116,7 @@ const useSCR = () => {
     }
   }, [notificationSlice, callRunScrApi, isCooldownActive, cooldownEnd]);
 
-  return { runScrApiLoading, handleRunScr };
+  return { runScrApiLoading, handleRunScr, timeLeft };
 };
 
 export default useSCR;

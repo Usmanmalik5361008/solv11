@@ -21,7 +21,11 @@ const Button = ({
   };
 
   return (
-    <button onClick={onClick} className={getClassName()} disabled={disabled}>
+    <button
+      onClick={onClick}
+      className={`${getClassName()} ${disabled ? "disabled" : ""}`}
+      disabled={disabled}
+    >
       {loading && (
         <Spin className="spin-white" style={{ marginRight: 10 }} size="small" />
       )}{" "}
