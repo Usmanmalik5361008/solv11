@@ -19,6 +19,7 @@ const Hypothesis = () => {
           <div className='custom-form-field'>
             <select className='dropdown-style-2'>
               <option value='solo'>{'Solo'}</option>
+              <option value='groupe'>{'Groupe'}</option>
             </select>
           </div>
         </Col>
@@ -31,6 +32,7 @@ const Hypothesis = () => {
           <div className='custom-form-field'>
             <select className='dropdown-style-2'>
               <option value='annuel'>{'Annuel'}</option>
+              <option value='trimestriel'>{'Trimestriel'}</option>
             </select>
           </div>
         </Col>
@@ -64,14 +66,16 @@ const Hypothesis = () => {
             <input
               className='text-right'
               type={'number'}
-              placeholder='0'
+              placeholder='50'
+              disabled
               style={{ width: 'calc(50% - 30px)' }}
             />
             <span>{'80'}</span>
             <input
               className='text-right'
               type={'number'}
-              placeholder='0'
+              placeholder='50'
+              disabled
               style={{ width: 'calc(50% - 30px)' }}
             />
           </div>
@@ -83,7 +87,7 @@ const Hypothesis = () => {
         </Col>
         <Col xs={24} xl={6}>
           <div className='custom-form-field'>
-            <input type={'number'} placeholder='0' />
+            <input type={'number'} placeholder='1' disabled />
           </div>
         </Col>
         <Col xs={24} xl={6}>

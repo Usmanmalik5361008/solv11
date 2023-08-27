@@ -23,8 +23,5 @@ export const mapper = {
     title: "Balance Sheet and own funds",
     description: "Total balance sheet",
   },
-  INFO_COMPLETED: {
-    title: "Balance Sheet and own funds",
-    description: "Total balance sheet",
-  },
+
 };

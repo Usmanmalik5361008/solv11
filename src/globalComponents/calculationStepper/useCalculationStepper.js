@@ -1,47 +1,53 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { useSelector } from "react-redux";
 import { getStepNumber } from "./utils";
 import { mapper } from "./mapper";
 
 const useCalculationStepper = () => {
   const { notifications } = useSelector((state) => state.notification);
+  const { current: sortedKeys } = useRef(
+    Object.keys(mapper).sort((a, b) => {
+      const [aStart] = a.split("_");
+      const [bStart] = b.split("_");
+      return Number(aStart) - Number(bStart);
+    })
+  );
 
   const items = useMemo(() => {
-    if (!notifications?.length) return [];
-    const distinctSteps = new Map();
+    return sortedKeys.map((key) => mapper[key]);
+  }, [sortedKeys]);
 
-    notifications.forEach(({ body }) => {
+  const current = useMemo(() => {
+    if (!notifications?.length) return -1; // Default to no active step if no notifications.
+
+    const keys = sortedKeys;
+    let current = -1;
+
+    // Loop through notifications to find the current step
+    for (const { body } of notifications) {
       const step = getStepNumber(body);
-
-      if (body.startsWith("INFO COMPLETED")) {
-        distinctSteps.set(
-          `INFO_COMPLETED_${Date.now()}`,
-          mapper["INFO_COMPLETED"]
-        ); // Ensure uniqueness
-        return;
-      }
-
-      for (const stepRange in mapper) {
-        if (stepRange.includes("_")) {
-          const [lowerRange, upperRange] = stepRange.split("_");
-          if (step >= +lowerRange && step <= +upperRange) {
-            distinctSteps.set(mapper[stepRange].title, mapper[stepRange]);
-            break;
-          }
-        } else if (step == stepRange) {
-          distinctSteps.set(mapper[stepRange].title, mapper[stepRange]);
-          break;
+      current = -1;
+      for (const key of keys) {
+        ++current;
+        const [lower, upper] = key.split("_");
+        if (step < +upper && step > +lower) {
+          return current;
+        } else if (step === +upper) {
+          return current;
+        } else if (step === +lower) {
+          return current;
+        } else if (key === "INFO_COMPLETED") {
+          return current - 1;
         }
       }
-    });
+    }
 
-    const stepsArray = [...distinctSteps.values()].reverse();
-    // Append a new step at the end
+    return current;
+  }, [notifications, sortedKeys]);
 
-    return stepsArray;
-  }, [notifications]);
-
-  const current = items.length - 1;
+  useEffect(() => {
+    console.log({ current });
+  }, [current]);
 
   return { items, current };
 };

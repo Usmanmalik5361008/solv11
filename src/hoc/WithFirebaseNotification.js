@@ -22,11 +22,10 @@ const WithFirebaseNotification = ({ children }) => {
         dispatch(onNewNotification(message?.notification));
         const [messageType, messageContent] =
           message?.notification.body.split(":");
-        console.log({ messageType, messageContent });
         if (messageType === NOTIFICATION_TYPE.INFO_COMPLETED) {
           dispatch(onCalculationCompletion());
         }
-        console.log({ messageType, messageContent });
+
         notification[messageType?.toLowerCase()]({
           message: message?.notification?.title,
           description: messageContent,

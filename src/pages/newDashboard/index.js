@@ -10,8 +10,12 @@ import useNewDashboard from "./useNewDashboard";
 
 const NewDashboard = () => {
   const { t } = useTranslation();
-  const { handleRunScr, scrHierarchyFormatted, runScrApiLoading } =
-    useNewDashboard();
+  const {
+    handleRunScr,
+    scrHierarchyFormatted,
+    runScrApiLoading,
+    downloadReport,
+  } = useNewDashboard();
 
   return (
     <div className="card-view">
@@ -53,6 +57,7 @@ const NewDashboard = () => {
               title={t("dashboard.scr-report")}
               bgColor="#8BB8A2"
               icon={SCR_REPORT_ICON}
+              onClick={downloadReport}
             />
             <OptionCard
               title={t("dashboard.scr-input")}

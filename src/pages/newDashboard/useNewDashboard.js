@@ -15,11 +15,15 @@ const useNewDashboard = () => {
 
   const notificationSlice = useSelector((state) => state.notification);
   const [scrHierarchyFormatted, setScrHierarchyFormatted] = useState([]);
+  const [reportFileLink, setReportFileLink] = useState("");
 
   useEffect(() => {
     for (const notification of notificationSlice?.notifications) {
       const notificationBody = notification.body;
       const [notificationType, encodedMessage] = notificationBody.split(":");
+      if (notificationType === "ZIPFILE") {
+        setReportFileLink(encodedMessage);
+      }
       if (notificationType === NOTIFICATION_TYPE.INFO_COMPLETED) {
         const decodedMessage = Buffer.from(encodedMessage, "base64").toString();
         const decodedMessageJson = JSON.parse(decodedMessage);
@@ -31,7 +35,33 @@ const useNewDashboard = () => {
         break;
       }
     }
+
+    for (const notification of notificationSlice?.notifications) {
+      const notificationBody = notification.body;
+      const [notificationType, encodedMessage] = notificationBody.split(":");
+      if (notificationType === "ZIPFILE") {
+        setReportFileLink(encodedMessage);
+        break;
+      }
+    }
   }, [notificationSlice.notifications]);
+
+  const downloadReport = () => {
+    if (!reportFileLink) {
+      message.error("No file available to download");
+      return;
+    }
+    const downloadLink = `https://kernel.solv11.cloud/download/${reportFileLink}`;
+
+    // Create an anchor element and trigger a click event to start the download
+    const anchor = document.createElement("a");
+    anchor.href = downloadLink;
+    anchor.setAttribute("download", ""); // This will prompt the file to be downloaded
+    anchor.style.display = "none"; // Hide the anchor
+    document.body.appendChild(anchor); // Add the anchor to the DOM
+    anchor.click(); // Trigger a click event
+    document.body.removeChild(anchor); // Remove the anchor from the DOM after the download starts
+  };
 
   const handleRunScr = useCallback(async () => {
     if (!notificationSlice.permissionGranted) {
@@ -103,7 +133,12 @@ const useNewDashboard = () => {
     }
   }, [notificationSlice, callRunScrApi]);
 
-  return { handleRunScr, scrHierarchyFormatted, runScrApiLoading };
+  return {
+    handleRunScr,
+    scrHierarchyFormatted,
+    runScrApiLoading,
+    downloadReport,
+  };
 };
 
 export default useNewDashboard;
